@@ -1,0 +1,12 @@
+reset 
+set terminal postscript eps
+set key box
+set origin 0.0,0.0
+set offsets 0, 0, 2, 2
+set output './images/Distribuicao dos Dados-FSCL43.eps'
+set label font "Times-Roman,14"
+set xlabel 'ATRIBUTO 2' font "Times-Roman,14"
+set ylabel 'ATRIBUTO 1' font "Times-Roman,14"
+plot  './images/FSCL3/Distribuicao dos Dados-FSCL40.dat' smooth unique title 'PROTOTIPOS' with points pointtype 9 pointsize 2,'./images/FSCL3/Distribuicao dos Dados-FSCL41.dat' smooth unique title 'CLUSTER1' with points pointtype 6 pointsize 1.5,'./images/FSCL3/Distribuicao dos Dados-FSCL42.dat' smooth unique title 'CLUSTER2' with points pointtype 6 pointsize 1.5,'./images/FSCL3/Distribuicao dos Dados-FSCL43.dat' smooth unique title 'CLUSTER3' with points pointtype 6 pointsize 1.5,'./images/FSCL3/Distribuicao dos Dados-FSCL44.dat' smooth unique title 'CLUSTER4' with points pointtype 6 pointsize 1.5 
+show output
+/usr/bin/epstopdf ./images/Distribuicao dos Dados-FSCL43.eps

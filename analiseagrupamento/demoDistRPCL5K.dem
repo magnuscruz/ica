@@ -1,0 +1,12 @@
+reset 
+set terminal postscript eps
+set key box
+set origin 0.0,0.0
+set offsets 0, 0, 2, 2
+set output './images/Distribuicao dos Dados-RPCL5K.eps'
+set label font "Times-Roman,14"
+set xlabel 'ATRIBUTO 2' font "Times-Roman,14"
+set ylabel 'ATRIBUTO 1' font "Times-Roman,14"
+plot  './images/RPCL/Distribuicao dos Dados-RPCL50.dat' smooth unique title 'PROTOTIPOS' with points pointtype 9 pointsize 2.5,'./images/RPCL/Distribuicao dos Dados-RPCL51.dat' smooth unique title 'CLUSTER1' with points pointtype 2 pointsize 1.5,'./images/RPCL/Distribuicao dos Dados-RPCL52.dat' smooth unique title 'CLUSTER2' with points pointtype 4 pointsize 1.5,'./images/RPCL/Distribuicao dos Dados-RPCL53.dat' smooth unique title 'CLUSTER3' with points pointtype 1 pointsize 1.5,'./images/RPCL/Distribuicao dos Dados-RPCL54.dat' smooth unique title 'CLUSTER4' with points pointtype 6 pointsize 1.5, './images/RPCL/Distribuicao dos Dados-RPCL55.dat' smooth unique title 'CLUSTER5' with points pointtype 11 pointsize 1.5
+show output
+/usr/bin/epstopdf ./images/Distribuicao dos Dados-RPCL5K.eps

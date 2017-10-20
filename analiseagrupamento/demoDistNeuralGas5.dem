@@ -1,0 +1,11 @@
+reset 
+set terminal postscript eps
+set key box
+set origin 0.0,0.0
+set offsets 0, 0, 2, 2
+set output './images/Distribuicao dos Dados-NeuralGas5.eps'
+set xlabel 'ATRIBUTO 2' font "Times-Roman,14"
+set ylabel 'ATRIBUTO 1' font "Times-Roman,14"
+plot  './images/NeuralGas/Distribuicao dos Dados-NeuralGas50.dat' smooth unique title 'PROTOTIPOS' with points pointtype 9 pointsize 2,'./images/NeuralGas/Distribuicao dos Dados-NeuralGas51.dat' smooth unique title 'CLUSTER1' with points pointtype 6 pointsize 1.5,'./images/NeuralGas/Distribuicao dos Dados-NeuralGas52.dat' smooth unique title 'CLUSTER2' with points pointtype 6 pointsize 1.5,'./images/NeuralGas/Distribuicao dos Dados-NeuralGas53.dat' smooth unique title 'CLUSTER3' with points pointtype 6 pointsize 1.5,'./images/NeuralGas/Distribuicao dos Dados-NeuralGas54.dat' smooth unique title 'CLUSTER4' with points pointtype 6 pointsize 1.5,'./images/NeuralGas/Distribuicao dos Dados-NeuralGas55.dat' smooth unique title 'CLUSTER5' with points pointtype 6 pointsize 1.5
+show output
+/usr/bin/epstopdf ./images/Distribuicao dos Dados-NeuralGas5.eps

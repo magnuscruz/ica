@@ -1,0 +1,12 @@
+reset
+set terminal postscript eps
+set key box
+set size 0.60
+set boxwidth 0.9
+set output './images/DistribuicaoDados.eps'
+set label font "Times-Roman,12"
+set xlabel 'ATRIBUTO 2' font "Times-Roman,12"
+set ylabel 'ATRIBUTO 1' font "Times-Roman,12"
+plot  './etc/resources/dataset1.dat' using 2:1 ';%lf;%lf' smooth unique title 'EX' with points pointtype 6 pointsize 1.5
+show output
+/usr/bin/epstopdf ./images/DistribuicaoDados.eps

@@ -1,0 +1,12 @@
+reset
+set terminal postscript eps
+set key box
+set origin 0.0,0.0
+set offsets 0, 0, 2, 2
+set output './images/Dunn Index Family-10.eps'
+set label font "Times-Roman,14"
+set xlabel 'K' font "Times-Roman,14"
+set ylabel 'Dunn Index' font "Times-Roman,14"
+plot  './images/SOM/Dunn Index Family-SOM10.dat' smooth unique title 'SOM' with linespoints linetype 1 pointtype 1, './images/WTA/Dunn Index Family-WTA10.dat' smooth unique title 'WTA' with linespoints linetype 2 pointtype 2, './images/FSCL/Dunn Index Family-FSCL10.dat' smooth unique title 'FSCL' with linespoints linetype 3 pointtype 3, './images/RPCL/Dunn Index Family-RPCL10.dat' smooth unique title 'RPCL' with linespoints linetype 4 pointtype 4, './images/K-Means/Dunn Index Family-K-Means10.dat' smooth unique title 'K-Means' with linespoints linetype 5 pointtype 5, './images/NeuralGas/Dunn Index Family-NeuralGas10.dat' smooth unique title 'NeuralGas' with linespoints linetype 6 pointtype 6
+show output
+/usr/bin/epstopdf ./images/Dunn Index Family-10.eps

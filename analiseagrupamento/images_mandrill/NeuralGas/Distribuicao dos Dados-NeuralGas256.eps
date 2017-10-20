@@ -1,0 +1,6688 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: ./images/NeuralGas/Distribuicao dos Dados-NeuralGas256.eps
+%%Creator: gnuplot 4.0 patchlevel 0
+%%CreationDate: Fri May 25 10:20:56 2007
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 410 302
+%%Orientation: Portrait
+%%EndComments
+/gnudict 256 dict def
+gnudict begin
+/Color false def
+/Solid false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/vshift -46 def
+/dl {10.0 mul} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/Rounded false def
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow { currentpoint stroke M
+  0 vshift R show } def
+/Rshow { currentpoint stroke M
+  dup stringwidth pop neg vshift R show } def
+/Cshow { currentpoint stroke M
+  dup stringwidth pop -2 div vshift R show } def
+/UP { dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def } def
+/DL { Color {setrgbcolor Solid {pop []} if 0 setdash }
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse } def
+/BL { stroke userlinewidth 2 mul setlinewidth
+      Rounded { 1 setlinejoin 1 setlinecap } if } def
+/AL { stroke userlinewidth 2 div setlinewidth
+      Rounded { 1 setlinejoin 1 setlinecap } if } def
+/UL { dup gnulinewidth mul /userlinewidth exch def
+      dup 1 lt {pop 1} if 10 mul /udl exch def } def
+/PL { stroke userlinewidth setlinewidth
+      Rounded { 1 setlinejoin 1 setlinecap } if } def
+/LTw { PL [] 1 setgray } def
+/LTb { BL [] 0 0 0 DL } def
+/LTa { AL [1 udl mul 2 udl mul] 0 setdash 0 0 0 setrgbcolor } def
+/LT0 { PL [] 1 0 0 DL } def
+/LT1 { PL [4 dl 2 dl] 0 1 0 DL } def
+/LT2 { PL [2 dl 3 dl] 0 0 1 DL } def
+/LT3 { PL [1 dl 1.5 dl] 1 0 1 DL } def
+/LT4 { PL [5 dl 2 dl 1 dl 2 dl] 0 1 1 DL } def
+/LT5 { PL [4 dl 3 dl 1 dl 3 dl] 1 1 0 DL } def
+/LT6 { PL [2 dl 2 dl 2 dl 4 dl] 0 0 0 DL } def
+/LT7 { PL [2 dl 2 dl 2 dl 2 dl 2 dl 4 dl] 1 0.3 0 DL } def
+/LT8 { PL [2 dl 2 dl 2 dl 2 dl 2 dl 2 dl 2 dl 4 dl] 0.5 0.5 0.5 DL } def
+/Pnt { stroke [] 0 setdash
+   gsave 1 setlinecap M 0 0 V stroke grestore } def
+/Dia { stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt } def
+/Pls { stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+  } def
+/Box { stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt } def
+/Crs { stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke } def
+/TriU { stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt  } def
+/Star { 2 copy Pls Crs } def
+/BoxF { stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V  hpt2 0 V  0 vpt2 V
+  hpt2 neg 0 V  closepath fill } def
+/TriUF { stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill } def
+/TriD { stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt  } def
+/TriDF { stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF { stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill } def
+/Pent { stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt } def
+/PentF { stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore } def
+/Circle { stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt } def
+/CircleF { stroke [] 0 setdash hpt 0 360 arc fill } def
+/C0 { BL [] 0 setdash 2 copy moveto vpt 90 450  arc } bind def
+/C1 { BL [] 0 setdash 2 copy        moveto
+       2 copy  vpt 0 90 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C2 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 90 180 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C3 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 0 180 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C4 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 180 270 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C5 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 0 90 arc
+       2 copy moveto
+       2 copy  vpt 180 270 arc closepath fill
+               vpt 0 360 arc } bind def
+/C6 { BL [] 0 setdash 2 copy moveto
+      2 copy  vpt 90 270 arc closepath fill
+              vpt 0 360 arc closepath } bind def
+/C7 { BL [] 0 setdash 2 copy moveto
+      2 copy  vpt 0 270 arc closepath fill
+              vpt 0 360 arc closepath } bind def
+/C8 { BL [] 0 setdash 2 copy moveto
+      2 copy vpt 270 360 arc closepath fill
+              vpt 0 360 arc closepath } bind def
+/C9 { BL [] 0 setdash 2 copy moveto
+      2 copy  vpt 270 450 arc closepath fill
+              vpt 0 360 arc closepath } bind def
+/C10 { BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+       2 copy moveto
+       2 copy vpt 90 180 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C11 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 0 180 arc closepath fill
+       2 copy moveto
+       2 copy  vpt 270 360 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C12 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 180 360 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C13 { BL [] 0 setdash  2 copy moveto
+       2 copy  vpt 0 90 arc closepath fill
+       2 copy moveto
+       2 copy  vpt 180 360 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C14 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 90 360 arc closepath fill
+               vpt 0 360 arc } bind def
+/C15 { BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/Rec   { newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+       neg 0 rlineto closepath } bind def
+/Square { dup Rec } bind def
+/Bsquare { vpt sub exch vpt sub exch vpt2 Square } bind def
+/S0 { BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare } bind def
+/S1 { BL [] 0 setdash 2 copy vpt Square fill Bsquare } bind def
+/S2 { BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare } bind def
+/S3 { BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare } bind def
+/S4 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare } bind def
+/S5 { BL [] 0 setdash 2 copy 2 copy vpt Square fill
+       exch vpt sub exch vpt sub vpt Square fill Bsquare } bind def
+/S6 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare } bind def
+/S7 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+       2 copy vpt Square fill
+       Bsquare } bind def
+/S8 { BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare } bind def
+/S9 { BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare } bind def
+/S10 { BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+       Bsquare } bind def
+/S11 { BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+       Bsquare } bind def
+/S12 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare } bind def
+/S13 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+       2 copy vpt Square fill Bsquare } bind def
+/S14 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+       2 copy exch vpt sub exch vpt Square fill Bsquare } bind def
+/S15 { BL [] 0 setdash 2 copy Bsquare fill Bsquare } bind def
+/D0 { gsave translate 45 rotate 0 0 S0 stroke grestore } bind def
+/D1 { gsave translate 45 rotate 0 0 S1 stroke grestore } bind def
+/D2 { gsave translate 45 rotate 0 0 S2 stroke grestore } bind def
+/D3 { gsave translate 45 rotate 0 0 S3 stroke grestore } bind def
+/D4 { gsave translate 45 rotate 0 0 S4 stroke grestore } bind def
+/D5 { gsave translate 45 rotate 0 0 S5 stroke grestore } bind def
+/D6 { gsave translate 45 rotate 0 0 S6 stroke grestore } bind def
+/D7 { gsave translate 45 rotate 0 0 S7 stroke grestore } bind def
+/D8 { gsave translate 45 rotate 0 0 S8 stroke grestore } bind def
+/D9 { gsave translate 45 rotate 0 0 S9 stroke grestore } bind def
+/D10 { gsave translate 45 rotate 0 0 S10 stroke grestore } bind def
+/D11 { gsave translate 45 rotate 0 0 S11 stroke grestore } bind def
+/D12 { gsave translate 45 rotate 0 0 S12 stroke grestore } bind def
+/D13 { gsave translate 45 rotate 0 0 S13 stroke grestore } bind def
+/D14 { gsave translate 45 rotate 0 0 S14 stroke grestore } bind def
+/D15 { gsave translate 45 rotate 0 0 S15 stroke grestore } bind def
+/DiaE { stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke } def
+/BoxE { stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke } def
+/TriUE { stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke } def
+/TriDE { stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke } def
+/PentE { stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore } def
+/CircE { stroke [] 0 setdash 
+  hpt 0 360 arc stroke } def
+/Opaque { gsave closepath 1 setgray fill grestore 0 setgray closepath } def
+/DiaW { stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke } def
+/BoxW { stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke } def
+/TriUW { stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke } def
+/TriDW { stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke } def
+/PentW { stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore } def
+/CircW { stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke } def
+/BoxFill { gsave Rec 1 setgray fill grestore } def
+/BoxColFill {
+  gsave Rec
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor
+  fill grestore } def
+%
+% PostScript Level 1 Pattern Fill routine
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill { gsave /PFa [ 9 2 roll ] def
+    PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+    PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+    gsave 1 setgray fill grestore clip
+    currentlinewidth 0.5 mul setlinewidth
+    /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+    0 0 M PFa 5 get rotate PFs -2 div dup translate
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{ PFa 4 get mul 0 M 0 PFs V } for
+    0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{ PFa 4 get mul 0 2 1 roll M PFs 0 V } for
+    } if
+    stroke grestore } def
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+end
+%%EndProlog
+gnudict begin
+gsave
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+1.000 UL
+LTb
+714 420 M
+63 0 V
+6185 0 R
+-63 0 V
+630 420 M
+gsave 0 setgray
+( 20) Rshow
+grestore
+1.000 UL
+LTb
+714 865 M
+63 0 V
+6185 0 R
+-63 0 V
+630 865 M
+gsave 0 setgray
+( 40) Rshow
+grestore
+1.000 UL
+LTb
+714 1310 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 60) Rshow
+grestore
+1.000 UL
+LTb
+714 1756 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 80) Rshow
+grestore
+1.000 UL
+LTb
+714 2201 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 100) Rshow
+grestore
+1.000 UL
+LTb
+714 2646 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 120) Rshow
+grestore
+1.000 UL
+LTb
+714 3091 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 140) Rshow
+grestore
+1.000 UL
+LTb
+714 3536 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 160) Rshow
+grestore
+1.000 UL
+LTb
+714 3982 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 180) Rshow
+grestore
+1.000 UL
+LTb
+714 4427 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 200) Rshow
+grestore
+1.000 UL
+LTb
+714 4872 M
+63 0 V
+6185 0 R
+-63 0 V
+-6269 0 R
+gsave 0 setgray
+( 220) Rshow
+grestore
+1.000 UL
+LTb
+714 420 M
+0 63 V
+0 4389 R
+0 -63 V
+714 280 M
+gsave 0 setgray
+( 0) Cshow
+grestore
+1.000 UL
+LTb
+1282 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 20) Cshow
+grestore
+1.000 UL
+LTb
+1850 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 40) Cshow
+grestore
+1.000 UL
+LTb
+2418 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 60) Cshow
+grestore
+1.000 UL
+LTb
+2986 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 80) Cshow
+grestore
+1.000 UL
+LTb
+3554 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 100) Cshow
+grestore
+1.000 UL
+LTb
+4122 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 120) Cshow
+grestore
+1.000 UL
+LTb
+4690 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 140) Cshow
+grestore
+1.000 UL
+LTb
+5258 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 160) Cshow
+grestore
+1.000 UL
+LTb
+5826 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 180) Cshow
+grestore
+1.000 UL
+LTb
+6394 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 200) Cshow
+grestore
+1.000 UL
+LTb
+6962 420 M
+0 63 V
+0 4389 R
+0 -63 V
+0 -4529 R
+gsave 0 setgray
+( 220) Cshow
+grestore
+1.000 UL
+LTb
+1.000 UL
+LTb
+714 420 M
+6248 0 V
+0 4452 V
+-6248 0 V
+714 420 L
+LTb
+140 2646 M
+gsave 0 setgray
+currentpoint gsave translate 90 rotate 0 0 M
+(ATRIBUTO 1) Cshow
+grestore
+grestore
+LTb
+3838 70 M
+gsave 0 setgray
+(ATRIBUTO 2) Cshow
+grestore
+1.000 UP
+1.000 UL
+LTb
+-5785 749 M
+0 4060 V
+12663 0 V
+0 -4060 V
+-12663 0 V
+0 4060 R
+12663 0 V
+1.000 UP
+1.000 UL
+LT0
+LTb
+-4945 4739 M
+gsave 0 setgray
+(PROTOTIPOS) Rshow
+grestore
+LT0
+1744 958 Circle
+1807 974 Circle
+1867 931 Circle
+1898 1022 Circle
+1924 1134 Circle
+2043 1189 Circle
+2141 1178 Circle
+2187 1089 Circle
+2202 1046 Circle
+2211 1193 Circle
+2224 1172 Circle
+2237 1269 Circle
+2254 1314 Circle
+2257 1277 Circle
+2298 1239 Circle
+2332 1559 Circle
+2336 1258 Circle
+2407 1325 Circle
+2416 1362 Circle
+2437 1343 Circle
+2491 1311 Circle
+2499 1287 Circle
+2509 1476 Circle
+2523 1367 Circle
+2552 1371 Circle
+2563 1161 Circle
+2576 1302 Circle
+2588 1582 Circle
+2610 1521 Circle
+2612 1393 Circle
+2644 1663 Circle
+2691 1566 Circle
+2719 1558 Circle
+2738 1358 Circle
+2766 1879 Circle
+2806 1835 Circle
+2872 1528 Circle
+2877 2006 Circle
+2887 1651 Circle
+2903 1794 Circle
+2912 1669 Circle
+2925 1753 Circle
+2928 1430 Circle
+2938 1852 Circle
+2942 1546 Circle
+2960 1613 Circle
+2986 1749 Circle
+2991 2030 Circle
+2999 2025 Circle
+3034 1721 Circle
+3049 1905 Circle
+3085 1860 Circle
+3087 1936 Circle
+3166 1905 Circle
+3203 2132 Circle
+3212 2141 Circle
+3221 2315 Circle
+3224 1781 Circle
+3225 1666 Circle
+3237 2185 Circle
+3247 2069 Circle
+3253 2269 Circle
+3283 2292 Circle
+3298 1842 Circle
+3331 1716 Circle
+3354 2364 Circle
+3360 1662 Circle
+3382 2389 Circle
+3389 2273 Circle
+3396 2245 Circle
+3443 1895 Circle
+3453 1859 Circle
+3459 2077 Circle
+3475 1945 Circle
+3481 1980 Circle
+3487 1789 Circle
+3503 1953 Circle
+3505 2139 Circle
+3515 1709 Circle
+3518 1972 Circle
+3521 2157 Circle
+3540 2272 Circle
+3626 2238 Circle
+3659 2345 Circle
+3682 2440 Circle
+3698 2691 Circle
+3739 2438 Circle
+3772 2056 Circle
+3782 2482 Circle
+3787 2363 Circle
+3797 2065 Circle
+3812 2370 Circle
+3832 2488 Circle
+3837 2368 Circle
+3875 2435 Circle
+3880 2920 Circle
+3892 2291 Circle
+3901 2731 Circle
+3909 2605 Circle
+3922 2528 Circle
+3922 2969 Circle
+3930 2726 Circle
+3937 2416 Circle
+3945 2332 Circle
+3950 2810 Circle
+3963 2682 Circle
+3970 2588 Circle
+4008 2356 Circle
+4031 2628 Circle
+4040 2591 Circle
+4063 2554 Circle
+4066 2469 Circle
+4069 2559 Circle
+4091 2789 Circle
+4111 2634 Circle
+4112 2722 Circle
+4118 2665 Circle
+4132 2319 Circle
+4141 2221 Circle
+4160 2859 Circle
+4161 2939 Circle
+4209 3043 Circle
+4218 2814 Circle
+4220 2786 Circle
+4227 2905 Circle
+4232 3344 Circle
+4257 2424 Circle
+4258 2548 Circle
+4260 2786 Circle
+4274 2748 Circle
+4280 3026 Circle
+4281 2648 Circle
+4296 2877 Circle
+4302 3140 Circle
+4304 2938 Circle
+4325 2636 Circle
+4329 2572 Circle
+4353 2857 Circle
+4366 3032 Circle
+4385 2972 Circle
+4402 2746 Circle
+4413 2583 Circle
+4414 3288 Circle
+4418 2619 Circle
+4420 2811 Circle
+4437 2987 Circle
+4441 2545 Circle
+4444 2911 Circle
+4445 2878 Circle
+4529 2548 Circle
+4554 2877 Circle
+4554 2945 Circle
+4558 3104 Circle
+4559 2925 Circle
+4565 3107 Circle
+4573 3441 Circle
+4580 2811 Circle
+4586 2814 Circle
+4640 3213 Circle
+4641 3039 Circle
+4641 3049 Circle
+4644 2905 Circle
+4654 3388 Circle
+4658 3093 Circle
+4678 3166 Circle
+4680 3141 Circle
+4699 2998 Circle
+4712 3131 Circle
+4747 3113 Circle
+4752 3030 Circle
+4754 3009 Circle
+4761 3275 Circle
+4781 3112 Circle
+4796 2855 Circle
+4828 3238 Circle
+4843 3033 Circle
+4860 3396 Circle
+4877 3268 Circle
+4897 3298 Circle
+4903 3274 Circle
+4917 3132 Circle
+4964 3194 Circle
+4987 3243 Circle
+5103 3042 Circle
+5110 3545 Circle
+5128 3339 Circle
+5144 3458 Circle
+5152 3015 Circle
+5152 3407 Circle
+5168 3573 Circle
+5177 3591 Circle
+5199 3792 Circle
+5200 3548 Circle
+5260 3564 Circle
+5272 3863 Circle
+5289 3470 Circle
+5296 3742 Circle
+5304 3404 Circle
+5304 3147 Circle
+5319 3151 Circle
+5332 2837 Circle
+5352 3759 Circle
+5389 2847 Circle
+5396 3764 Circle
+5408 3697 Circle
+5418 3134 Circle
+5427 3834 Circle
+5435 3634 Circle
+5453 3553 Circle
+5477 3588 Circle
+5501 3466 Circle
+5506 3713 Circle
+5508 3660 Circle
+5514 3825 Circle
+5519 3499 Circle
+5556 3512 Circle
+5592 3767 Circle
+5621 3769 Circle
+5645 3830 Circle
+5654 3957 Circle
+5692 3969 Circle
+5698 3744 Circle
+5707 3863 Circle
+5707 4090 Circle
+5741 3908 Circle
+5782 3930 Circle
+5791 3945 Circle
+5798 3915 Circle
+5801 3705 Circle
+5811 3948 Circle
+5856 3941 Circle
+5896 3993 Circle
+5935 4083 Circle
+5962 4094 Circle
+5992 4071 Circle
+5997 4163 Circle
+6008 4197 Circle
+6011 4095 Circle
+6016 4068 Circle
+6031 4016 Circle
+6044 4120 Circle
+6066 4071 Circle
+6107 4199 Circle
+6131 4179 Circle
+6145 4255 Circle
+6162 4241 Circle
+6205 4112 Circle
+6213 4257 Circle
+6235 4347 Circle
+6251 4222 Circle
+6261 4374 Circle
+6348 4309 Circle
+6387 4427 Circle
+6397 4378 Circle
+6402 4439 Circle
+6429 4382 Circle
+-4662 4739 Circle
+1.000 UP
+1.000 UL
+LT1
+LTb
+-4945 4599 M
+gsave 0 setgray
+(CLUSTER1) Rshow
+grestore
+LT1
+3923 1756 Crs
+4434 3937 Crs
+4605 3536 Crs
+4690 3425 Crs
+4860 3637 Crs
+4917 3514 Crs
+4974 3369 Crs
+5031 3514 Crs
+5059 3369 Crs
+5088 3581 Crs
+5116 3670 Crs
+5144 3525 Crs
+5173 3559 Crs
+5201 3425 Crs
+5315 3603 Crs
+5400 3926 Crs
+5428 3592 Crs
+5457 3893 Crs
+5514 3659 Crs
+-4662 4599 Crs
+1.000 UP
+1.000 UL
+LT2
+LTb
+-4945 4459 M
+gsave 0 setgray
+(CLUSTER2) Rshow
+grestore
+LT2
+3440 2379 Star
+4804 3692 Star
+4946 3792 Star
+4974 4004 Star
+5230 4427 Star
+5315 4004 Star
+5372 4048 Star
+5428 3982 Star
+5599 3885 Star
+5627 2913 Star
+5741 3982 Star
+5968 3314 Star
+-4662 4459 Star
+1.000 UP
+1.000 UL
+LT3
+LTb
+-4945 4319 M
+gsave 0 setgray
+(CLUSTER3) Rshow
+grestore
+LT3
+3866 3447 Box
+4236 1733 Box
+4605 2423 Box
+4804 3158 Box
+4860 3514 Box
+4946 3403 Box
+5144 3113 Box
+5173 3848 Box
+5201 3002 Box
+5258 3203 Box
+5286 3113 Box
+5343 3358 Box
+5400 2891 Box
+5457 3180 Box
+5542 3893 Box
+-4662 4319 Box
+1.000 UP
+1.000 UL
+LT4
+LTb
+-4945 4179 M
+gsave 0 setgray
+(CLUSTER4) Rshow
+grestore
+LT4
+2617 1333 BoxF
+2816 2390 BoxF
+2958 2123 BoxF
+3185 2579 BoxF
+3242 1911 BoxF
+3355 1800 BoxF
+3526 1422 BoxF
+3582 1867 BoxF
+3810 1399 BoxF
+3923 1377 BoxF
+4292 2312 BoxF
+4378 1310 BoxF
+-4662 4179 BoxF
+1.000 UP
+1.000 UL
+LT5
+LTb
+-4945 4039 M
+gsave 0 setgray
+(CLUSTER5) Rshow
+grestore
+LT5
+4889 2268 Circle
+5514 4093 Circle
+5769 4026 Circle
+5883 4093 Circle
+5996 3937 Circle
+6053 4160 Circle
+6082 4026 Circle
+6167 4137 Circle
+6195 3759 Circle
+6224 4071 Circle
+6394 3737 Circle
+-4662 4039 Circle
+1.000 UP
+1.000 UL
+LT6
+LTb
+-4945 3899 M
+gsave 0 setgray
+(CLUSTER6) Rshow
+grestore
+LT6
+3213 3113 CircleF
+3384 2468 CircleF
+3497 2512 CircleF
+3753 2357 CircleF
+3810 2535 CircleF
+3895 3336 CircleF
+3952 2935 CircleF
+3980 3603 CircleF
+4150 3648 CircleF
+4207 2891 CircleF
+4264 2846 CircleF
+4349 3648 CircleF
+4378 2446 CircleF
+4434 3036 CircleF
+4491 2624 CircleF
+4520 3024 CircleF
+4576 2846 CircleF
+4633 3670 CircleF
+4747 2490 CircleF
+4889 3447 CircleF
+4946 2134 CircleF
+5002 3447 CircleF
+5059 2802 CircleF
+5201 3336 CircleF
+5258 3536 CircleF
+5286 3247 CircleF
+5315 2223 CircleF
+-4662 3899 CircleF
+1.000 UP
+1.000 UL
+LT7
+LTb
+-4945 3759 M
+gsave 0 setgray
+(CLUSTER7) Rshow
+grestore
+LT7
+3497 2646 TriU
+3810 2601 TriU
+3895 3203 TriU
+4008 2613 TriU
+4321 2668 TriU
+4378 2512 TriU
+4406 3024 TriU
+4548 3692 TriU
+4605 2713 TriU
+4662 3447 TriU
+4775 3759 TriU
+4889 3414 TriU
+4917 2757 TriU
+5002 3136 TriU
+5599 3247 TriU
+-4662 3759 TriU
+1.000 UP
+1.000 UL
+LT8
+LTb
+-4945 3619 M
+gsave 0 setgray
+(CLUSTER8) Rshow
+grestore
+LT8
+3298 2334 TriUF
+5372 3737 TriUF
+5542 4026 TriUF
+5911 4026 TriUF
+5940 4249 TriUF
+-4662 3619 TriUF
+1.000 UP
+1.000 UL
+LT0
+LTb
+-4945 3479 M
+gsave 0 setgray
+(CLUSTER9) Rshow
+grestore
+LT0
+2901 2245 TriD
+2929 2891 TriD
+2986 2290 TriD
+3043 2401 TriD
+3071 2067 TriD
+3100 1845 TriD
+3185 2268 TriD
+3242 2201 TriD
+3298 2234 TriD
+3440 2201 TriD
+3497 2757 TriD
+3554 2223 TriD
+3611 2067 TriD
+3639 2223 TriD
+3724 2268 TriD
+3781 2579 TriD
+3923 2000 TriD
+4122 2468 TriD
+-4662 3479 TriD
+1.000 UP
+1.000 UL
+LT1
+LTb
+-4945 3339 M
+gsave 0 setgray
+(CLUSTER10) Rshow
+grestore
+LT1
+3327 1889 TriDF
+3440 2134 TriDF
+3582 2179 TriDF
+3639 2535 TriDF
+3668 2401 TriDF
+3696 2490 TriDF
+3724 3180 TriDF
+3838 2401 TriDF
+3866 2312 TriDF
+3895 2446 TriDF
+3923 2446 TriDF
+4037 2657 TriDF
+4122 1578 TriDF
+4150 2423 TriDF
+4236 2735 TriDF
+4264 2624 TriDF
+4321 2713 TriDF
+4349 2702 TriDF
+4406 2735 TriDF
+4434 2483 TriDF
+4463 2668 TriDF
+4718 2423 TriDF
+4775 1934 TriDF
+-4662 3339 TriDF
+1.000 UP
+1.000 UL
+LT2
+LTb
+-4945 3199 M
+gsave 0 setgray
+(CLUSTER11) Rshow
+grestore
+LT2
+3810 1867 Dia
+5201 3403 Dia
+5542 3915 Dia
+5684 3937 Dia
+5769 4271 Dia
+5826 4360 Dia
+5883 3826 Dia
+5968 4115 Dia
+5996 4271 Dia
+6110 4293 Dia
+6138 3826 Dia
+6167 4360 Dia
+6252 3625 Dia
+6337 3603 Dia
+6536 4338 Dia
+-4662 3199 Dia
+1.000 UP
+1.000 UL
+LT3
+LTb
+-4945 3059 M
+gsave 0 setgray
+(CLUSTER12) Rshow
+grestore
+LT3
+3043 2179 DiaF
+4491 3625 DiaF
+4605 2245 DiaF
+4804 3247 DiaF
+4832 3158 DiaF
+4860 3436 DiaF
+4917 3091 DiaF
+4974 3102 DiaF
+5031 3314 DiaF
+5116 3559 DiaF
+5173 3737 DiaF
+5343 3536 DiaF
+5372 3614 DiaF
+5485 3336 DiaF
+5542 3225 DiaF
+5712 3113 DiaF
+-4662 3059 DiaF
+1.000 UP
+1.000 UL
+LT4
+LTb
+-4945 2919 M
+gsave 0 setgray
+(CLUSTER13) Rshow
+grestore
+LT4
+3412 2223 Pent
+3810 3648 Pent
+4150 2735 Pent
+4207 3269 Pent
+4378 2023 Pent
+4463 2846 Pent
+4520 3024 Pent
+4605 3581 Pent
+4804 3481 Pent
+5144 2512 Pent
+5173 3536 Pent
+5599 3536 Pent
+-4662 2919 Pent
+1.000 UP
+1.000 UL
+LT5
+LTb
+-4945 2779 M
+gsave 0 setgray
+(CLUSTER14) Rshow
+grestore
+LT5
+3923 1934 PentF
+5059 4004 PentF
+5315 3781 PentF
+5400 3648 PentF
+5428 3781 PentF
+5457 3937 PentF
+5514 3781 PentF
+5570 2980 PentF
+5599 3915 PentF
+5627 4082 PentF
+5741 3781 PentF
+5769 4115 PentF
+5798 3904 PentF
+5940 3826 PentF
+5968 4093 PentF
+6025 3714 PentF
+6082 4004 PentF
+-4662 2779 PentF
+1.000 UP
+1.000 UL
+LT6
+LTb
+-4945 2639 M
+gsave 0 setgray
+(CLUSTER15) Rshow
+grestore
+LT6
+2191 2045 C0
+2446 2112 C0
+2532 2913 C0
+2730 2245 C0
+2844 2601 C0
+2958 2490 C0
+2986 2579 C0
+3014 2012 C0
+3270 2401 C0
+3384 2201 C0
+3469 2913 C0
+3497 2268 C0
+3526 2156 C0
+3554 2179 C0
+3611 1978 C0
+3781 2646 C0
+4179 2357 C0
+4207 1845 C0
+4662 2624 C0
+-4662 2639 C0
+1.000 UP
+1.000 UL
+LT7
+LTb
+-4945 2499 M
+gsave 0 setgray
+(CLUSTER16) Rshow
+grestore
+LT7
+3128 2379 C1
+4008 2535 C1
+4491 2557 C1
+4946 2334 C1
+5315 2980 C1
+5514 1867 C1
+5712 3292 C1
+5769 2156 C1
+5968 2334 C1
+-4662 2499 C1
+1.000 UP
+1.000 UL
+LT8
+LTb
+-4945 2359 M
+gsave 0 setgray
+(CLUSTER17) Rshow
+grestore
+LT8
+3781 2357 C2
+3895 2713 C2
+4434 3047 C2
+4463 3625 C2
+4633 3559 C2
+4662 3425 C2
+4718 3351 C2
+4747 3091 C2
+4860 3136 C2
+5031 3247 C2
+5059 2980 C2
+5088 3247 C2
+5315 3358 C2
+5372 3047 C2
+-4662 2359 C2
+1.000 UP
+1.000 UL
+LT0
+LTb
+-4945 2219 M
+gsave 0 setgray
+(CLUSTER18) Rshow
+grestore
+LT0
+3384 2223 C3
+4264 2691 C3
+4292 3024 C3
+4321 3008 C3
+4349 2835 C3
+4434 3024 C3
+4491 2958 C3
+4520 2943 C3
+4548 2891 C3
+4576 3013 C3
+4605 2846 C3
+4633 2691 C3
+4662 2935 C3
+4747 2947 C3
+4775 2958 C3
+4974 2891 C3
+5173 3336 C3
+5286 2601 C3
+-4662 2219 C3
+1.000 UP
+1.000 UL
+LT1
+LTb
+-4945 2079 M
+gsave 0 setgray
+(CLUSTER19) Rshow
+grestore
+LT1
+2475 3158 C4
+2730 2446 C4
+2759 3136 C4
+3412 2357 C4
+3469 1778 C4
+3497 1934 C4
+3724 2201 C4
+3781 2357 C4
+3810 2379 C4
+3838 2546 C4
+3866 2619 C4
+3895 2446 C4
+3923 2379 C4
+3952 2535 C4
+3980 2535 C4
+4008 2416 C4
+4406 2290 C4
+-4662 2079 C4
+1.000 UP
+1.000 UL
+LT2
+LTb
+-4945 1939 M
+gsave 0 setgray
+(CLUSTER20) Rshow
+grestore
+LT2
+1651 732 C5
+2361 1199 C5
+2390 1199 C5
+2617 1867 C5
+2645 1555 C5
+2759 1578 C5
+2872 1822 C5
+2986 1132 C5
+3327 2134 C5
+3526 1555 C5
+3838 3225 C5
+-4662 1939 C5
+1.000 UP
+1.000 UL
+LT3
+LTb
+-4945 1799 M
+gsave 0 setgray
+(CLUSTER21) Rshow
+grestore
+LT3
+1623 798 C6
+1850 1511 C6
+1907 2357 C6
+2049 1043 C6
+2077 1511 C6
+2219 1199 C6
+2390 1021 C6
+3384 2067 C6
+-4662 1799 C6
+1.000 UP
+1.000 UL
+LT4
+LTb
+-4945 1659 M
+gsave 0 setgray
+(CLUSTER22) Rshow
+grestore
+LT4
+3696 1978 C7
+4236 3492 C7
+4548 3069 C7
+4718 3203 C7
+4775 3269 C7
+4946 2713 C7
+5088 2869 C7
+5144 3692 C7
+5173 2290 C7
+5315 3203 C7
+5400 2869 C7
+5542 3047 C7
+5627 3136 C7
+5798 3915 C7
+5940 3447 C7
+6053 3024 C7
+-4662 1659 C7
+1.000 UP
+1.000 UL
+LT5
+LTb
+-4945 1519 M
+gsave 0 setgray
+(CLUSTER23) Rshow
+grestore
+LT5
+3100 2646 C8
+3213 2468 C8
+3611 2179 C8
+3724 2490 C8
+3781 2423 C8
+3810 2223 C8
+3866 2490 C8
+3980 2557 C8
+4008 3180 C8
+4150 2379 C8
+4179 3670 C8
+4207 3203 C8
+4378 2601 C8
+4662 2757 C8
+4690 3269 C8
+-4662 1519 C8
+1.000 UP
+1.000 UL
+LT6
+LTb
+-4945 1379 M
+gsave 0 setgray
+(CLUSTER24) Rshow
+grestore
+LT6
+3923 2401 C9
+3952 2334 C9
+4179 3091 C9
+4207 3358 C9
+4321 2817 C9
+4463 3047 C9
+4576 2935 C9
+4690 3136 C9
+4718 3536 C9
+4804 2935 C9
+4860 3069 C9
+4917 3314 C9
+5201 3804 C9
+5741 2290 C9
+5911 3425 C9
+-4662 1379 C9
+1.000 UP
+1.000 UL
+LT7
+LTb
+-4945 1239 M
+gsave 0 setgray
+(CLUSTER25) Rshow
+grestore
+LT7
+3895 3381 C10
+4207 2646 C10
+4292 2023 C10
+4406 3158 C10
+4491 3870 C10
+4690 3180 C10
+4804 2112 C10
+4917 2668 C10
+5002 3225 C10
+5144 3113 C10
+5173 3381 C10
+5201 3358 C10
+5230 3292 C10
+5315 2757 C10
+5627 3870 C10
+6110 3893 C10
+-4662 1239 C10
+1.000 UP
+1.000 UL
+LT8
+LTb
+-4945 1099 M
+gsave 0 setgray
+(CLUSTER26) Rshow
+grestore
+LT8
+1651 932 C11
+2276 1555 C11
+2418 1466 C11
+2560 1088 C11
+2929 1555 C11
+3270 1956 C11
+-4662 1099 C11
+1.000 UP
+1.000 UL
+LT0
+LTb
+-4945 959 M
+gsave 0 setgray
+(CLUSTER27) Rshow
+grestore
+LT0
+3043 3381 C12
+3213 2156 C12
+3242 2312 C12
+3384 2557 C12
+3639 1934 C12
+3724 2357 C12
+3781 2179 C12
+3810 2279 C12
+3838 2902 C12
+3895 2334 C12
+3980 2691 C12
+4094 2579 C12
+4292 2802 C12
+4378 2290 C12
+4491 2780 C12
+4662 2000 C12
+5201 2780 C12
+5230 2045 C12
+-4662 959 C12
+1.000 UP
+1.000 UL
+LT1
+LTb
+-4945 819 M
+gsave 0 setgray
+(CLUSTER28) Rshow
+grestore
+LT1
+3327 2490 C13
+4747 3826 C13
+5088 2913 C13
+5201 3069 C13
+5315 3870 C13
+5542 2735 C13
+5570 2735 C13
+5656 3781 C13
+5712 3559 C13
+6252 2913 C13
+-4662 819 C13
+1.000 UP
+1.000 UL
+LT2
+LTb
+-3538 4739 M
+gsave 0 setgray
+(CLUSTER29) Rshow
+grestore
+LT2
+3440 3358 C14
+3554 2780 C14
+3724 2490 C14
+3923 2423 C14
+3952 2423 C14
+3980 2935 C14
+4207 2468 C14
+4236 3336 C14
+4264 2846 C14
+4378 2446 C14
+4491 2824 C14
+4548 2668 C14
+4605 2735 C14
+4946 2891 C14
+-3255 4739 C14
+1.000 UP
+1.000 UL
+LT3
+LTb
+-3538 4599 M
+gsave 0 setgray
+(CLUSTER30) Rshow
+grestore
+LT3
+3270 2535 C15
+3838 2691 C15
+3866 2490 C15
+3895 2512 C15
+3952 2757 C15
+3980 2587 C15
+4008 2553 C15
+4037 2668 C15
+4094 2705 C15
+4122 2817 C15
+4150 2768 C15
+4179 2661 C15
+4207 2624 C15
+4236 2757 C15
+4264 2631 C15
+4378 2635 C15
+4491 2579 C15
+4576 2601 C15
+-3255 4599 C15
+1.000 UP
+1.000 UL
+LT4
+LTb
+-3538 4459 M
+gsave 0 setgray
+(CLUSTER31) Rshow
+grestore
+LT4
+3412 2512 S0
+4236 3158 S0
+4491 2913 S0
+4775 3292 S0
+4832 2401 S0
+4946 3292 S0
+4974 3102 S0
+5031 3062 S0
+5088 3314 S0
+5116 3180 S0
+5258 3358 S0
+5343 3047 S0
+5400 2869 S0
+-3255 4459 S0
+1.000 UP
+1.000 UL
+LT5
+LTb
+-3538 4319 M
+gsave 0 setgray
+(CLUSTER32) Rshow
+grestore
+LT5
+3185 1778 S1
+5769 3804 S1
+5883 3982 S1
+5911 4304 S1
+6025 4004 S1
+6053 4004 S1
+6082 4060 S1
+6167 4182 S1
+-3255 4319 S1
+1.000 UP
+1.000 UL
+LT6
+LTb
+-3538 4179 M
+gsave 0 setgray
+(CLUSTER33) Rshow
+grestore
+LT6
+2418 1444 S2
+2816 1578 S2
+2872 2067 S2
+2929 1911 S2
+3100 2156 S2
+3185 1867 S2
+3440 2846 S2
+3554 2446 S2
+3838 2223 S2
+-3255 4179 S2
+1.000 UP
+1.000 UL
+LT7
+LTb
+-3538 4039 M
+gsave 0 setgray
+(CLUSTER34) Rshow
+grestore
+LT7
+3384 2245 S3
+3412 2312 S3
+4037 2090 S3
+4207 2757 S3
+4264 2913 S3
+4434 2223 S3
+4463 2802 S3
+4548 3492 S3
+4662 2646 S3
+4804 3147 S3
+5400 3848 S3
+-3255 4039 S3
+1.000 UP
+1.000 UL
+LT8
+LTb
+-3538 3899 M
+gsave 0 setgray
+(CLUSTER35) Rshow
+grestore
+LT8
+1992 1622 S4
+2106 1310 S4
+2361 1088 S4
+2390 1433 S4
+2532 1911 S4
+2617 1455 S4
+2702 1488 S4
+2730 1733 S4
+2844 1600 S4
+2986 1511 S4
+3043 1711 S4
+3270 1422 S4
+3724 1956 S4
+4378 1422 S4
+-3255 3899 S4
+1.000 UP
+1.000 UL
+LT0
+LTb
+-3538 3759 M
+gsave 0 setgray
+(CLUSTER36) Rshow
+grestore
+LT0
+3043 2201 S5
+3128 2156 S5
+3242 2980 S5
+3384 2179 S5
+3412 2446 S5
+3724 3403 S5
+3810 2312 S5
+3866 2201 S5
+3923 2579 S5
+3952 2156 S5
+3980 2423 S5
+4037 2913 S5
+4179 2390 S5
+4236 2090 S5
+4491 2156 S5
+4576 2423 S5
+4605 2223 S5
+4889 2179 S5
+5031 3002 S5
+5514 3203 S5
+-3255 3759 S5
+1.000 UP
+1.000 UL
+LT1
+LTb
+-3538 3619 M
+gsave 0 setgray
+(CLUSTER37) Rshow
+grestore
+LT1
+3213 1756 S6
+3582 2512 S6
+3639 2757 S6
+3724 2379 S6
+3838 2446 S6
+3980 2891 S6
+4150 2646 S6
+4292 2201 S6
+4321 2635 S6
+4378 3047 S6
+4633 2512 S6
+4718 2468 S6
+4775 2846 S6
+5173 2512 S6
+-3255 3619 S6
+1.000 UP
+1.000 UL
+LT2
+LTb
+-3538 3479 M
+gsave 0 setgray
+(CLUSTER38) Rshow
+grestore
+LT2
+3185 1778 S7
+3696 2201 S7
+3838 3113 S7
+4236 2846 S7
+4292 2579 S7
+4605 3191 S7
+4718 3447 S7
+4860 2869 S7
+4946 3625 S7
+5031 3013 S7
+5258 3314 S7
+5372 2980 S7
+5428 3136 S7
+5883 3225 S7
+-3255 3479 S7
+1.000 UP
+1.000 UL
+LT3
+LTb
+-3538 3339 M
+gsave 0 setgray
+(CLUSTER39) Rshow
+grestore
+LT3
+2276 1488 S8
+2503 2357 S8
+2787 1444 S8
+2844 1711 S8
+2872 1622 S8
+2929 1088 S8
+2958 2268 S8
+3242 1689 S8
+3298 1422 S8
+3355 1978 S8
+3582 1488 S8
+3611 2112 S8
+3639 2312 S8
+-3255 3339 S8
+1.000 UP
+1.000 UL
+LT4
+LTb
+-3538 3199 M
+gsave 0 setgray
+(CLUSTER40) Rshow
+grestore
+LT4
+2560 2780 S9
+2787 2245 S9
+2844 1956 S9
+2872 2234 S9
+2986 1867 S9
+3014 2045 S9
+3100 2245 S9
+3128 2179 S9
+3156 1956 S9
+3213 2268 S9
+3242 1993 S9
+3270 2268 S9
+3298 2034 S9
+3355 2179 S9
+3526 2112 S9
+3866 2312 S9
+-3255 3199 S9
+1.000 UP
+1.000 UL
+LT5
+LTb
+-3538 3059 M
+gsave 0 setgray
+(CLUSTER41) Rshow
+grestore
+LT5
+2730 2713 S10
+3043 2668 S10
+3185 2156 S10
+3213 2156 S10
+3270 2535 S10
+3355 2468 S10
+3384 2167 S10
+3412 2212 S10
+3497 2446 S10
+3554 1934 S10
+3582 2312 S10
+3611 2423 S10
+3639 2535 S10
+3668 2156 S10
+3696 2401 S10
+3781 2345 S10
+3810 2134 S10
+3866 1956 S10
+3980 2323 S10
+4065 1911 S10
+-3255 3059 S10
+1.000 UP
+1.000 UL
+LT6
+LTb
+-3538 2919 M
+gsave 0 setgray
+(CLUSTER42) Rshow
+grestore
+LT6
+3923 2668 S11
+4974 3648 S11
+5315 3670 S11
+5457 3982 S11
+5542 4071 S11
+5627 3603 S11
+5684 3781 S11
+5741 3982 S11
+5798 3603 S11
+5826 3959 S11
+5854 3792 S11
+5883 3989 S11
+5911 3937 S11
+6025 3759 S11
+6252 3648 S11
+-3255 2919 S11
+1.000 UP
+1.000 UL
+LT7
+LTb
+-3538 2779 M
+gsave 0 setgray
+(CLUSTER43) Rshow
+grestore
+LT7
+2901 2468 S12
+3270 1911 S12
+3497 2846 S12
+3582 1422 S12
+3895 1110 S12
+4008 2067 S12
+4037 2090 S12
+4207 2334 S12
+4463 1689 S12
+4520 1288 S12
+4662 3113 S12
+4690 3514 S12
+4804 2735 S12
+5315 2668 S12
+5428 2512 S12
+-3255 2779 S12
+1.000 UP
+1.000 UL
+LT8
+LTb
+-3538 2639 M
+gsave 0 setgray
+(CLUSTER44) Rshow
+grestore
+LT8
+1651 754 S13
+1680 954 S13
+1708 1021 S13
+1907 1132 S13
+1964 1088 S13
+2106 954 S13
+2162 1488 S13
+2844 1255 S13
+3526 2824 S13
+4321 2401 S13
+-3255 2639 S13
+1.000 UP
+1.000 UL
+LT0
+LTb
+-3538 2499 M
+gsave 0 setgray
+(CLUSTER45) Rshow
+grestore
+LT0
+3696 2557 S14
+3753 2357 S14
+3923 1555 S14
+3952 2423 S14
+4094 2468 S14
+4179 1622 S14
+4236 2702 S14
+4349 2334 S14
+4434 2913 S14
+4463 2668 S14
+4491 2468 S14
+4520 2958 S14
+4690 2857 S14
+4804 2624 S14
+4832 2735 S14
+4860 2935 S14
+5088 2490 S14
+5173 2067 S14
+5230 1934 S14
+5343 2646 S14
+-3255 2499 S14
+1.000 UP
+1.000 UL
+LT1
+LTb
+-3538 2359 M
+gsave 0 setgray
+(CLUSTER46) Rshow
+grestore
+LT1
+3355 2579 S15
+3412 1911 S15
+3469 2112 S15
+3497 2468 S15
+3526 3013 S15
+3554 2034 S15
+3611 2223 S15
+3668 2134 S15
+3696 2201 S15
+3724 2691 S15
+3753 2386 S15
+3781 2535 S15
+3866 2179 S15
+3895 2223 S15
+3923 2379 S15
+3980 2134 S15
+4008 2357 S15
+4094 2512 S15
+4122 2423 S15
+4207 2435 S15
+4292 2980 S15
+4349 2624 S15
+4946 2045 S15
+-3255 2359 S15
+1.000 UP
+1.000 UL
+LT2
+LTb
+-3538 2219 M
+gsave 0 setgray
+(CLUSTER47) Rshow
+grestore
+LT2
+2844 3024 D0
+5940 4126 D0
+5968 4271 D0
+5996 4160 D0
+6025 4271 D0
+6053 4048 D0
+6082 4048 D0
+6167 4226 D0
+6195 4449 D0
+6224 4160 D0
+6252 4082 D0
+6309 3893 D0
+6337 4293 D0
+6366 4071 D0
+6394 4538 D0
+6422 4583 D0
+6479 4449 D0
+-3255 2219 D0
+1.000 UP
+1.000 UL
+LT3
+LTb
+-3538 2079 M
+gsave 0 setgray
+(CLUSTER48) Rshow
+grestore
+LT3
+2020 1733 D1
+2191 2334 D1
+2333 2869 D1
+2929 1511 D1
+3213 2034 D1
+3270 2423 D1
+3298 2401 D1
+3469 2134 D1
+3611 1756 D1
+3810 1911 D1
+3866 2201 D1
+-3255 2079 D1
+1.000 UP
+1.000 UL
+LT4
+LTb
+-3538 1939 M
+gsave 0 setgray
+(CLUSTER49) Rshow
+grestore
+LT4
+3043 2156 D2
+3781 2156 D2
+3838 2535 D2
+3952 3336 D2
+4122 2980 D2
+4150 2913 D2
+4179 2935 D2
+4264 3269 D2
+4349 1756 D2
+4520 2646 D2
+4662 2869 D2
+4804 2156 D2
+4889 2034 D2
+5258 2357 D2
+-3255 1939 D2
+1.000 UP
+1.000 UL
+LT5
+LTb
+-3538 1799 M
+gsave 0 setgray
+(CLUSTER50) Rshow
+grestore
+LT5
+4406 2713 D3
+4718 3915 D3
+5570 4004 D3
+5599 4115 D3
+5656 3870 D3
+5684 3425 D3
+6110 3982 D3
+6138 4004 D3
+-3255 1799 D3
+1.000 UP
+1.000 UL
+LT6
+LTb
+-3538 1659 M
+gsave 0 setgray
+(CLUSTER51) Rshow
+grestore
+LT6
+3298 2891 D4
+3952 2334 D4
+4292 2958 D4
+4605 2112 D4
+4718 3002 D4
+4747 2824 D4
+4889 2023 D4
+5400 2023 D4
+5542 2668 D4
+-3255 1659 D4
+1.000 UP
+1.000 UL
+LT7
+LTb
+-3538 1519 M
+gsave 0 setgray
+(CLUSTER52) Rshow
+grestore
+LT7
+3611 2691 D5
+3668 3247 D5
+3895 3336 D5
+4236 2869 D5
+4349 2757 D5
+4406 2958 D5
+4434 3002 D5
+4548 2223 D5
+4605 3091 D5
+4718 3091 D5
+4747 3113 D5
+4832 3069 D5
+4860 3080 D5
+4889 3269 D5
+4917 2880 D5
+4946 3203 D5
+5059 3080 D5
+5088 2668 D5
+5144 2913 D5
+5258 3203 D5
+5712 2757 D5
+5940 2869 D5
+-3255 1519 D5
+1.000 UP
+1.000 UL
+LT8
+LTb
+-3538 1379 M
+gsave 0 setgray
+(CLUSTER53) Rshow
+grestore
+LT8
+1481 609 D6
+1538 620 D6
+1594 687 D6
+1680 1021 D6
+1907 843 D6
+1935 776 D6
+1964 1132 D6
+2248 687 D6
+3384 2334 D6
+-3255 1379 D6
+1.000 UP
+1.000 UL
+LT0
+LTb
+-3538 1239 M
+gsave 0 setgray
+(CLUSTER54) Rshow
+grestore
+LT0
+3753 2045 D7
+4463 3514 D7
+4832 4182 D7
+4860 3536 D7
+5201 4471 D7
+5230 3781 D7
+5315 3737 D7
+5428 3937 D7
+5457 3893 D7
+5485 3692 D7
+5627 3625 D7
+5656 4093 D7
+5940 3625 D7
+5968 4226 D7
+6082 4249 D7
+-3255 1239 D7
+1.000 UP
+1.000 UL
+LT1
+LTb
+-3538 1099 M
+gsave 0 setgray
+(CLUSTER55) Rshow
+grestore
+LT1
+1509 821 D8
+1594 776 D8
+1736 754 D8
+1793 798 D8
+3412 2379 D8
+-3255 1099 D8
+1.000 UP
+1.000 UL
+LT2
+LTb
+-3538 959 M
+gsave 0 setgray
+(CLUSTER56) Rshow
+grestore
+LT2
+1623 487 D9
+1765 843 D9
+1793 910 D9
+2106 943 D9
+2162 865 D9
+2702 1422 D9
+2844 1667 D9
+3128 709 D9
+3355 2468 D9
+3440 1555 D9
+3526 1422 D9
+-3255 959 D9
+1.000 UP
+1.000 UL
+LT3
+LTb
+-3538 819 M
+gsave 0 setgray
+(CLUSTER57) Rshow
+grestore
+LT3
+3895 2490 D10
+4747 3759 D10
+4917 3403 D10
+5088 3692 D10
+5144 3529 D10
+5173 4204 D10
+5230 3648 D10
+5258 3458 D10
+5315 3982 D10
+5343 3314 D10
+5457 3514 D10
+5712 3425 D10
+5769 3269 D10
+5798 4004 D10
+5826 4182 D10
+5911 4015 D10
+-3255 819 D10
+1.000 UP
+1.000 UL
+LT4
+LTb
+-2131 4739 M
+gsave 0 setgray
+(CLUSTER58) Rshow
+grestore
+LT4
+3242 2179 D11
+4747 3648 D11
+5059 3614 D11
+5088 3514 D11
+5258 3603 D11
+5286 3336 D11
+5372 3548 D11
+5514 3670 D11
+5627 3670 D11
+5684 3781 D11
+5769 4004 D11
+5940 3915 D11
+6053 3959 D11
+6337 3514 D11
+6394 4071 D11
+-1848 4739 D11
+1.000 UP
+1.000 UL
+LT5
+LTb
+-2131 4599 M
+gsave 0 setgray
+(CLUSTER59) Rshow
+grestore
+LT5
+2162 2112 D12
+2276 1800 D12
+2333 1622 D12
+2390 1800 D12
+2418 1333 D12
+2560 2090 D12
+2617 1466 D12
+2787 1711 D12
+3384 2579 D12
+-1848 4599 D12
+1.000 UP
+1.000 UL
+LT6
+LTb
+-2131 4459 M
+gsave 0 setgray
+(CLUSTER60) Rshow
+grestore
+LT6
+2844 1867 D13
+3469 2468 D13
+3668 2156 D13
+3838 2512 D13
+4122 2490 D13
+4150 2713 D13
+4179 2757 D13
+4207 2735 D13
+4236 2774 D13
+4264 2679 D13
+4292 2750 D13
+4349 2913 D13
+4378 2691 D13
+4406 2791 D13
+4434 2668 D13
+4548 2980 D13
+4576 2935 D13
+4605 2902 D13
+4690 2735 D13
+-1848 4459 D13
+1.000 UP
+1.000 UL
+LT7
+LTb
+-2131 4319 M
+gsave 0 setgray
+(CLUSTER61) Rshow
+grestore
+LT7
+1878 821 D14
+2219 1644 D14
+2248 2067 D14
+2304 1696 D14
+2674 1266 D14
+2759 1466 D14
+2872 2045 D14
+3014 2112 D14
+3043 1756 D14
+3128 2179 D14
+3213 2000 D14
+3242 1299 D14
+3270 1867 D14
+3781 2045 D14
+3895 1711 D14
+-1848 4319 D14
+1.000 UP
+1.000 UL
+LT8
+LTb
+-2131 4179 M
+gsave 0 setgray
+(CLUSTER62) Rshow
+grestore
+LT8
+2730 1444 D15
+6224 4538 D15
+6280 4382 D15
+6309 4204 D15
+6366 4393 D15
+6422 4349 D15
+6479 4293 D15
+6564 4304 D15
+-1848 4179 D15
+1.000 UP
+1.000 UL
+LT0
+LTb
+-2131 4039 M
+gsave 0 setgray
+(CLUSTER63) Rshow
+grestore
+LT0
+2333 1221 BoxE
+2390 1221 BoxE
+2446 1266 BoxE
+2475 1845 BoxE
+2503 1210 BoxE
+2560 1177 BoxE
+2872 1511 BoxE
+3185 2023 BoxE
+-1848 4039 BoxE
+1.000 UP
+1.000 UL
+LT1
+LTb
+-2131 3899 M
+gsave 0 setgray
+(CLUSTER64) Rshow
+grestore
+LT1
+2645 2334 CircE
+2702 1533 CircE
+2787 2245 CircE
+2929 1600 CircE
+2986 2000 CircE
+3014 2579 CircE
+3043 1822 CircE
+3156 2546 CircE
+3497 2090 CircE
+3526 2512 CircE
+3582 2379 CircE
+3639 3024 CircE
+-1848 3899 CircE
+1.000 UP
+1.000 UL
+LT2
+LTb
+-2131 3759 M
+gsave 0 setgray
+(CLUSTER65) Rshow
+grestore
+LT2
+1793 932 TriUE
+1850 1132 TriUE
+1992 1221 TriUE
+2049 1155 TriUE
+2162 1155 TriUE
+2191 1733 TriUE
+2219 1622 TriUE
+2248 1188 TriUE
+2333 1110 TriUE
+2475 1244 TriUE
+2674 1110 TriUE
+3014 1578 TriUE
+-1848 3759 TriUE
+1.000 UP
+1.000 UL
+LT3
+LTb
+-2131 3619 M
+gsave 0 setgray
+(CLUSTER66) Rshow
+grestore
+LT3
+2077 1911 TriDE
+2162 1533 TriDE
+2219 1266 TriDE
+2446 887 TriDE
+2560 1444 TriDE
+2787 2023 TriDE
+2844 1756 TriDE
+2929 1533 TriDE
+2958 1822 TriDE
+3043 1644 TriDE
+3071 1889 TriDE
+3242 1867 TriDE
+3270 1778 TriDE
+4179 1444 TriDE
+-1848 3619 TriDE
+1.000 UP
+1.000 UL
+LT4
+LTb
+-2131 3479 M
+gsave 0 setgray
+(CLUSTER67) Rshow
+grestore
+LT4
+2503 1555 DiaE
+2986 1867 DiaE
+3156 1889 DiaE
+3185 1956 DiaE
+3213 1578 DiaE
+3242 1711 DiaE
+3355 2212 DiaE
+3440 1800 DiaE
+3497 1667 DiaE
+3554 2134 DiaE
+3611 1711 DiaE
+3639 1834 DiaE
+3696 2223 DiaE
+3724 2112 DiaE
+3838 1733 DiaE
+4179 2223 DiaE
+4548 1444 DiaE
+-1848 3479 DiaE
+1.000 UP
+1.000 UL
+LT5
+LTb
+-2131 3339 M
+gsave 0 setgray
+(CLUSTER68) Rshow
+grestore
+LT5
+2844 1466 PentE
+3952 3893 PentE
+4065 3091 PentE
+4236 3536 PentE
+4292 3603 PentE
+4378 2958 PentE
+4434 3091 PentE
+4520 3136 PentE
+4605 2935 PentE
+4662 2768 PentE
+4690 3514 PentE
+4747 4026 PentE
+4775 3403 PentE
+4974 3603 PentE
+5173 3113 PentE
+5315 3358 PentE
+-1848 3339 PentE
+1.000 UP
+1.000 UL
+LT6
+LTb
+-2131 3199 M
+gsave 0 setgray
+(CLUSTER69) Rshow
+grestore
+LT6
+3100 1867 BoxW
+4775 3314 BoxW
+4860 3625 BoxW
+4917 3314 BoxW
+4974 3403 BoxW
+5031 2913 BoxW
+5059 3625 BoxW
+5088 3581 BoxW
+5173 3169 BoxW
+5286 3559 BoxW
+5343 2691 BoxW
+5514 3447 BoxW
+5599 4071 BoxW
+-1848 3199 BoxW
+1.000 UP
+1.000 UL
+LT7
+LTb
+-2131 3059 M
+gsave 0 setgray
+(CLUSTER70) Rshow
+grestore
+LT7
+1396 420 CircW
+1765 732 CircW
+2077 1355 CircW
+2106 1221 CircW
+2219 1021 CircW
+2276 1155 CircW
+2418 865 CircW
+2475 1333 CircW
+2503 1422 CircW
+2702 1555 CircW
+2929 1600 CircW
+2958 1889 CircW
+3242 1956 CircW
+3582 1110 CircW
+-1848 3059 CircW
+1.000 UP
+1.000 UL
+LT8
+LTb
+-2131 2919 M
+gsave 0 setgray
+(CLUSTER71) Rshow
+grestore
+LT8
+3100 1733 TriUW
+6280 4538 TriUW
+6394 4382 TriUW
+6422 4494 TriUW
+6451 4583 TriUW
+6479 4282 TriUW
+6536 4471 TriUW
+6564 4486 TriUW
+6593 4516 TriUW
+6621 4538 TriUW
+-1848 2919 TriUW
+1.000 UP
+1.000 UL
+LT0
+LTb
+-2131 2779 M
+gsave 0 setgray
+(CLUSTER72) Rshow
+grestore
+LT0
+3213 3002 TriDW
+3242 1800 TriDW
+3497 2846 TriDW
+3668 2045 TriDW
+3724 3002 TriDW
+3781 2468 TriDW
+3923 2691 TriDW
+4065 2557 TriDW
+4207 2824 TriDW
+4406 2802 TriDW
+4520 2334 TriDW
+4804 2468 TriDW
+5485 3648 TriDW
+-1848 2779 TriDW
+1.000 UP
+1.000 UL
+LT1
+LTb
+-2131 2639 M
+gsave 0 setgray
+(CLUSTER73) Rshow
+grestore
+LT1
+2617 1689 DiaW
+2816 1756 DiaW
+2872 2624 DiaW
+3185 2468 DiaW
+3270 1822 DiaW
+3440 1878 DiaW
+3866 2412 DiaW
+3895 2112 DiaW
+4065 1733 DiaW
+4520 2112 DiaW
+-1848 2639 DiaW
+1.000 UP
+1.000 UL
+LT2
+LTb
+-2131 2499 M
+gsave 0 setgray
+(CLUSTER74) Rshow
+grestore
+LT2
+2759 1511 PentW
+3355 2423 PentW
+3469 2401 PentW
+3497 1911 PentW
+3526 2646 PentW
+3554 2691 PentW
+3639 2379 PentW
+3668 2824 PentW
+3696 3403 PentW
+3810 2156 PentW
+3838 2412 PentW
+3866 2067 PentW
+3952 2401 PentW
+4037 2958 PentW
+5002 2512 PentW
+5144 2134 PentW
+-1848 2499 PentW
+1.000 UP
+1.000 UL
+LT3
+LTb
+-2131 2359 M
+gsave 0 setgray
+(CLUSTER75) Rshow
+grestore
+LT3
+2872 1589 Pls
+3298 2557 Pls
+3412 2156 Pls
+3668 1488 Pls
+3866 1310 Pls
+3952 2557 Pls
+3980 1889 Pls
+4065 1845 Pls
+5286 1155 Pls
+-1848 2359 Pls
+1.000 UP
+1.000 UL
+LT4
+LTb
+-2131 2219 M
+gsave 0 setgray
+(CLUSTER76) Rshow
+grestore
+LT4
+2106 1088 Crs
+2333 1845 Crs
+2901 1399 Crs
+2958 1355 Crs
+3014 1756 Crs
+3156 1221 Crs
+3213 1555 Crs
+3355 1644 Crs
+3497 2134 Crs
+3526 2268 Crs
+3611 1533 Crs
+4491 1177 Crs
+-1848 2219 Crs
+1.000 UP
+1.000 UL
+LT5
+LTb
+-2131 2079 M
+gsave 0 setgray
+(CLUSTER77) Rshow
+grestore
+LT5
+2958 1578 Star
+4974 3870 Star
+5144 3826 Star
+5315 4004 Star
+5457 3581 Star
+5514 3766 Star
+5542 3781 Star
+5627 3759 Star
+5798 4004 Star
+5883 3893 Star
+5911 4249 Star
+-1848 2079 Star
+1.000 UP
+1.000 UL
+LT6
+LTb
+-2131 1939 M
+gsave 0 setgray
+(CLUSTER78) Rshow
+grestore
+LT6
+2787 1778 Box
+4662 3425 Box
+4690 3737 Box
+4946 3514 Box
+5002 3024 Box
+5031 3492 Box
+5088 3881 Box
+5116 2947 Box
+5286 3915 Box
+5428 3203 Box
+5542 3492 Box
+5627 3436 Box
+5684 3470 Box
+-1848 1939 Box
+1.000 UP
+1.000 UL
+LT7
+LTb
+-2131 1799 M
+gsave 0 setgray
+(CLUSTER79) Rshow
+grestore
+LT7
+3071 1800 BoxF
+5741 3247 BoxF
+5798 4048 BoxF
+5826 4026 BoxF
+5854 4137 BoxF
+5968 4160 BoxF
+5996 4204 BoxF
+6053 3670 BoxF
+6110 4226 BoxF
+6224 4160 BoxF
+6309 4494 BoxF
+-1848 1799 BoxF
+1.000 UP
+1.000 UL
+LT8
+LTb
+-2131 1659 M
+gsave 0 setgray
+(CLUSTER80) Rshow
+grestore
+LT8
+2162 2023 Circle
+2333 1110 Circle
+2446 1466 Circle
+2475 1355 Circle
+2503 2312 Circle
+2532 1667 Circle
+2560 1455 Circle
+2759 1600 Circle
+2872 1733 Circle
+3100 1244 Circle
+3242 1778 Circle
+-1848 1659 Circle
+1.000 UP
+1.000 UL
+LT0
+LTb
+-2131 1519 M
+gsave 0 setgray
+(CLUSTER81) Rshow
+grestore
+LT0
+3014 1711 CircleF
+3100 2245 CircleF
+3582 1934 CircleF
+3838 2557 CircleF
+3895 2646 CircleF
+4008 2423 CircleF
+4037 1756 CircleF
+4122 2446 CircleF
+4150 2201 CircleF
+4207 2698 CircleF
+4236 1900 CircleF
+4264 2824 CircleF
+4321 2557 CircleF
+4349 2679 CircleF
+4406 2256 CircleF
+4548 2757 CircleF
+4576 2691 CircleF
+4633 1800 CircleF
+5286 1622 CircleF
+-1848 1519 CircleF
+1.000 UP
+1.000 UL
+LT1
+LTb
+-2131 1379 M
+gsave 0 setgray
+(CLUSTER82) Rshow
+grestore
+LT1
+3838 2379 TriU
+3923 2423 TriU
+4094 3180 TriU
+4122 3603 TriU
+4321 2134 TriU
+4378 2691 TriU
+4406 2802 TriU
+4633 3514 TriU
+4718 2891 TriU
+4747 3136 TriU
+4775 3603 TriU
+4860 3714 TriU
+5088 3292 TriU
+5258 3314 TriU
+5570 3091 TriU
+5656 2780 TriU
+-1848 1379 TriU
+1.000 UP
+1.000 UL
+LT2
+LTb
+-2131 1239 M
+gsave 0 setgray
+(CLUSTER83) Rshow
+grestore
+LT2
+3071 2646 TriUF
+6394 4360 TriUF
+6508 4293 TriUF
+-1848 1239 TriUF
+1.000 UP
+1.000 UL
+LT3
+LTb
+-2131 1099 M
+gsave 0 setgray
+(CLUSTER84) Rshow
+grestore
+LT3
+2645 2112 TriD
+6025 4071 TriD
+6053 4293 TriD
+6082 4271 TriD
+6110 4160 TriD
+6167 4204 TriD
+6195 4271 TriD
+6224 4271 TriD
+6252 4137 TriD
+6280 4226 TriD
+6309 4349 TriD
+6394 4226 TriD
+6451 4293 TriD
+-1848 1099 TriD
+1.000 UP
+1.000 UL
+LT4
+LTb
+-2131 959 M
+gsave 0 setgray
+(CLUSTER85) Rshow
+grestore
+LT4
+2560 1244 TriDF
+2958 1845 TriDF
+2986 2023 TriDF
+3128 1644 TriDF
+3156 1622 TriDF
+3185 1756 TriDF
+3213 2357 TriDF
+3242 2000 TriDF
+3270 1767 TriDF
+3327 1934 TriDF
+3412 1733 TriDF
+3469 1607 TriDF
+3554 1978 TriDF
+3582 2000 TriDF
+3639 2245 TriDF
+3668 1444 TriDF
+4008 1889 TriDF
+-1848 959 TriDF
+1.000 UP
+1.000 UL
+LT5
+LTb
+-2131 819 M
+gsave 0 setgray
+(CLUSTER86) Rshow
+grestore
+LT5
+2390 1043 Dia
+2532 754 Dia
+2816 1066 Dia
+2844 1155 Dia
+3071 1978 Dia
+3327 1900 Dia
+-1848 819 Dia
+1.000 UP
+1.000 UL
+LT6
+LTb
+-724 4739 M
+gsave 0 setgray
+(CLUSTER87) Rshow
+grestore
+LT6
+3270 1778 DiaF
+3952 3581 DiaF
+5315 3514 DiaF
+5372 3381 DiaF
+5542 3559 DiaF
+5712 3625 DiaF
+5741 3470 DiaF
+5826 3470 DiaF
+5854 3848 DiaF
+5883 3514 DiaF
+-441 4739 DiaF
+1.000 UP
+1.000 UL
+LT7
+LTb
+-724 4599 M
+gsave 0 setgray
+(CLUSTER88) Rshow
+grestore
+LT7
+3696 2268 Pent
+4236 2869 Pent
+4349 3113 Pent
+4718 3314 Pent
+4917 3625 Pent
+5059 2958 Pent
+5088 3648 Pent
+5116 3392 Pent
+5144 3559 Pent
+5173 3433 Pent
+5201 3395 Pent
+5230 3403 Pent
+5258 3581 Pent
+5286 3559 Pent
+5315 3692 Pent
+5343 3447 Pent
+5372 3648 Pent
+5428 3959 Pent
+5570 3581 Pent
+-441 4599 Pent
+1.000 UP
+1.000 UL
+LT8
+LTb
+-724 4459 M
+gsave 0 setgray
+(CLUSTER89) Rshow
+grestore
+LT8
+3327 1978 PentF
+4065 3269 PentF
+4122 3069 PentF
+4548 3314 PentF
+4662 3269 PentF
+4718 3113 PentF
+4775 3781 PentF
+4832 3514 PentF
+4860 3225 PentF
+4889 3470 PentF
+4946 3548 PentF
+5116 3670 PentF
+5144 3180 PentF
+5173 3358 PentF
+5201 3937 PentF
+5656 3492 PentF
+-441 4459 PentF
+1.000 UP
+1.000 UL
+LT0
+LTb
+-724 4319 M
+gsave 0 setgray
+(CLUSTER90) Rshow
+grestore
+LT0
+3497 1845 C0
+3526 2112 C0
+3582 2550 C0
+3696 2212 C0
+3753 2891 C0
+3866 3024 C0
+3895 2557 C0
+3923 2601 C0
+3952 2401 C0
+3980 3047 C0
+4037 2468 C0
+4122 2312 C0
+4292 2924 C0
+4321 2579 C0
+4548 3336 C0
+4576 2646 C0
+5002 2290 C0
+-441 4319 C0
+1.000 UP
+1.000 UL
+LT1
+LTb
+-724 4179 M
+gsave 0 setgray
+(CLUSTER91) Rshow
+grestore
+LT1
+2787 1867 C1
+3043 2601 C1
+3554 2601 C1
+3611 2112 C1
+3668 2343 C1
+3696 2290 C1
+3724 2290 C1
+3753 2357 C1
+3781 2446 C1
+3810 2601 C1
+3838 2446 C1
+3952 2379 C1
+3980 2379 C1
+4008 2312 C1
+4037 2691 C1
+4122 2245 C1
+4207 2490 C1
+4264 2078 C1
+4292 2446 C1
+4491 2780 C1
+-441 4179 C1
+1.000 UP
+1.000 UL
+LT2
+LTb
+-724 4039 M
+gsave 0 setgray
+(CLUSTER92) Rshow
+grestore
+LT2
+3497 3692 C2
+3895 2601 C2
+4065 2891 C2
+4150 3069 C2
+4179 3848 C2
+4321 3403 C2
+4406 3269 C2
+4434 3158 C2
+4633 2935 C2
+4662 3191 C2
+4690 3425 C2
+5059 3403 C2
+5343 4271 C2
+-441 4039 C2
+1.000 UP
+1.000 UL
+LT3
+LTb
+-724 3899 M
+gsave 0 setgray
+(CLUSTER93) Rshow
+grestore
+LT3
+2361 1310 C3
+2418 1132 C3
+2645 1422 C3
+2702 1555 C3
+2759 2052 C3
+2787 1310 C3
+3043 1956 C3
+3185 2023 C3
+3213 2023 C3
+3242 1444 C3
+3270 1622 C3
+3298 2357 C3
+3384 1756 C3
+3412 2201 C3
+3497 1288 C3
+3639 1288 C3
+3668 1845 C3
+-441 3899 C3
+1.000 UP
+1.000 UL
+LT4
+LTb
+-724 3759 M
+gsave 0 setgray
+(CLUSTER94) Rshow
+grestore
+LT4
+3071 3091 C4
+3412 3447 C4
+3469 2312 C4
+3724 2579 C4
+3781 3091 C4
+3810 2535 C4
+4037 2757 C4
+4292 3692 C4
+4378 3314 C4
+4406 3169 C4
+5031 2891 C4
+5059 2590 C4
+5144 3002 C4
+5258 2401 C4
+5286 3848 C4
+-441 3759 C4
+1.000 UP
+1.000 UL
+LT5
+LTb
+-724 3619 M
+gsave 0 setgray
+(CLUSTER95) Rshow
+grestore
+LT5
+1822 1355 C5
+2162 1244 C5
+2276 2023 C5
+2304 1188 C5
+2560 954 C5
+2674 1622 C5
+3128 2423 C5
+3866 2201 C5
+-441 3619 C5
+1.000 UP
+1.000 UL
+LT6
+LTb
+-724 3479 M
+gsave 0 setgray
+(CLUSTER96) Rshow
+grestore
+LT6
+2588 2290 C6
+2617 2646 C6
+2645 1355 C6
+2844 2579 C6
+2929 2312 C6
+3014 2223 C6
+3043 2290 C6
+3100 3113 C6
+3156 2958 C6
+3185 2156 C6
+3355 2167 C6
+3384 2334 C6
+3412 2379 C6
+3526 2268 C6
+3753 2512 C6
+3781 1889 C6
+3810 2312 C6
+3952 3002 C6
+4008 2891 C6
+4037 2557 C6
+4207 2179 C6
+-441 3479 C6
+1.000 UP
+1.000 UL
+LT7
+LTb
+-724 3339 M
+gsave 0 setgray
+(CLUSTER97) Rshow
+grestore
+LT7
+4264 1845 C7
+6082 4137 C7
+6309 4427 C7
+6337 4360 C7
+6394 4271 C7
+6451 4449 C7
+6479 4560 C7
+6508 4460 C7
+6536 4560 C7
+6564 4416 C7
+6593 4204 C7
+6650 4560 C7
+-441 3339 C7
+1.000 UP
+1.000 UL
+LT8
+LTb
+-724 3199 M
+gsave 0 setgray
+(CLUSTER98) Rshow
+grestore
+LT8
+2986 1889 C8
+3639 2980 C8
+3952 2379 C8
+4008 2691 C8
+4037 2991 C8
+4094 1800 C8
+4179 2401 C8
+4207 2557 C8
+4662 2290 C8
+4718 2958 C8
+5116 1600 C8
+-441 3199 C8
+1.000 UP
+1.000 UL
+LT0
+LTb
+-724 3059 M
+gsave 0 setgray
+(CLUSTER99) Rshow
+grestore
+LT0
+1566 509 C9
+1708 1667 C9
+1793 843 C9
+1935 1177 C9
+2077 1244 C9
+2248 1288 C9
+2361 1244 C9
+2418 1199 C9
+2617 1266 C9
+3071 1533 C9
+-441 3059 C9
+1.000 UP
+1.000 UL
+LT1
+LTb
+-724 2919 M
+gsave 0 setgray
+(CLUSTER100) Rshow
+grestore
+LT1
+1793 2023 C10
+2191 1221 C10
+2219 2535 C10
+2390 1533 C10
+2617 1444 C10
+2645 1511 C10
+2702 2090 C10
+2730 1511 C10
+2787 2112 C10
+2816 1644 C10
+2901 2000 C10
+2929 1600 C10
+3100 1689 C10
+3185 1644 C10
+3327 1689 C10
+3412 3203 C10
+-441 2919 C10
+1.000 UP
+1.000 UL
+LT2
+LTb
+-724 2779 M
+gsave 0 setgray
+(CLUSTER101) Rshow
+grestore
+LT2
+3128 2468 C11
+3242 1956 C11
+3611 2134 C11
+3668 1822 C11
+3923 2223 C11
+3980 2624 C11
+4008 2379 C11
+4179 2490 C11
+4207 1822 C11
+4434 3180 C11
+4520 2802 C11
+4662 2780 C11
+4775 2913 C11
+5286 1978 C11
+5315 2557 C11
+5485 2668 C11
+-441 2779 C11
+1.000 UP
+1.000 UL
+LT3
+LTb
+-724 2639 M
+gsave 0 setgray
+(CLUSTER102) Rshow
+grestore
+LT3
+1765 954 C12
+2162 2134 C12
+2191 1199 C12
+2446 1444 C12
+2588 1867 C12
+2759 1800 C12
+2872 2245 C12
+2901 1266 C12
+3071 1600 C12
+3185 1288 C12
+3242 1578 C12
+3270 2512 C12
+3384 2067 C12
+3952 3180 C12
+4804 3514 C12
+-441 2639 C12
+1.000 UP
+1.000 UL
+LT4
+LTb
+-724 2499 M
+gsave 0 setgray
+(CLUSTER103) Rshow
+grestore
+LT4
+3327 2535 C13
+4008 2646 C13
+4037 2631 C13
+4065 2791 C13
+4122 2969 C13
+4179 2802 C13
+4207 2757 C13
+4236 2735 C13
+4264 2824 C13
+4321 2921 C13
+4406 2876 C13
+4434 2846 C13
+4463 2857 C13
+4491 3180 C13
+4520 3180 C13
+4576 2668 C13
+4605 2935 C13
+4633 3069 C13
+4662 2980 C13
+4718 3069 C13
+4974 2935 C13
+5002 2891 C13
+5088 2624 C13
+-441 2499 C13
+1.000 UP
+1.000 UL
+LT5
+LTb
+-724 2359 M
+gsave 0 setgray
+(CLUSTER104) Rshow
+grestore
+LT5
+3043 1800 C14
+4605 3203 C14
+4946 3982 C14
+5031 3536 C14
+5230 3781 C14
+5258 3091 C14
+5286 3403 C14
+5428 3314 C14
+5684 3559 C14
+5741 4004 C14
+5769 3403 C14
+5854 3603 C14
+5883 4004 C14
+5940 3625 C14
+5968 3804 C14
+5996 2713 C14
+6138 3470 C14
+6167 4204 C14
+-441 2359 C14
+1.000 UP
+1.000 UL
+LT6
+LTb
+-724 2219 M
+gsave 0 setgray
+(CLUSTER105) Rshow
+grestore
+LT6
+3298 1978 C15
+5968 4293 C15
+6053 4360 C15
+6082 4360 C15
+6195 4538 C15
+6280 4375 C15
+6366 4282 C15
+6451 4382 C15
+-441 2219 C15
+1.000 UP
+1.000 UL
+LT7
+LTb
+-724 2079 M
+gsave 0 setgray
+(CLUSTER106) Rshow
+grestore
+LT7
+3100 1778 S0
+4605 3336 S0
+4662 4093 S0
+4690 3247 S0
+4775 3180 S0
+4860 3314 S0
+4946 3737 S0
+5059 3648 S0
+5144 3804 S0
+5258 4004 S0
+5343 4026 S0
+5372 3937 S0
+5428 3625 S0
+5457 2935 S0
+5542 3603 S0
+5599 3648 S0
+5627 4048 S0
+5741 3425 S0
+5798 3425 S0
+5854 3648 S0
+-441 2079 S0
+1.000 UP
+1.000 UL
+LT8
+LTb
+-724 1939 M
+gsave 0 setgray
+(CLUSTER107) Rshow
+grestore
+LT8
+3242 1689 S1
+4406 3236 S1
+4633 3395 S1
+4690 3470 S1
+4718 3358 S1
+4747 3232 S1
+4775 3351 S1
+4804 3403 S1
+4832 3091 S1
+4860 3152 S1
+4889 3091 S1
+4917 3169 S1
+4946 3247 S1
+4974 3492 S1
+5002 3548 S1
+5031 3425 S1
+5059 3303 S1
+5088 3158 S1
+5116 3047 S1
+5173 3425 S1
+5258 3269 S1
+5286 3225 S1
+5315 3091 S1
+-441 1939 S1
+1.000 UP
+1.000 UL
+LT0
+LTb
+-724 1799 M
+gsave 0 setgray
+(CLUSTER108) Rshow
+grestore
+LT0
+3156 1822 S2
+3838 3759 S2
+3952 4137 S2
+4207 3002 S2
+4236 3169 S2
+4718 3069 S2
+4775 3692 S2
+4832 3136 S2
+4860 3247 S2
+4917 3403 S2
+5059 3225 S2
+5116 3314 S2
+5144 3514 S2
+5173 3536 S2
+5258 2780 S2
+5286 3614 S2
+5400 3759 S2
+5457 3069 S2
+5542 3269 S2
+5798 3247 S2
+-441 1799 S2
+1.000 UP
+1.000 UL
+LT1
+LTb
+-724 1659 M
+gsave 0 setgray
+(CLUSTER109) Rshow
+grestore
+LT1
+3100 1956 S3
+3185 2824 S3
+3412 3091 S3
+3611 2713 S3
+3639 2624 S3
+3838 2780 S3
+3952 2334 S3
+4150 2223 S3
+4179 2223 S3
+4207 2579 S3
+4321 2735 S3
+4378 3670 S3
+4576 3937 S3
+5116 2846 S3
+-441 1659 S3
+1.000 UP
+1.000 UL
+LT2
+LTb
+-724 1519 M
+gsave 0 setgray
+(CLUSTER110) Rshow
+grestore
+LT2
+3384 1845 S4
+4264 2958 S4
+4349 2824 S4
+4378 2869 S4
+4406 2846 S4
+4491 2935 S4
+4520 2857 S4
+4548 3047 S4
+4576 3069 S4
+4605 3036 S4
+4633 2668 S4
+4662 3113 S4
+4690 3203 S4
+4718 3158 S4
+4747 3039 S4
+4832 3247 S4
+4860 3136 S4
+5002 2891 S4
+5059 2880 S4
+5088 3125 S4
+5116 3113 S4
+5286 3136 S4
+5343 2134 S4
+-441 1519 S4
+1.000 UP
+1.000 UL
+LT3
+LTb
+-724 1379 M
+gsave 0 setgray
+(CLUSTER111) Rshow
+grestore
+LT3
+1481 620 S5
+1907 1077 S5
+2276 1155 S5
+3128 2179 S5
+-441 1379 S5
+1.000 UP
+1.000 UL
+LT4
+LTb
+-724 1239 M
+gsave 0 setgray
+(CLUSTER112) Rshow
+grestore
+LT4
+2248 1533 S6
+2361 1066 S6
+2446 2045 S6
+2532 1778 S6
+2560 1711 S6
+2674 2090 S6
+2702 1845 S6
+2787 1622 S6
+2929 1667 S6
+2958 1778 S6
+3071 1822 S6
+3128 2423 S6
+3156 1978 S6
+3384 1767 S6
+4434 2023 S6
+-441 1239 S6
+1.000 UP
+1.000 UL
+LT5
+LTb
+-724 1099 M
+gsave 0 setgray
+(CLUSTER113) Rshow
+grestore
+LT5
+2162 1266 S7
+2304 910 S7
+2418 1132 S7
+2986 1778 S7
+3213 1622 S7
+-441 1099 S7
+1.000 UP
+1.000 UL
+LT6
+LTb
+-724 959 M
+gsave 0 setgray
+(CLUSTER114) Rshow
+grestore
+LT6
+2787 1867 S8
+4207 3136 S8
+4463 3225 S8
+4520 2913 S8
+4633 3102 S8
+4662 3269 S8
+4690 2780 S8
+4775 3314 S8
+4804 3425 S8
+4860 3381 S8
+4889 3225 S8
+4917 3314 S8
+4974 3247 S8
+5002 3214 S8
+5031 3358 S8
+5088 3269 S8
+5173 3570 S8
+5258 3425 S8
+-441 959 S8
+1.000 UP
+1.000 UL
+LT7
+LTb
+-724 819 M
+gsave 0 setgray
+(CLUSTER115) Rshow
+grestore
+LT7
+2049 2824 S9
+2617 3002 S9
+3156 2045 S9
+3440 2735 S9
+3639 2802 S9
+3696 3069 S9
+3810 2134 S9
+4264 2512 S9
+4378 3225 S9
+4491 2891 S9
+4662 3180 S9
+4804 3113 S9
+4832 3358 S9
+5088 3247 S9
+5144 2869 S9
+5315 2802 S9
+5684 3670 S9
+-441 819 S9
+1.000 UP
+1.000 UL
+LT8
+LTb
+683 4739 M
+gsave 0 setgray
+(CLUSTER116) Rshow
+grestore
+LT8
+2446 2067 S10
+4321 4115 S10
+4946 3358 S10
+4974 3425 S10
+5230 2357 S10
+5258 3603 S10
+5343 3314 S10
+5457 3714 S10
+5514 2757 S10
+5684 3959 S10
+5712 3403 S10
+5798 3292 S10
+5854 3536 S10
+5911 3804 S10
+5940 3581 S10
+5996 3648 S10
+6025 3403 S10
+966 4739 S10
+1.000 UP
+1.000 UL
+LT0
+LTb
+683 4599 M
+gsave 0 setgray
+(CLUSTER117) Rshow
+grestore
+LT0
+2730 2223 S11
+4832 2268 S11
+5059 2913 S11
+5230 3381 S11
+5258 3247 S11
+5343 2691 S11
+5428 3047 S11
+5457 3781 S11
+5485 2601 S11
+5599 2913 S11
+5712 3136 S11
+5826 2891 S11
+966 4599 S11
+1.000 UP
+1.000 UL
+LT1
+LTb
+683 4459 M
+gsave 0 setgray
+(CLUSTER118) Rshow
+grestore
+LT1
+2304 1310 S12
+3327 3113 S12
+3384 2223 S12
+3412 2290 S12
+3497 2000 S12
+3668 2646 S12
+3696 2824 S12
+3810 2780 S12
+3838 2624 S12
+3895 2379 S12
+3923 2357 S12
+3980 2757 S12
+4037 2646 S12
+4094 2691 S12
+4150 2557 S12
+4179 2535 S12
+4463 2624 S12
+4889 3314 S12
+966 4459 S12
+1.000 UP
+1.000 UL
+LT2
+LTb
+683 4319 M
+gsave 0 setgray
+(CLUSTER119) Rshow
+grestore
+LT2
+2588 1978 S13
+3639 3158 S13
+3668 2846 S13
+3753 3180 S13
+3923 2646 S13
+4349 2980 S13
+4605 2846 S13
+4633 2757 S13
+4662 2802 S13
+4690 2891 S13
+4718 2802 S13
+4747 3002 S13
+4832 2490 S13
+4917 2624 S13
+966 4319 S13
+1.000 UP
+1.000 UL
+LT3
+LTb
+683 4179 M
+gsave 0 setgray
+(CLUSTER120) Rshow
+grestore
+LT3
+2645 2490 S14
+5656 4249 S14
+5826 4048 S14
+5854 4293 S14
+5996 4137 S14
+6025 4182 S14
+6053 3804 S14
+6110 4115 S14
+6167 4316 S14
+6224 4516 S14
+6280 4048 S14
+6366 3737 S14
+966 4179 S14
+1.000 UP
+1.000 UL
+LT4
+LTb
+683 4039 M
+gsave 0 setgray
+(CLUSTER121) Rshow
+grestore
+LT4
+2390 1711 S15
+3554 4071 S15
+3952 3180 S15
+4065 2824 S15
+4179 2512 S15
+4236 2668 S15
+4378 3113 S15
+4605 2757 S15
+4690 2980 S15
+4718 3225 S15
+4832 3180 S15
+4889 2824 S15
+5144 3158 S15
+966 4039 S15
+1.000 UP
+1.000 UL
+LT5
+LTb
+683 3899 M
+gsave 0 setgray
+(CLUSTER122) Rshow
+grestore
+LT5
+2929 1956 D0
+3724 2691 D0
+3838 2757 D0
+3866 2423 D0
+3895 2646 D0
+3923 2668 D0
+3952 2535 D0
+3980 2524 D0
+4008 2668 D0
+4037 2557 D0
+4065 2613 D0
+4094 2624 D0
+4122 2652 D0
+4150 2735 D0
+4179 2780 D0
+4207 2869 D0
+4264 2780 D0
+4349 2601 D0
+4463 3002 D0
+4605 2535 D0
+4633 2201 D0
+4718 2824 D0
+5059 2423 D0
+966 3899 D0
+1.000 UP
+1.000 UL
+LT6
+LTb
+683 3759 M
+gsave 0 setgray
+(CLUSTER123) Rshow
+grestore
+LT6
+3100 1867 D1
+5911 3915 D1
+5940 4026 D1
+5968 4149 D1
+5996 3982 D1
+6053 4048 D1
+6082 4034 D1
+6138 4226 D1
+6195 4115 D1
+6224 4104 D1
+6252 4226 D1
+966 3759 D1
+1.000 UP
+1.000 UL
+LT7
+LTb
+683 3619 M
+gsave 0 setgray
+(CLUSTER124) Rshow
+grestore
+LT7
+3156 1733 D2
+5514 3848 D2
+5599 4115 D2
+5627 4004 D2
+5684 3937 D2
+5826 3870 D2
+5854 3826 D2
+5883 4048 D2
+5968 3982 D2
+5996 3904 D2
+6053 4182 D2
+6138 4182 D2
+966 3619 D2
+1.000 UP
+1.000 UL
+LT8
+LTb
+683 3479 M
+gsave 0 setgray
+(CLUSTER125) Rshow
+grestore
+LT8
+3100 2023 D3
+3611 3136 D3
+4008 3381 D3
+4037 3536 D3
+4548 2713 D3
+4662 3358 D3
+4690 3002 D3
+5400 4048 D3
+5940 3826 D3
+966 3479 D3
+1.000 UP
+1.000 UL
+LT0
+LTb
+683 3339 M
+gsave 0 setgray
+(CLUSTER126) Rshow
+grestore
+LT0
+2901 1822 D4
+5372 4048 D4
+5514 4026 D4
+5570 3893 D4
+5599 4093 D4
+5627 3982 D4
+5684 3781 D4
+5712 3759 D4
+5741 3970 D4
+5769 3893 D4
+5798 3826 D4
+5883 3915 D4
+5911 4048 D4
+5940 3948 D4
+5968 3937 D4
+6110 3893 D4
+966 3339 D4
+1.000 UP
+1.000 UL
+LT1
+LTb
+683 3199 M
+gsave 0 setgray
+(CLUSTER127) Rshow
+grestore
+LT1
+2702 1934 D5
+2759 2201 D5
+2816 1555 D5
+2929 1622 D5
+3014 2090 D5
+3100 1756 D5
+3156 1889 D5
+3185 1856 D5
+3213 1800 D5
+3270 1845 D5
+3384 1377 D5
+3554 1978 D5
+3781 1466 D5
+3838 2134 D5
+966 3199 D5
+1.000 UP
+1.000 UL
+LT2
+LTb
+683 3059 M
+gsave 0 setgray
+(CLUSTER128) Rshow
+grestore
+LT2
+1850 798 D6
+2020 810 D6
+2219 1066 D6
+2248 1099 D6
+2276 1121 D6
+2418 1021 D6
+2844 1911 D6
+966 3059 D6
+1.000 UP
+1.000 UL
+LT3
+LTb
+683 2919 M
+gsave 0 setgray
+(CLUSTER129) Rshow
+grestore
+LT3
+2588 1266 D7
+6082 4115 D7
+6138 4137 D7
+6195 3930 D7
+6224 4115 D7
+6252 4271 D7
+6280 4026 D7
+6309 4171 D7
+6536 4137 D7
+966 2919 D7
+1.000 UP
+1.000 UL
+LT4
+LTb
+683 2779 M
+gsave 0 setgray
+(CLUSTER130) Rshow
+grestore
+LT4
+2503 1288 D8
+2645 1533 D8
+2901 1611 D8
+3043 1822 D8
+3071 1800 D8
+3270 1778 D8
+3327 2023 D8
+3355 2067 D8
+3384 1667 D8
+3412 1800 D8
+3526 2357 D8
+3696 1711 D8
+3952 1355 D8
+4037 1900 D8
+4065 1811 D8
+966 2779 D8
+1.000 UP
+1.000 UL
+LT5
+LTb
+683 2639 M
+gsave 0 setgray
+(CLUSTER131) Rshow
+grestore
+LT5
+2134 977 D9
+2191 1043 D9
+2248 1867 D9
+2304 1155 D9
+2390 1132 D9
+2475 1678 D9
+2588 1488 D9
+2617 1244 D9
+2645 1399 D9
+2702 843 D9
+3242 1221 D9
+3384 1244 D9
+966 2639 D9
+1.000 UP
+1.000 UL
+LT6
+LTb
+683 2499 M
+gsave 0 setgray
+(CLUSTER132) Rshow
+grestore
+LT6
+2588 2268 D10
+2816 1555 D10
+3213 2635 D10
+3298 2958 D10
+3327 2190 D10
+3469 2268 D10
+4008 3381 D10
+966 2499 D10
+1.000 UP
+1.000 UL
+LT7
+LTb
+683 2359 M
+gsave 0 setgray
+(CLUSTER133) Rshow
+grestore
+LT7
+2645 1244 D11
+3980 4182 D11
+4463 3781 D11
+4690 3759 D11
+4718 3648 D11
+4804 3804 D11
+4860 3581 D11
+4889 3937 D11
+5002 3804 D11
+5059 4115 D11
+5144 4115 D11
+5372 4071 D11
+5599 4093 D11
+5627 3893 D11
+5656 4093 D11
+5684 3893 D11
+5712 3603 D11
+5798 3870 D11
+5826 4160 D11
+5940 4160 D11
+966 2359 D11
+1.000 UP
+1.000 UL
+LT8
+LTb
+683 2219 M
+gsave 0 setgray
+(CLUSTER134) Rshow
+grestore
+LT8
+2588 1667 D12
+3952 3002 D12
+4349 2913 D12
+4406 3536 D12
+4491 3102 D12
+4548 2802 D12
+4576 3247 D12
+4605 3091 D12
+4832 3314 D12
+4917 3069 D12
+4946 3314 D12
+5002 3381 D12
+5059 3403 D12
+5116 4093 D12
+5201 2134 D12
+5230 3759 D12
+5712 2824 D12
+5741 4093 D12
+966 2219 D12
+1.000 UP
+1.000 UL
+LT0
+LTb
+683 2079 M
+gsave 0 setgray
+(CLUSTER135) Rshow
+grestore
+LT0
+2304 1644 D13
+2645 2668 D13
+2958 2468 D13
+3014 2535 D13
+3696 2357 D13
+3838 2713 D13
+3895 2757 D13
+4122 2446 D13
+4264 2624 D13
+4434 1778 D13
+4463 2557 D13
+4548 3125 D13
+4804 3002 D13
+966 2079 D13
+1.000 UP
+1.000 UL
+LT1
+LTb
+683 1939 M
+gsave 0 setgray
+(CLUSTER136) Rshow
+grestore
+LT1
+2077 821 D14
+2191 1555 D14
+2276 1333 D14
+2333 910 D14
+2446 1733 D14
+2475 865 D14
+2702 1444 D14
+2844 1644 D14
+2929 1466 D14
+2986 1444 D14
+3213 1355 D14
+3384 1934 D14
+966 1939 D14
+1.000 UP
+1.000 UL
+LT2
+LTb
+683 1799 M
+gsave 0 setgray
+(CLUSTER137) Rshow
+grestore
+LT2
+2020 821 D15
+2248 1221 D15
+2333 932 D15
+2418 1244 D15
+3071 1199 D15
+966 1799 D15
+1.000 UP
+1.000 UL
+LT3
+LTb
+683 1659 M
+gsave 0 setgray
+(CLUSTER138) Rshow
+grestore
+LT3
+2304 1288 BoxE
+3582 3559 BoxE
+4065 3336 BoxE
+4321 3247 BoxE
+4406 2958 BoxE
+4520 3603 BoxE
+4633 3447 BoxE
+4690 3180 BoxE
+4747 3158 BoxE
+4804 2980 BoxE
+4832 2824 BoxE
+4860 3358 BoxE
+4974 3403 BoxE
+5059 3136 BoxE
+5116 3292 BoxE
+5258 3670 BoxE
+5315 3047 BoxE
+5457 3559 BoxE
+5570 4048 BoxE
+5996 3425 BoxE
+966 1659 BoxE
+1.000 UP
+1.000 UL
+LT4
+LTb
+683 1519 M
+gsave 0 setgray
+(CLUSTER139) Rshow
+grestore
+LT4
+2617 1578 CircE
+3185 2446 CircE
+3440 1800 CircE
+3497 2101 CircE
+3611 2535 CircE
+3639 2279 CircE
+3668 2368 CircE
+3696 2435 CircE
+3724 2379 CircE
+3753 2323 CircE
+3781 2512 CircE
+3810 2401 CircE
+3838 2379 CircE
+3866 2373 CircE
+3895 2435 CircE
+3923 2364 CircE
+3952 2485 CircE
+3980 1667 CircE
+4008 2691 CircE
+4037 2401 CircE
+4264 2579 CircE
+966 1519 CircE
+1.000 UP
+1.000 UL
+LT5
+LTb
+683 1379 M
+gsave 0 setgray
+(CLUSTER140) Rshow
+grestore
+LT5
+1907 1021 TriUE
+3071 1756 TriUE
+3242 2446 TriUE
+3412 2935 TriUE
+3440 3158 TriUE
+3526 2446 TriUE
+3668 2601 TriUE
+3810 3358 TriUE
+3838 2000 TriUE
+3866 2824 TriUE
+3895 2401 TriUE
+4122 2423 TriUE
+4179 3024 TriUE
+4292 2090 TriUE
+4378 2067 TriUE
+4491 2624 TriUE
+4548 2802 TriUE
+4576 2624 TriUE
+4633 2357 TriUE
+4690 2935 TriUE
+5173 2000 TriUE
+966 1379 TriUE
+1.000 UP
+1.000 UL
+LT6
+LTb
+683 1239 M
+gsave 0 setgray
+(CLUSTER141) Rshow
+grestore
+LT6
+2929 3024 TriDE
+3100 2201 TriDE
+3185 2245 TriDE
+3355 1711 TriDE
+3582 2780 TriDE
+3668 2980 TriDE
+3696 2780 TriDE
+3724 3714 TriDE
+3923 3670 TriDE
+4037 3247 TriDE
+4236 3024 TriDE
+4292 2401 TriDE
+4463 3581 TriDE
+4860 3136 TriDE
+966 1239 TriDE
+1.000 UP
+1.000 UL
+LT7
+LTb
+683 1099 M
+gsave 0 setgray
+(CLUSTER142) Rshow
+grestore
+LT7
+2759 1310 DiaE
+2844 2446 DiaE
+3014 3047 DiaE
+3043 2512 DiaE
+3071 3403 DiaE
+3242 2691 DiaE
+3440 2468 DiaE
+3724 2446 DiaE
+3781 3648 DiaE
+3810 3514 DiaE
+3838 2735 DiaE
+4321 3180 DiaE
+4378 3536 DiaE
+4662 3047 DiaE
+4775 2935 DiaE
+4946 2646 DiaE
+5457 2802 DiaE
+966 1099 DiaE
+1.000 UP
+1.000 UL
+LT8
+LTb
+683 959 M
+gsave 0 setgray
+(CLUSTER143) Rshow
+grestore
+LT8
+2958 1555 PentE
+4747 4204 PentE
+5372 3292 PentE
+5627 3637 PentE
+5684 3269 PentE
+5854 4182 PentE
+6053 3826 PentE
+6138 4293 PentE
+966 959 PentE
+1.000 UP
+1.000 UL
+LT0
+LTb
+683 819 M
+gsave 0 setgray
+(CLUSTER144) Rshow
+grestore
+LT0
+2162 1310 BoxW
+2929 2023 BoxW
+2986 2557 BoxW
+3100 3269 BoxW
+3213 1511 BoxW
+3355 1845 BoxW
+3384 1310 BoxW
+3412 2000 BoxW
+3554 2512 BoxW
+3582 1956 BoxW
+4008 2535 BoxW
+966 819 BoxW
+1.000 UP
+1.000 UL
+LT1
+LTb
+2090 4739 M
+gsave 0 setgray
+(CLUSTER145) Rshow
+grestore
+LT1
+2929 1711 CircW
+4207 3203 CircW
+4236 3314 CircW
+4264 3024 CircW
+4321 3358 CircW
+4349 2980 CircW
+4406 3247 CircW
+4463 3069 CircW
+4520 3203 CircW
+4548 3047 CircW
+4633 2958 CircW
+4804 3214 CircW
+4889 2802 CircW
+4917 2958 CircW
+4946 3299 CircW
+4974 3102 CircW
+5031 3581 CircW
+5059 3069 CircW
+5173 3381 CircW
+2373 4739 CircW
+1.000 UP
+1.000 UL
+LT2
+LTb
+2090 4599 M
+gsave 0 setgray
+(CLUSTER146) Rshow
+grestore
+LT2
+3156 1644 TriUW
+3639 1600 TriUW
+3724 2512 TriUW
+3753 2401 TriUW
+3838 1845 TriUW
+4150 2546 TriUW
+4378 2201 TriUW
+4520 2000 TriUW
+4633 1845 TriUW
+4775 2334 TriUW
+2373 4599 TriUW
+1.000 UP
+1.000 UL
+LT3
+LTb
+2090 4459 M
+gsave 0 setgray
+(CLUSTER147) Rshow
+grestore
+LT3
+3071 2824 TriDW
+3298 1667 TriDW
+3696 3247 TriDW
+3753 2512 TriDW
+3810 3113 TriDW
+3838 2691 TriDW
+3952 2613 TriDW
+3980 3024 TriDW
+4008 2757 TriDW
+4094 2824 TriDW
+4122 2913 TriDW
+4150 2869 TriDW
+4236 2802 TriDW
+4264 2735 TriDW
+4292 3203 TriDW
+4349 2579 TriDW
+4434 3024 TriDW
+4491 2624 TriDW
+4520 3136 TriDW
+4605 3024 TriDW
+5144 2357 TriDW
+2373 4459 TriDW
+1.000 UP
+1.000 UL
+LT4
+LTb
+2090 4319 M
+gsave 0 setgray
+(CLUSTER148) Rshow
+grestore
+LT4
+3866 2802 DiaW
+6082 4182 DiaW
+6110 4249 DiaW
+6138 4204 DiaW
+6224 4204 DiaW
+6309 4204 DiaW
+6394 4271 DiaW
+6422 4271 DiaW
+2373 4319 DiaW
+1.000 UP
+1.000 UL
+LT5
+LTb
+2090 4179 M
+gsave 0 setgray
+(CLUSTER149) Rshow
+grestore
+LT5
+3213 3292 PentW
+5230 3826 PentW
+5712 3492 PentW
+5741 3692 PentW
+5826 3870 PentW
+5883 3870 PentW
+5911 3203 PentW
+5968 4004 PentW
+5996 3091 PentW
+6053 3047 PentW
+6309 3314 PentW
+6394 4137 PentW
+2373 4179 PentW
+1.000 UP
+1.000 UL
+LT6
+LTb
+2090 4039 M
+gsave 0 setgray
+(CLUSTER150) Rshow
+grestore
+LT6
+3781 3069 Pls
+4349 3559 Pls
+4434 3714 Pls
+4491 4093 Pls
+4548 3002 Pls
+4889 3358 Pls
+5088 3536 Pls
+5144 3581 Pls
+5173 3470 Pls
+5315 3336 Pls
+5428 3781 Pls
+5627 3358 Pls
+5684 4026 Pls
+5826 3559 Pls
+2373 4039 Pls
+1.000 UP
+1.000 UL
+LT7
+LTb
+2090 3899 M
+gsave 0 setgray
+(CLUSTER151) Rshow
+grestore
+LT7
+3611 3314 Crs
+3980 2958 Crs
+4094 2624 Crs
+4122 2924 Crs
+4292 3091 Crs
+4349 3002 Crs
+4491 2579 Crs
+4520 2869 Crs
+4690 3937 Crs
+4747 2913 Crs
+4775 3225 Crs
+4804 3203 Crs
+4889 2913 Crs
+5258 3625 Crs
+5485 2446 Crs
+5826 2601 Crs
+2373 3899 Crs
+1.000 UP
+1.000 UL
+LT8
+LTb
+2090 3759 M
+gsave 0 setgray
+(CLUSTER152) Rshow
+grestore
+LT8
+3895 3024 Star
+4378 4271 Star
+4946 4182 Star
+5400 3982 Star
+5627 4093 Star
+5656 4082 Star
+5769 4004 Star
+5826 3848 Star
+5968 4316 Star
+6053 4249 Star
+6082 4160 Star
+6110 4316 Star
+6167 4382 Star
+6195 4405 Star
+2373 3759 Star
+1.000 UP
+1.000 UL
+LT0
+LTb
+2090 3619 M
+gsave 0 setgray
+(CLUSTER153) Rshow
+grestore
+LT0
+3611 3136 Box
+2373 3619 Box
+1.000 UP
+1.000 UL
+LT1
+LTb
+2090 3479 M
+gsave 0 setgray
+(CLUSTER154) Rshow
+grestore
+LT1
+3554 2958 BoxF
+3895 2379 BoxF
+4008 2179 BoxF
+4037 2000 BoxF
+4463 2312 BoxF
+4491 2757 BoxF
+4520 3269 BoxF
+4548 2557 BoxF
+4576 2312 BoxF
+4747 2179 BoxF
+4775 3225 BoxF
+4889 2668 BoxF
+4974 2980 BoxF
+5031 2958 BoxF
+5088 3225 BoxF
+5144 2980 BoxF
+5230 3113 BoxF
+5286 2735 BoxF
+5343 2780 BoxF
+5542 3514 BoxF
+5656 3447 BoxF
+5684 3247 BoxF
+2373 3479 BoxF
+1.000 UP
+1.000 UL
+LT2
+LTb
+2090 3339 M
+gsave 0 setgray
+(CLUSTER155) Rshow
+grestore
+LT2
+3156 3024 Circle
+5116 4316 Circle
+5230 3714 Circle
+5343 3714 Circle
+5514 3848 Circle
+5570 3625 Circle
+5599 3625 Circle
+5656 3581 Circle
+5712 3603 Circle
+2373 3339 Circle
+1.000 UP
+1.000 UL
+LT3
+LTb
+2090 3199 M
+gsave 0 setgray
+(CLUSTER156) Rshow
+grestore
+LT3
+3611 2334 CircleF
+3838 2691 CircleF
+3895 2090 CircleF
+4065 2624 CircleF
+4207 2668 CircleF
+4349 1466 CircleF
+4378 2802 CircleF
+4406 2223 CircleF
+4662 2935 CircleF
+4860 2535 CircleF
+4917 2935 CircleF
+5201 1800 CircleF
+5372 2268 CircleF
+2373 3199 CircleF
+1.000 UP
+1.000 UL
+LT4
+LTb
+2090 3059 M
+gsave 0 setgray
+(CLUSTER157) Rshow
+grestore
+LT4
+1310 487 TriU
+2191 1177 TriU
+2730 843 TriU
+3866 2245 TriU
+2373 3059 TriU
+1.000 UP
+1.000 UL
+LT5
+LTb
+2090 2919 M
+gsave 0 setgray
+(CLUSTER158) Rshow
+grestore
+LT5
+2162 887 TriUF
+2219 1132 TriUF
+2304 1088 TriUF
+2390 977 TriUF
+2418 1310 TriUF
+2446 1155 TriUF
+2475 821 TriUF
+2560 1533 TriUF
+2645 1800 TriUF
+2730 2067 TriUF
+2901 1221 TriUF
+3014 1355 TriUF
+3100 2357 TriUF
+2373 2919 TriUF
+1.000 UP
+1.000 UL
+LT6
+LTb
+2090 2779 M
+gsave 0 setgray
+(CLUSTER159) Rshow
+grestore
+LT6
+3497 2824 TriD
+3810 2713 TriD
+4264 2802 TriD
+4349 2824 TriD
+4378 2935 TriD
+4463 3002 TriD
+4491 2757 TriD
+4520 3013 TriD
+4548 2446 TriD
+4576 3032 TriD
+4662 2846 TriD
+4718 1644 TriD
+4804 2802 TriD
+4832 2980 TriD
+5059 2579 TriD
+5088 2980 TriD
+2373 2779 TriD
+1.000 UP
+1.000 UL
+LT7
+LTb
+2090 2639 M
+gsave 0 setgray
+(CLUSTER160) Rshow
+grestore
+LT7
+3440 2535 TriDF
+3554 2446 TriDF
+3724 1533 TriDF
+3810 1911 TriDF
+3952 2579 TriDF
+4292 2112 TriDF
+2373 2639 TriDF
+1.000 UP
+1.000 UL
+LT8
+LTb
+2090 2499 M
+gsave 0 setgray
+(CLUSTER161) Rshow
+grestore
+LT8
+3554 2935 Dia
+3724 3447 Dia
+3866 2757 Dia
+4037 2668 Dia
+4065 2557 Dia
+4321 3292 Dia
+4406 3080 Dia
+4491 2880 Dia
+4548 2846 Dia
+4576 3559 Dia
+4662 2780 Dia
+4747 3180 Dia
+5059 2958 Dia
+2373 2499 Dia
+1.000 UP
+1.000 UL
+LT0
+LTb
+2090 2359 M
+gsave 0 setgray
+(CLUSTER162) Rshow
+grestore
+LT0
+3327 2112 DiaF
+3753 2535 DiaF
+3781 2846 DiaF
+3952 1622 DiaF
+3980 2557 DiaF
+4008 2557 DiaF
+4065 2379 DiaF
+4179 1978 DiaF
+4321 2646 DiaF
+4605 2112 DiaF
+4775 2112 DiaF
+2373 2359 DiaF
+1.000 UP
+1.000 UL
+LT1
+LTb
+2090 2219 M
+gsave 0 setgray
+(CLUSTER163) Rshow
+grestore
+LT1
+3526 2802 Pent
+4662 3982 Pent
+4832 3247 Pent
+5031 3447 Pent
+5059 3381 Pent
+5088 3670 Pent
+5144 3826 Pent
+5173 3447 Pent
+5201 3574 Pent
+5230 3514 Pent
+5258 3503 Pent
+5286 3536 Pent
+5315 3503 Pent
+5343 3603 Pent
+5372 3648 Pent
+5485 3592 Pent
+5514 3804 Pent
+5542 3603 Pent
+2373 2219 Pent
+1.000 UP
+1.000 UL
+LT2
+LTb
+2090 2079 M
+gsave 0 setgray
+(CLUSTER164) Rshow
+grestore
+LT2
+3469 2179 PentF
+3668 2201 PentF
+3895 3648 PentF
+4065 3870 PentF
+4179 3314 PentF
+4292 2935 PentF
+4378 3381 PentF
+4463 2869 PentF
+4491 3158 PentF
+4605 3381 PentF
+4662 3247 PentF
+4775 3447 PentF
+4860 3759 PentF
+4917 3358 PentF
+5002 2869 PentF
+5116 2902 PentF
+5372 3514 PentF
+5769 3024 PentF
+2373 2079 PentF
+1.000 UP
+1.000 UL
+LT3
+LTb
+2090 1939 M
+gsave 0 setgray
+(CLUSTER165) Rshow
+grestore
+LT3
+1197 1155 C0
+1310 776 C0
+1509 576 C0
+1594 665 C0
+1623 954 C0
+1651 932 C0
+1708 999 C0
+1736 776 C0
+1765 810 C0
+1793 1555 C0
+1935 932 C0
+2049 754 C0
+5088 3514 C0
+2373 1939 C0
+1.000 UP
+1.000 UL
+LT4
+LTb
+2090 1799 M
+gsave 0 setgray
+(CLUSTER166) Rshow
+grestore
+LT4
+3043 2023 C1
+3100 1889 C1
+3156 2201 C1
+3327 2090 C1
+3412 2067 C1
+3469 2179 C1
+3554 2090 C1
+3668 2012 C1
+3696 1600 C1
+3753 1600 C1
+3781 2334 C1
+3952 1333 C1
+4946 1377 C1
+5088 3091 C1
+2373 1799 C1
+1.000 UP
+1.000 UL
+LT5
+LTb
+2090 1659 M
+gsave 0 setgray
+(CLUSTER167) Rshow
+grestore
+LT5
+2361 2023 C2
+2730 1889 C2
+2929 1867 C2
+2986 1733 C2
+3043 1578 C2
+3156 2490 C2
+3185 1733 C2
+3213 1845 C2
+3355 1422 C2
+3639 2334 C2
+3952 2446 C2
+4264 2980 C2
+2373 1659 C2
+1.000 UP
+1.000 UL
+LT6
+LTb
+2090 1519 M
+gsave 0 setgray
+(CLUSTER168) Rshow
+grestore
+LT6
+3696 1956 C3
+3753 2757 C3
+4548 3024 C3
+4747 3269 C3
+2373 1519 C3
+1.000 UP
+1.000 UL
+LT7
+LTb
+2090 1379 M
+gsave 0 setgray
+(CLUSTER169) Rshow
+grestore
+LT7
+2844 2201 C4
+2872 1956 C4
+2929 1956 C4
+2986 1667 C4
+3043 2512 C4
+3242 1711 C4
+3327 2090 C4
+3355 2535 C4
+3412 2468 C4
+3526 2201 C4
+3696 1989 C4
+4236 3024 C4
+2373 1379 C4
+1.000 UP
+1.000 UL
+LT8
+LTb
+2090 1239 M
+gsave 0 setgray
+(CLUSTER170) Rshow
+grestore
+LT8
+4775 3047 C5
+2373 1239 C5
+1.000 UP
+1.000 UL
+LT0
+LTb
+2090 1099 M
+gsave 0 setgray
+(CLUSTER171) Rshow
+grestore
+LT0
+4207 2601 C6
+5940 3982 C6
+6053 4160 C6
+6082 4093 C6
+6110 4226 C6
+6167 4316 C6
+6337 4360 C6
+2373 1099 C6
+1.000 UP
+1.000 UL
+LT1
+LTb
+2090 959 M
+gsave 0 setgray
+(CLUSTER172) Rshow
+grestore
+LT1
+3753 2468 C7
+2373 959 C7
+1.000 UP
+1.000 UL
+LT2
+LTb
+2090 819 M
+gsave 0 setgray
+(CLUSTER173) Rshow
+grestore
+LT2
+3440 2891 C8
+3866 3158 C8
+4037 3514 C8
+4094 2624 C8
+4150 2668 C8
+4207 3381 C8
+4264 3002 C8
+4292 3136 C8
+4321 2824 C8
+4349 2835 C8
+4378 3069 C8
+4406 2813 C8
+4434 2802 C8
+4463 2535 C8
+4491 2863 C8
+4520 2958 C8
+4548 2913 C8
+4576 2869 C8
+4605 2913 C8
+4633 2969 C8
+4662 2802 C8
+4690 3180 C8
+4718 3013 C8
+4889 2883 C8
+4974 3247 C8
+2373 819 C8
+1.000 UP
+1.000 UL
+LT3
+LTb
+3497 4739 M
+gsave 0 setgray
+(CLUSTER174) Rshow
+grestore
+LT3
+4576 3080 C9
+4718 3648 C9
+5201 3358 C9
+5315 3648 C9
+5485 3047 C9
+5599 3648 C9
+5656 3002 C9
+5741 3436 C9
+3780 4739 C9
+1.000 UP
+1.000 UL
+LT4
+LTb
+3497 4599 M
+gsave 0 setgray
+(CLUSTER175) Rshow
+grestore
+LT4
+4406 3247 C10
+5599 3959 C10
+5684 4204 C10
+5712 3937 C10
+5798 3982 C10
+5854 4071 C10
+5883 4004 C10
+5911 4115 C10
+5968 4071 C10
+5996 4204 C10
+6025 4071 C10
+6053 3982 C10
+6082 4026 C10
+6110 4115 C10
+3780 4599 C10
+1.000 UP
+1.000 UL
+LT5
+LTb
+3497 4459 M
+gsave 0 setgray
+(CLUSTER176) Rshow
+grestore
+LT5
+1736 1199 C11
+1907 2045 C11
+2106 1399 C11
+2333 1533 C11
+2390 1600 C11
+2503 1199 C11
+2588 1433 C11
+2645 1399 C11
+2730 1377 C11
+3384 2579 C11
+3780 4459 C11
+1.000 UP
+1.000 UL
+LT6
+LTb
+3497 4319 M
+gsave 0 setgray
+(CLUSTER177) Rshow
+grestore
+LT6
+2191 1444 C12
+2304 977 C12
+2390 1377 C12
+2702 1733 C12
+2844 2668 C12
+2872 1667 C12
+2958 2023 C12
+2986 1733 C12
+3043 2179 C12
+3100 2980 C12
+3327 1822 C12
+3440 2824 C12
+3923 2334 C12
+4690 2379 C12
+3780 4319 C12
+1.000 UP
+1.000 UL
+LT7
+LTb
+3497 4179 M
+gsave 0 setgray
+(CLUSTER178) Rshow
+grestore
+LT7
+2872 2891 C13
+3270 2134 C13
+3384 3113 C13
+3526 2223 C13
+3668 3136 C13
+3781 2980 C13
+3810 2268 C13
+3838 3002 C13
+3980 2000 C13
+4008 2646 C13
+4378 2134 C13
+4576 2512 C13
+4690 2223 C13
+3780 4179 C13
+1.000 UP
+1.000 UL
+LT8
+LTb
+3497 4039 M
+gsave 0 setgray
+(CLUSTER179) Rshow
+grestore
+LT8
+3270 2134 C14
+3412 2891 C14
+3497 2334 C14
+3554 2713 C14
+3724 2312 C14
+3838 3603 C14
+3952 2401 C14
+4179 1956 C14
+4321 2958 C14
+3780 4039 C14
+1.000 UP
+1.000 UL
+LT0
+LTb
+3497 3899 M
+gsave 0 setgray
+(CLUSTER180) Rshow
+grestore
+LT0
+4264 1845 C15
+4832 3670 C15
+5002 2468 C15
+5315 4182 C15
+5684 3915 C15
+5741 3425 C15
+5769 2490 C15
+5940 4093 C15
+5968 4360 C15
+5996 4026 C15
+6366 3937 C15
+3780 3899 C15
+1.000 UP
+1.000 UL
+LT1
+LTb
+3497 3759 M
+gsave 0 setgray
+(CLUSTER181) Rshow
+grestore
+LT1
+2787 1088 S0
+3469 2935 S0
+4094 2601 S0
+4122 3893 S0
+4150 2913 S0
+4378 3714 S0
+4605 2535 S0
+4718 3848 S0
+5144 3203 S0
+3780 3759 S0
+1.000 UP
+1.000 UL
+LT2
+LTb
+3497 3619 M
+gsave 0 setgray
+(CLUSTER182) Rshow
+grestore
+LT2
+2844 1600 S1
+3781 3581 S1
+3866 3358 S1
+3923 2245 S1
+3980 2668 S1
+4094 3447 S1
+4179 3247 S1
+4292 3136 S1
+4406 2802 S1
+4491 2423 S1
+4520 2958 S1
+4605 3325 S1
+4690 2980 S1
+4747 3458 S1
+4775 3269 S1
+4832 3470 S1
+5144 3002 S1
+5258 3136 S1
+3780 3619 S1
+1.000 UP
+1.000 UL
+LT3
+LTb
+3497 3479 M
+gsave 0 setgray
+(CLUSTER183) Rshow
+grestore
+LT3
+2986 1667 S2
+4775 3314 S2
+4946 3492 S2
+5144 3292 S2
+5286 2802 S2
+5343 3915 S2
+5428 3024 S2
+5627 3514 S2
+5769 3759 S2
+5826 3358 S2
+3780 3479 S2
+1.000 UP
+1.000 UL
+LT4
+LTb
+3497 3339 M
+gsave 0 setgray
+(CLUSTER184) Rshow
+grestore
+LT4
+2702 1867 S3
+2929 1756 S3
+3128 2735 S3
+3242 1689 S3
+3384 1756 S3
+3582 2290 S3
+3639 2557 S3
+3753 2490 S3
+3781 2357 S3
+3895 2334 S3
+3923 2268 S3
+3980 2824 S3
+3780 3339 S3
+1.000 UP
+1.000 UL
+LT5
+LTb
+3497 3199 M
+gsave 0 setgray
+(CLUSTER185) Rshow
+grestore
+LT5
+3668 977 S4
+3780 3199 S4
+1.000 UP
+1.000 UL
+LT6
+LTb
+3497 3059 M
+gsave 0 setgray
+(CLUSTER186) Rshow
+grestore
+LT6
+3043 2201 S5
+5258 3570 S5
+5315 3692 S5
+5343 3648 S5
+5372 3570 S5
+5457 4137 S5
+5514 3514 S5
+5570 3714 S5
+5627 3959 S5
+5798 3893 S5
+5826 2802 S5
+5911 3314 S5
+5996 3870 S5
+6224 3381 S5
+3780 3059 S5
+1.000 UP
+1.000 UL
+LT7
+LTb
+3497 2919 M
+gsave 0 setgray
+(CLUSTER187) Rshow
+grestore
+LT7
+2390 2423 S6
+2759 1778 S6
+3412 2490 S6
+3440 2846 S6
+3526 2691 S6
+3611 2334 S6
+3668 2757 S6
+3696 2557 S6
+3753 2512 S6
+3781 2512 S6
+3838 2635 S6
+3923 2780 S6
+3952 2368 S6
+4094 2468 S6
+4122 2512 S6
+4150 1756 S6
+4491 1756 S6
+4633 2290 S6
+3780 2919 S6
+1.000 UP
+1.000 UL
+LT8
+LTb
+3497 2779 M
+gsave 0 setgray
+(CLUSTER188) Rshow
+grestore
+LT8
+2645 1377 S7
+3696 3002 S7
+3781 2891 S7
+3810 2780 S7
+3923 2691 S7
+3952 2624 S7
+3980 2679 S7
+4008 2780 S7
+4037 2724 S7
+4065 3091 S7
+4094 2813 S7
+4122 2869 S7
+4150 2765 S7
+4179 2768 S7
+4236 2883 S7
+4264 2891 S7
+4321 2774 S7
+4378 2720 S7
+4406 2935 S7
+4434 2857 S7
+4463 2713 S7
+4548 2991 S7
+4690 2691 S7
+4775 3047 S7
+4917 3091 S7
+5144 2312 S7
+3780 2779 S7
+1.000 UP
+1.000 UL
+LT0
+LTb
+3497 2639 M
+gsave 0 setgray
+(CLUSTER189) Rshow
+grestore
+LT0
+3724 1266 S8
+5343 3826 S8
+5514 3514 S8
+5542 4123 S8
+5769 3982 S8
+5826 4048 S8
+5883 3970 S8
+5940 3700 S8
+5968 3982 S8
+5996 3970 S8
+6053 3514 S8
+3780 2639 S8
+1.000 UP
+1.000 UL
+LT1
+LTb
+3497 2499 M
+gsave 0 setgray
+(CLUSTER190) Rshow
+grestore
+LT1
+2276 1377 S9
+5286 3670 S9
+5372 3714 S9
+5400 3492 S9
+5599 4104 S9
+5656 3759 S9
+5883 4071 S9
+5911 3358 S9
+5940 3514 S9
+6053 4271 S9
+6224 3893 S9
+6337 3915 S9
+3780 2499 S9
+1.000 UP
+1.000 UL
+LT2
+LTb
+3497 2359 M
+gsave 0 setgray
+(CLUSTER191) Rshow
+grestore
+LT2
+3355 2067 S10
+5996 4182 S10
+6025 4160 S10
+6053 4219 S10
+6082 4241 S10
+6110 4215 S10
+6138 4316 S10
+6167 4271 S10
+6195 4249 S10
+6224 4082 S10
+6252 4327 S10
+6366 4405 S10
+3780 2359 S10
+1.000 UP
+1.000 UL
+LT3
+LTb
+3497 2219 M
+gsave 0 setgray
+(CLUSTER192) Rshow
+grestore
+LT3
+2276 1689 S11
+5428 3826 S11
+5542 3870 S11
+5712 4004 S11
+5741 3982 S11
+5826 3781 S11
+5883 4338 S11
+5911 4082 S11
+5968 3870 S11
+6082 3804 S11
+6110 4137 S11
+3780 2219 S11
+1.000 UP
+1.000 UL
+LT4
+LTb
+3497 2079 M
+gsave 0 setgray
+(CLUSTER193) Rshow
+grestore
+LT4
+1935 1021 S12
+2162 821 S12
+2333 1867 S12
+2390 1066 S12
+2475 1355 S12
+2560 1711 S12
+2730 1578 S12
+2787 1377 S12
+2901 1889 S12
+2958 1177 S12
+3780 2079 S12
+1.000 UP
+1.000 UL
+LT5
+LTb
+3497 1939 M
+gsave 0 setgray
+(CLUSTER194) Rshow
+grestore
+LT5
+3043 1622 S13
+5684 4271 S13
+5826 4204 S13
+5854 4048 S13
+5883 4182 S13
+5996 4249 S13
+6025 4071 S13
+6053 4182 S13
+6082 4241 S13
+6138 4382 S13
+6224 4293 S13
+3780 1939 S13
+1.000 UP
+1.000 UL
+LT6
+LTb
+3497 1799 M
+gsave 0 setgray
+(CLUSTER195) Rshow
+grestore
+LT6
+3043 2156 S14
+3780 1799 S14
+1.000 UP
+1.000 UL
+LT7
+LTb
+3497 1659 M
+gsave 0 setgray
+(CLUSTER196) Rshow
+grestore
+LT7
+3100 1800 S15
+3128 2179 S15
+3298 1043 S15
+3327 2112 S15
+3526 1488 S15
+3582 2067 S15
+3724 1578 S15
+4037 2023 S15
+4122 1800 S15
+4775 2000 S15
+3780 1659 S15
+1.000 UP
+1.000 UL
+LT8
+LTb
+3497 1519 M
+gsave 0 setgray
+(CLUSTER197) Rshow
+grestore
+LT8
+3100 1622 D0
+6110 4338 D0
+6224 4471 D0
+6252 4471 D0
+6309 4360 D0
+6366 4360 D0
+6394 4482 D0
+6422 4338 D0
+6451 4516 D0
+6479 4494 D0
+6508 4583 D0
+3780 1519 D0
+1.000 UP
+1.000 UL
+LT0
+LTb
+3497 1379 M
+gsave 0 setgray
+(CLUSTER198) Rshow
+grestore
+LT0
+2560 1422 D1
+2645 1622 D1
+2872 2023 D1
+2901 2223 D1
+2929 3670 D1
+2958 2268 D1
+2986 3203 D1
+3071 1889 D1
+3185 2468 D1
+3213 2312 D1
+3298 2134 D1
+3384 2969 D1
+3469 1889 D1
+3497 2446 D1
+3526 2268 D1
+3582 1488 D1
+3639 2134 D1
+3780 1379 D1
+1.000 UP
+1.000 UL
+LT1
+LTb
+3497 1239 M
+gsave 0 setgray
+(CLUSTER199) Rshow
+grestore
+LT1
+2219 977 D2
+2361 1488 D2
+2418 887 D2
+2446 1477 D2
+2901 1488 D2
+3780 1239 D2
+1.000 UP
+1.000 UL
+LT2
+LTb
+3497 1099 M
+gsave 0 setgray
+(CLUSTER200) Rshow
+grestore
+LT2
+1481 665 D3
+1623 776 D3
+1736 910 D3
+1765 1911 D3
+2049 821 D3
+3554 1488 D3
+3780 1099 D3
+1.000 UP
+1.000 UL
+LT3
+LTb
+3497 959 M
+gsave 0 setgray
+(CLUSTER201) Rshow
+grestore
+LT3
+2759 2245 D4
+2816 1845 D4
+2844 1845 D4
+3071 1689 D4
+3100 1444 D4
+3384 1767 D4
+3412 1043 D4
+3497 1978 D4
+3781 1466 D4
+5059 1066 D4
+3780 959 D4
+1.000 UP
+1.000 UL
+LT4
+LTb
+3497 819 M
+gsave 0 setgray
+(CLUSTER202) Rshow
+grestore
+LT4
+2617 1511 D5
+3780 819 D5
+1.000 UP
+1.000 UL
+LT5
+LTb
+4904 4739 M
+gsave 0 setgray
+(CLUSTER203) Rshow
+grestore
+LT5
+3384 1110 D6
+3866 3670 D6
+4321 3447 D6
+4434 3091 D6
+4605 2824 D6
+4633 3113 D6
+4832 3091 D6
+4889 2334 D6
+4946 3069 D6
+4974 3002 D6
+5088 2869 D6
+5201 3336 D6
+5400 3514 D6
+5627 3915 D6
+5940 3091 D6
+5187 4739 D6
+1.000 UP
+1.000 UL
+LT6
+LTb
+4904 4599 M
+gsave 0 setgray
+(CLUSTER204) Rshow
+grestore
+LT6
+2304 1333 D7
+2361 2023 D7
+2418 2212 D7
+2503 2357 D7
+2674 2824 D7
+2759 2201 D7
+2816 1845 D7
+2844 2379 D7
+3128 2045 D7
+3156 2156 D7
+3298 1778 D7
+3639 1756 D7
+5187 4599 D7
+1.000 UP
+1.000 UL
+LT7
+LTb
+4904 4459 M
+gsave 0 setgray
+(CLUSTER205) Rshow
+grestore
+LT7
+2219 1021 D8
+3980 3514 D8
+4520 3982 D8
+4576 4204 D8
+4946 4093 D8
+5428 3581 D8
+5457 3781 D8
+5514 4071 D8
+5599 3959 D8
+5187 4459 D8
+1.000 UP
+1.000 UL
+LT8
+LTb
+4904 4319 M
+gsave 0 setgray
+(CLUSTER206) Rshow
+grestore
+LT8
+1878 1867 D9
+2248 1466 D9
+2361 1422 D9
+2503 2090 D9
+2588 1578 D9
+2617 1377 D9
+2645 1845 D9
+2702 1566 D9
+2901 1934 D9
+3014 1956 D9
+5187 4319 D9
+1.000 UP
+1.000 UL
+LT0
+LTb
+4904 4179 M
+gsave 0 setgray
+(CLUSTER207) Rshow
+grestore
+LT0
+2787 1355 D10
+3497 3214 D10
+3696 2668 D10
+3781 3737 D10
+3952 2913 D10
+3980 2980 D10
+4037 2913 D10
+4150 2735 D10
+4236 3536 D10
+4292 2891 D10
+4349 3336 D10
+4718 3069 D10
+4747 2757 D10
+4775 3269 D10
+4804 3269 D10
+5187 4179 D10
+1.000 UP
+1.000 UL
+LT1
+LTb
+4904 4039 M
+gsave 0 setgray
+(CLUSTER208) Rshow
+grestore
+LT1
+2560 1533 D11
+5996 4137 D11
+6053 4226 D11
+6082 4182 D11
+6110 4160 D11
+6167 4249 D11
+6195 4115 D11
+6280 4338 D11
+6366 4249 D11
+6451 4405 D11
+5187 4039 D11
+1.000 UP
+1.000 UL
+LT2
+LTb
+4904 3899 M
+gsave 0 setgray
+(CLUSTER209) Rshow
+grestore
+LT2
+2901 1600 D12
+5187 3899 D12
+1.000 UP
+1.000 UL
+LT3
+LTb
+4904 3759 M
+gsave 0 setgray
+(CLUSTER210) Rshow
+grestore
+LT3
+2702 1600 D13
+4378 2980 D13
+4406 3147 D13
+4463 3169 D13
+4491 3164 D13
+4520 3020 D13
+4605 3447 D13
+4633 2935 D13
+4662 3076 D13
+4718 3039 D13
+4747 3125 D13
+4775 3136 D13
+4804 3091 D13
+4832 3113 D13
+4860 3113 D13
+4917 2913 D13
+4946 3136 D13
+5187 3759 D13
+1.000 UP
+1.000 UL
+LT4
+LTb
+4904 3619 M
+gsave 0 setgray
+(CLUSTER211) Rshow
+grestore
+LT4
+1964 1066 D14
+5059 3314 D14
+5457 3982 D14
+5514 3648 D14
+5542 3670 D14
+5599 4160 D14
+5712 3937 D14
+5769 3959 D14
+5996 3881 D14
+6025 3982 D14
+6110 3447 D14
+5187 3619 D14
+1.000 UP
+1.000 UL
+LT5
+LTb
+4904 3479 M
+gsave 0 setgray
+(CLUSTER212) Rshow
+grestore
+LT5
+3355 1466 D15
+5996 4215 D15
+6082 4193 D15
+6110 4197 D15
+6138 4193 D15
+6167 4226 D15
+6195 4093 D15
+6224 4316 D15
+6252 4278 D15
+5187 3479 D15
+1.000 UP
+1.000 UL
+LT6
+LTb
+4904 3339 M
+gsave 0 setgray
+(CLUSTER213) Rshow
+grestore
+LT6
+2361 1066 BoxE
+3668 3292 BoxE
+4179 2891 BoxE
+4236 3447 BoxE
+4264 2935 BoxE
+4321 3203 BoxE
+4406 2557 BoxE
+4434 2735 BoxE
+4832 2691 BoxE
+4860 2857 BoxE
+4889 2780 BoxE
+4917 3447 BoxE
+4974 2357 BoxE
+5570 3536 BoxE
+5684 3314 BoxE
+5826 3336 BoxE
+5187 3339 BoxE
+1.000 UP
+1.000 UL
+LT7
+LTb
+4904 3199 M
+gsave 0 setgray
+(CLUSTER214) Rshow
+grestore
+LT7
+2759 1934 CircE
+2844 3358 CircE
+3838 3069 CircE
+3895 3937 CircE
+3923 3047 CircE
+4122 3625 CircE
+4349 3470 CircE
+4378 2624 CircE
+4576 3225 CircE
+4662 3781 CircE
+4718 3937 CircE
+4804 3559 CircE
+4860 3414 CircE
+4917 2557 CircE
+4974 3492 CircE
+5286 3648 CircE
+5187 3199 CircE
+1.000 UP
+1.000 UL
+LT8
+LTb
+4904 3059 M
+gsave 0 setgray
+(CLUSTER215) Rshow
+grestore
+LT8
+3043 1733 TriUE
+5372 3559 TriUE
+5656 4004 TriUE
+5684 3959 TriUE
+5712 4060 TriUE
+5741 4048 TriUE
+5769 3815 TriUE
+5798 3848 TriUE
+5883 4026 TriUE
+5911 4093 TriUE
+6025 3804 TriUE
+6082 4093 TriUE
+5187 3059 TriUE
+1.000 UP
+1.000 UL
+LT0
+LTb
+4904 2919 M
+gsave 0 setgray
+(CLUSTER216) Rshow
+grestore
+LT0
+3298 1822 TriDE
+5187 2919 TriDE
+1.000 UP
+1.000 UL
+LT1
+LTb
+4904 2779 M
+gsave 0 setgray
+(CLUSTER217) Rshow
+grestore
+LT1
+2844 1644 DiaE
+3242 1800 DiaE
+3355 1333 DiaE
+3497 2980 DiaE
+3582 2512 DiaE
+3668 2824 DiaE
+3753 3804 DiaE
+3838 2023 DiaE
+3895 2290 DiaE
+3923 2446 DiaE
+3980 2579 DiaE
+4037 1956 DiaE
+4065 2446 DiaE
+4236 2668 DiaE
+4491 2757 DiaE
+4576 3559 DiaE
+4747 1333 DiaE
+4860 2067 DiaE
+4946 2223 DiaE
+5187 2779 DiaE
+1.000 UP
+1.000 UL
+LT2
+LTb
+4904 2639 M
+gsave 0 setgray
+(CLUSTER218) Rshow
+grestore
+LT2
+3100 1422 PentE
+3554 2891 PentE
+3781 2846 PentE
+3838 2713 PentE
+3866 2824 PentE
+4065 2780 PentE
+4094 3203 PentE
+4122 2958 PentE
+4264 3024 PentE
+4292 2713 PentE
+4520 2891 PentE
+4633 3536 PentE
+4860 3447 PentE
+5173 3692 PentE
+5187 2639 PentE
+1.000 UP
+1.000 UL
+LT3
+LTb
+4904 2499 M
+gsave 0 setgray
+(CLUSTER219) Rshow
+grestore
+LT3
+2901 2312 BoxW
+3611 2869 BoxW
+3781 2780 BoxW
+3838 2869 BoxW
+4207 3492 BoxW
+4292 2846 BoxW
+4349 2512 BoxW
+4463 2446 BoxW
+4633 2379 BoxW
+4662 3069 BoxW
+4690 2668 BoxW
+5002 3292 BoxW
+5173 2913 BoxW
+5187 2499 BoxW
+1.000 UP
+1.000 UL
+LT4
+LTb
+4904 2359 M
+gsave 0 setgray
+(CLUSTER220) Rshow
+grestore
+LT4
+3554 3091 CircW
+3696 2601 CircW
+3724 2624 CircW
+3980 2223 CircW
+4037 2958 CircW
+4179 2268 CircW
+4264 2780 CircW
+4349 2312 CircW
+4378 1756 CircW
+4406 3325 CircW
+4434 2846 CircW
+4491 2646 CircW
+4576 2713 CircW
+4718 2735 CircW
+4747 2179 CircW
+4889 2446 CircW
+5258 2802 CircW
+5187 2359 CircW
+1.000 UP
+1.000 UL
+LT5
+LTb
+4904 2219 M
+gsave 0 setgray
+(CLUSTER221) Rshow
+grestore
+LT5
+2475 2067 TriUW
+2503 1845 TriUW
+2645 1533 TriUW
+2674 2201 TriUW
+2816 1422 TriUW
+2844 1377 TriUW
+2958 2156 TriUW
+3071 1867 TriUW
+3128 1622 TriUW
+3156 1800 TriUW
+3185 2268 TriUW
+3440 1355 TriUW
+3639 1845 TriUW
+5187 2219 TriUW
+1.000 UP
+1.000 UL
+LT6
+LTb
+4904 2079 M
+gsave 0 setgray
+(CLUSTER222) Rshow
+grestore
+LT6
+2390 1800 TriDW
+5187 2079 TriDW
+1.000 UP
+1.000 UL
+LT7
+LTb
+4904 1939 M
+gsave 0 setgray
+(CLUSTER223) Rshow
+grestore
+LT7
+1992 1488 DiaW
+2020 1177 DiaW
+2077 999 DiaW
+2106 1344 DiaW
+2219 1422 DiaW
+2276 1132 DiaW
+2304 977 DiaW
+2503 1110 DiaW
+2560 1533 DiaW
+2702 1266 DiaW
+3327 1667 DiaW
+5187 1939 DiaW
+1.000 UP
+1.000 UL
+LT8
+LTb
+4904 1799 M
+gsave 0 setgray
+(CLUSTER224) Rshow
+grestore
+LT8
+4832 1511 PentW
+5187 1799 PentW
+1.000 UP
+1.000 UL
+LT0
+LTb
+4904 1659 M
+gsave 0 setgray
+(CLUSTER225) Rshow
+grestore
+LT0
+3327 2023 Pls
+5883 4382 Pls
+6082 4338 Pls
+6195 4293 Pls
+6224 4316 Pls
+6252 4419 Pls
+6280 4382 Pls
+6366 4471 Pls
+6593 4449 Pls
+5187 1659 Pls
+1.000 UP
+1.000 UL
+LT1
+LTb
+4904 1519 M
+gsave 0 setgray
+(CLUSTER226) Rshow
+grestore
+LT1
+3582 2446 Crs
+3639 2468 Crs
+3895 2857 Crs
+3980 3403 Crs
+4094 3180 Crs
+4122 3726 Crs
+4150 2913 Crs
+4207 2401 Crs
+4321 2757 Crs
+4349 3503 Crs
+4406 3314 Crs
+4434 3403 Crs
+4463 3381 Crs
+4605 3269 Crs
+4633 3470 Crs
+4662 3625 Crs
+4690 3292 Crs
+4974 3425 Crs
+5031 3447 Crs
+5187 1519 Crs
+1.000 UP
+1.000 UL
+LT2
+LTb
+4904 1379 M
+gsave 0 setgray
+(CLUSTER227) Rshow
+grestore
+LT2
+2333 2601 Star
+2787 1778 Star
+3298 2045 Star
+3355 2557 Star
+3384 2824 Star
+3469 2601 Star
+3554 2535 Star
+3781 2579 Star
+3866 2958 Star
+3923 2846 Star
+4037 2824 Star
+4094 2245 Star
+5187 1379 Star
+1.000 UP
+1.000 UL
+LT3
+LTb
+4904 1239 M
+gsave 0 setgray
+(CLUSTER228) Rshow
+grestore
+LT3
+3242 2468 Box
+4576 4115 Box
+5059 3292 Box
+5116 3848 Box
+5144 3292 Box
+5230 3047 Box
+5400 3692 Box
+5457 4026 Box
+5712 3670 Box
+5798 3625 Box
+6053 3826 Box
+6280 4360 Box
+6366 3781 Box
+5187 1239 Box
+1.000 UP
+1.000 UL
+LT4
+LTb
+4904 1099 M
+gsave 0 setgray
+(CLUSTER229) Rshow
+grestore
+LT4
+2702 1956 BoxF
+4690 4204 BoxF
+4917 3447 BoxF
+4946 4226 BoxF
+5002 3759 BoxF
+5201 3781 BoxF
+5315 3826 BoxF
+5570 3781 BoxF
+5627 3792 BoxF
+5798 3514 BoxF
+6025 4271 BoxF
+5187 1099 BoxF
+1.000 UP
+1.000 UL
+LT5
+LTb
+4904 959 M
+gsave 0 setgray
+(CLUSTER230) Rshow
+grestore
+LT5
+2390 1066 Circle
+2532 1377 Circle
+2588 2446 Circle
+3242 2535 Circle
+3327 2023 Circle
+3384 1889 Circle
+3639 2090 Circle
+4037 1399 Circle
+4065 1800 Circle
+5187 959 Circle
+1.000 UP
+1.000 UL
+LT6
+LTb
+4904 819 M
+gsave 0 setgray
+(CLUSTER231) Rshow
+grestore
+LT6
+3469 2290 CircleF
+4747 3158 CircleF
+5002 3358 CircleF
+5088 3158 CircleF
+5400 2824 CircleF
+5428 3047 CircleF
+5627 2512 CircleF
+5656 3559 CircleF
+5769 2913 CircleF
+5911 2980 CircleF
+5187 819 CircleF
+1.000 UP
+1.000 UL
+LT7
+LTb
+6311 4739 M
+gsave 0 setgray
+(CLUSTER232) Rshow
+grestore
+LT7
+2588 2624 TriU
+3071 3024 TriU
+3242 2601 TriU
+3298 2646 TriU
+3355 2757 TriU
+3412 2379 TriU
+3696 2691 TriU
+3724 2646 TriU
+3980 3069 TriU
+4094 3069 TriU
+4236 2891 TriU
+4264 3336 TriU
+4434 1756 TriU
+4463 3136 TriU
+4548 2713 TriU
+4576 2958 TriU
+4889 3069 TriU
+6594 4739 TriU
+1.000 UP
+1.000 UL
+LT8
+LTb
+6311 4599 M
+gsave 0 setgray
+(CLUSTER233) Rshow
+grestore
+LT8
+3270 3336 TriUF
+4889 3603 TriUF
+5173 3403 TriUF
+5400 3447 TriUF
+5457 3514 TriUF
+5514 3770 TriUF
+5542 3670 TriUF
+5627 3614 TriUF
+5656 3826 TriUF
+5684 3729 TriUF
+5741 3937 TriUF
+5769 3759 TriUF
+5826 3692 TriUF
+5883 4093 TriUF
+5996 3737 TriUF
+6594 4599 TriUF
+1.000 UP
+1.000 UL
+LT0
+LTb
+6311 4459 M
+gsave 0 setgray
+(CLUSTER234) Rshow
+grestore
+LT0
+3724 2757 TriD
+4321 3470 TriD
+4917 3024 TriD
+5059 3180 TriD
+5116 3470 TriD
+5144 3648 TriD
+5173 3447 TriD
+5230 3292 TriD
+5343 3625 TriD
+5372 3403 TriD
+5400 3737 TriD
+5485 3959 TriD
+5514 3347 TriD
+5684 3603 TriD
+5712 2780 TriD
+6594 4459 TriD
+1.000 UP
+1.000 UL
+LT1
+LTb
+6311 4319 M
+gsave 0 setgray
+(CLUSTER235) Rshow
+grestore
+LT1
+3298 3314 TriDF
+3355 2290 TriDF
+3384 4048 TriDF
+3440 3759 TriDF
+3526 3781 TriDF
+3781 3425 TriDF
+3895 3069 TriDF
+3923 4204 TriDF
+4037 3247 TriDF
+4179 3507 TriDF
+4207 3514 TriDF
+4236 2757 TriDF
+4292 3262 TriDF
+4690 3948 TriDF
+4804 2579 TriDF
+6594 4319 TriDF
+1.000 UP
+1.000 UL
+LT2
+LTb
+6311 4179 M
+gsave 0 setgray
+(CLUSTER236) Rshow
+grestore
+LT2
+3327 2223 Dia
+3384 1822 Dia
+3582 2713 Dia
+3639 2869 Dia
+3724 2601 Dia
+3753 2357 Dia
+3781 2245 Dia
+3838 2524 Dia
+3866 2512 Dia
+3895 2512 Dia
+3923 2668 Dia
+3952 2496 Dia
+3980 2605 Dia
+4008 2627 Dia
+4037 2551 Dia
+4065 2579 Dia
+4094 2579 Dia
+4122 2535 Dia
+4207 2728 Dia
+4264 2869 Dia
+6594 4179 Dia
+1.000 UP
+1.000 UL
+LT3
+LTb
+6311 4039 M
+gsave 0 setgray
+(CLUSTER237) Rshow
+grestore
+LT3
+3213 2067 DiaF
+3327 2980 DiaF
+3440 3492 DiaF
+3611 2824 DiaF
+3639 2401 DiaF
+3724 2824 DiaF
+3866 2601 DiaF
+4065 2579 DiaF
+4094 2401 DiaF
+4122 2757 DiaF
+4236 3203 DiaF
+4264 3002 DiaF
+4349 2791 DiaF
+4406 2757 DiaF
+4434 2179 DiaF
+4463 2780 DiaF
+4520 3047 DiaF
+4605 3559 DiaF
+4690 2379 DiaF
+4775 2935 DiaF
+4804 3047 DiaF
+4860 3447 DiaF
+5059 3158 DiaF
+6594 4039 DiaF
+1.000 UP
+1.000 UL
+LT4
+LTb
+6311 3899 M
+gsave 0 setgray
+(CLUSTER238) Rshow
+grestore
+LT4
+1907 509 Pent
+2077 977 Pent
+2106 977 Pent
+2304 1155 Pent
+2361 1500 Pent
+2475 1177 Pent
+2645 1466 Pent
+2844 1555 Pent
+5599 1978 Pent
+6594 3899 Pent
+1.000 UP
+1.000 UL
+LT5
+LTb
+6311 3759 M
+gsave 0 setgray
+(CLUSTER239) Rshow
+grestore
+LT5
+2532 1911 PentF
+3469 2290 PentF
+3781 2312 PentF
+3866 3358 PentF
+3952 2512 PentF
+4037 2691 PentF
+4122 2535 PentF
+4179 2579 PentF
+4207 2668 PentF
+4236 2735 PentF
+4264 3247 PentF
+4292 2668 PentF
+4406 3084 PentF
+4463 3336 PentF
+4576 3180 PentF
+4605 3447 PentF
+4633 3247 PentF
+4804 3225 PentF
+4832 2579 PentF
+6594 3759 PentF
+1.000 UP
+1.000 UL
+LT6
+LTb
+6311 3619 M
+gsave 0 setgray
+(CLUSTER240) Rshow
+grestore
+LT6
+3014 1288 C0
+3071 2023 C0
+3952 2646 C0
+5059 3203 C0
+6594 3619 C0
+1.000 UP
+1.000 UL
+LT7
+LTb
+6311 3479 M
+gsave 0 setgray
+(CLUSTER241) Rshow
+grestore
+LT7
+2503 643 C1
+2986 1711 C1
+3298 1911 C1
+3412 2112 C1
+3497 2290 C1
+3526 1778 C1
+3668 2119 C1
+3753 1911 C1
+3866 2468 C1
+3923 2179 C1
+3952 1622 C1
+4037 1689 C1
+4775 2045 C1
+4917 2134 C1
+4946 1978 C1
+6594 3479 C1
+1.000 UP
+1.000 UL
+LT8
+LTb
+6311 3339 M
+gsave 0 setgray
+(CLUSTER242) Rshow
+grestore
+LT8
+2617 1644 C2
+6594 3339 C2
+1.000 UP
+1.000 UL
+LT0
+LTb
+6311 3199 M
+gsave 0 setgray
+(CLUSTER243) Rshow
+grestore
+LT0
+1793 932 C3
+1964 1355 C3
+2162 2000 C3
+2446 1756 C3
+2503 1355 C3
+2674 1377 C3
+2787 1333 C3
+2844 1600 C3
+2901 1644 C3
+6594 3199 C3
+1.000 UP
+1.000 UL
+LT1
+LTb
+6311 3059 M
+gsave 0 setgray
+(CLUSTER244) Rshow
+grestore
+LT1
+2730 1711 C4
+4974 3692 C4
+5002 3804 C4
+5372 3603 C4
+5457 3759 C4
+5542 3670 C4
+5627 4048 C4
+5656 4004 C4
+6025 3559 C4
+6594 3059 C4
+1.000 UP
+1.000 UL
+LT2
+LTb
+6311 2919 M
+gsave 0 setgray
+(CLUSTER245) Rshow
+grestore
+LT2
+1651 1221 C5
+2333 1110 C5
+2390 1600 C5
+2475 1733 C5
+2560 1132 C5
+2730 1533 C5
+2844 1555 C5
+2872 1822 C5
+3071 1377 C5
+3100 1678 C5
+3185 1845 C5
+3213 1845 C5
+3242 2401 C5
+3384 1600 C5
+3412 1756 C5
+3810 999 C5
+3923 1244 C5
+6594 2919 C5
+1.000 UP
+1.000 UL
+LT3
+LTb
+6311 2779 M
+gsave 0 setgray
+(CLUSTER246) Rshow
+grestore
+LT3
+2191 1310 C6
+2901 2312 C6
+3043 2223 C6
+3100 2535 C6
+3327 1800 C6
+3497 2023 C6
+3582 2579 C6
+3724 2668 C6
+3753 1845 C6
+3866 2357 C6
+4236 2579 C6
+4378 2535 C6
+4434 2891 C6
+4548 2268 C6
+4889 2646 C6
+4917 1923 C6
+6594 2779 C6
+1.000 UP
+1.000 UL
+LT4
+LTb
+6311 2639 M
+gsave 0 setgray
+(CLUSTER247) Rshow
+grestore
+LT4
+2134 954 C7
+5798 4004 C7
+5911 4160 C7
+5968 4204 C7
+6025 3781 C7
+6195 4160 C7
+6224 4226 C7
+6451 3915 C7
+6594 2639 C7
+1.000 UP
+1.000 UL
+LT5
+LTb
+6311 2499 M
+gsave 0 setgray
+(CLUSTER248) Rshow
+grestore
+LT5
+3497 1667 C8
+5769 4249 C8
+5883 4160 C8
+5911 4085 C8
+5940 4249 C8
+5968 4167 C8
+5996 4115 C8
+6025 4204 C8
+6053 4137 C8
+6082 4282 C8
+6110 4538 C8
+6138 4271 C8
+6167 4304 C8
+6594 2499 C8
+1.000 UP
+1.000 UL
+LT6
+LTb
+6311 2359 M
+gsave 0 setgray
+(CLUSTER249) Rshow
+grestore
+LT6
+2759 954 C9
+6594 2359 C9
+1.000 UP
+1.000 UL
+LT7
+LTb
+6311 2219 M
+gsave 0 setgray
+(CLUSTER250) Rshow
+grestore
+LT7
+2844 1578 C10
+4434 2802 C10
+4662 1800 C10
+4860 2935 C10
+5230 2757 C10
+5542 3024 C10
+5656 3002 C10
+5741 2201 C10
+5854 2713 C10
+6138 2601 C10
+6594 2219 C10
+1.000 UP
+1.000 UL
+LT8
+LTb
+6311 2079 M
+gsave 0 setgray
+(CLUSTER251) Rshow
+grestore
+LT8
+2077 1800 C11
+2276 1355 C11
+2532 1221 C11
+2702 1399 C11
+6594 2079 C11
+1.000 UP
+1.000 UL
+LT0
+LTb
+6311 1939 M
+gsave 0 setgray
+(CLUSTER252) Rshow
+grestore
+LT0
+3810 3136 C12
+6594 1939 C12
+1.000 UP
+1.000 UL
+LT1
+LTb
+6311 1799 M
+gsave 0 setgray
+(CLUSTER253) Rshow
+grestore
+LT1
+3100 2045 C13
+3668 2624 C13
+3696 2557 C13
+3781 2757 C13
+3810 3503 C13
+3838 3714 C13
+3866 3024 C13
+3980 3303 C13
+4122 3158 C13
+4207 2958 C13
+4264 3447 C13
+4378 2846 C13
+4406 2512 C13
+4662 2891 C13
+4718 2980 C13
+4832 3403 C13
+5116 2846 C13
+5258 3381 C13
+6594 1799 C13
+1.000 UP
+1.000 UL
+LT2
+LTb
+6311 1659 M
+gsave 0 setgray
+(CLUSTER254) Rshow
+grestore
+LT2
+4889 2913 C14
+6594 1659 C14
+1.000 UP
+1.000 UL
+LT3
+LTb
+6311 1519 M
+gsave 0 setgray
+(CLUSTER255) Rshow
+grestore
+LT3
+3952 2468 C15
+4094 3447 C15
+4292 2268 C15
+4520 3024 C15
+4576 1600 C15
+4633 2468 C15
+4718 2869 C15
+4832 2446 C15
+4860 1778 C15
+5002 2023 C15
+5514 3492 C15
+6594 1519 C15
+1.000 UP
+1.000 UL
+LT4
+LTb
+6311 1379 M
+gsave 0 setgray
+(CLUSTER256) Rshow
+grestore
+LT4
+4008 2468 S0
+4037 2601 S0
+4122 2624 S0
+4292 2579 S0
+4349 2657 S0
+4406 2724 S0
+4434 2691 S0
+4463 2613 S0
+4520 2791 S0
+4662 3002 S0
+4718 2832 S0
+4832 1800 S0
+4974 2279 S0
+5116 1756 S0
+5144 2646 S0
+5230 2245 S0
+5286 2290 S0
+6594 1379 S0
+1.000 UL
+LTb
+714 420 M
+6248 0 V
+0 4452 V
+-6248 0 V
+714 420 L
+1.000 UP
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica

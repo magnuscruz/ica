@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/jcommon-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/unidu-20050320.jar" sourcepath="lib/unidu-20050320-src.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart-1.0.1.jar" sourcepath="E:/Meus documentos/Magnus/Mestrado/JFreeChart/jfreechart-1.0.1/source"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

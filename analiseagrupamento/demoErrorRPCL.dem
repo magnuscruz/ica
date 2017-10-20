@@ -1,0 +1,12 @@
+reset
+set terminal postscript eps
+set key box
+set origin 0.0,0.0
+set offsets 0, 0, 2, 2
+set output './images/Quantization Error Index-RPCL.eps'
+set label font "Times-Roman,14"
+set xlabel 'K' font "Times-Roman,14"
+set ylabel 'ERRO DE QUANTIZACAO' font "Times-Roman,14"
+plot  './images/RPCL/Quantization Error Index-RPCL10_1.dat' smooth unique title 'Gamma 0.1' with linespoints linetype 3 pointtype 3, './images/RPCL/Quantization Error Index-RPCL10_05.dat' smooth unique title 'Gamma 0.05' with linespoints linetype 4 pointtype 4
+show output
+/usr/bin/epstopdf ./images/Quantization Error Index-RPCL.eps

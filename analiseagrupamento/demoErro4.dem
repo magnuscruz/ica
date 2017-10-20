@@ -1,0 +1,12 @@
+reset
+set terminal postscript eps
+set key box
+set origin 0.0,0.0
+set offsets 0, 0, 2, 2
+set output './images/Quantization Error-4.eps'
+set label font "Times-Roman,14"
+set xlabel 'EPOCA' font "Times-Roman,14"
+set ylabel 'ERRO DE QUANTIZACAO' font "Times-Roman,14"
+plot  './images/SOM/Quantization Error-SOM4.dat' smooth unique title 'SOM' with lines linetype 1, './images/WTA/Quantization Error-WTA4.dat' smooth unique title 'WTA' with lines linetype 2, './images/FSCL/Quantization Error-FSCL4.dat' smooth unique title 'FSCL' with lines linetype 3, './images/RPCL/Quantization Error-RPCL4.dat' smooth unique title 'RPCL' with lines linetype 4, './images/FuzzyCL/Quantization Error-FuzzyCL4.dat' smooth unique title 'FuzzyCL' with lines linetype 5 linewidth 1, './images/K-Means/Quantization Error-K-Means4.dat' smooth unique title 'K-Means' with lines linetype 6 linewidth 1, './images/NeuralGas/Quantization Error-NeuralGas4.dat' smooth unique title 'NeuralGas' with lines linetype 7 linewidth 1
+show output
+/usr/bin/epstopdf ./images/Quantization Error-4.eps

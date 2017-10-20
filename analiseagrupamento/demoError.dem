@@ -1,0 +1,13 @@
+reset
+set terminal postscript eps
+set key box
+set size 0.60
+set origin 0.0,0.0
+set offsets 0, 0, 0.1, 0.0
+set output './images/QuantizationErrorIndex.eps'
+set label font "Times-Roman,12"
+set xlabel 'K' font "Times-Roman,12"
+set ylabel 'ERRO DE QUANTIZACAO' font "Times-Roman,12"
+plot  './images/SOM/Quantization Error Index-SOM10.dat' smooth unique title 'SOM' with linespoints linetype 1 pointtype 1, './images/WTA/Quantization Error Index-WTA10.dat' smooth unique title 'WTA' with linespoints linetype 2 pointtype 2, './images/FSCL/Quantization Error Index-FSCL10.dat' smooth unique title 'FSCL' with linespoints linetype 3 pointtype 3, './images/RPCL/Quantization Error Index-RPCL10.dat' smooth unique title 'RPCL' with linespoints linetype 4 pointtype 4,  './images/FuzzyCL/Quantization Error Index-FuzzyCL10.dat' smooth unique title 'FuzzyCL' with linespoints linetype 5 pointtype 5, './images/K-Means/Quantization Error Index-K-Means10.dat' smooth unique title 'K-Means' with linespoints linetype 6 pointtype 6, './images/NeuralGas/Quantization Error Index-NeuralGas10.dat' smooth unique title 'NeuralGas' with linespoints linetype 7 pointtype 7
+show output
+/usr/bin/epstopdf ./images/QuantizationErrorIndex.eps

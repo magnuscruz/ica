@@ -1,0 +1,2 @@
+convert -separate lena.tiff lena2.tiff
+convert -resize 256x256 lena2.tiff lena3.tiff

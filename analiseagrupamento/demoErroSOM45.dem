@@ -1,0 +1,14 @@
+reset
+set terminal postscript eps
+set encoding iso_8859_2
+show encoding
+set key box
+set origin 0.0,0.0
+set offsets 0, 0, 2, 2
+set output './images/Quantization Error-SOM45.eps'
+set label font "Times-Roman,14"
+set xlabel "EPOCA" font "Times-Roman,14"
+set ylabel "ERRO DE QUANTIZACAO" font "Times-Roman,14"
+plot  './images/SOM/Quantization Error-SOM4.dat' smooth unique title 'K=4' with lines linetype 1, './images/SOM/Quantization Error-SOM5.dat' smooth unique title 'K=5' with lines linetype 2
+show output
+/usr/bin/epstopdf ./images/Quantization Error-SOM45.eps

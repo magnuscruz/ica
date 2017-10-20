@@ -1,0 +1,42 @@
+reset
+set terminal postscript eps color
+set key box
+set output './images/SOM/Davies-Bouldin Index-4.eps'
+set xlabel 'K'
+set ylabel 'Index'
+plot  './images/SOM/Davies-Bouldin Index-SOM4.dat' smooth unique title 'DB Index - SOM' with linespoints linetype 1 pointtype 1, './images/WTA/Davies-Bouldin Index-WTA4.dat' smooth unique title 'DB Index - WTA' with linespoints linetype 2 pointtype 2 
+show output
+/usr/bin/epstopdf ./images/SOM/Davies-Bouldin Index-4.eps
+
+reset 
+set terminal postscript eps color
+set key box
+set output './images/WTA/Davies-Bouldin Index-WTA4.eps'
+set style data 'linespoints pointtype 5'
+set xlabel 'K'
+set ylabel 'Index'
+plot  './images/WTA/Davies-Bouldin Index-WTA4.dat' smooth unique title 'Davies-Bouldin Index' with linespoints pointtype 5 
+show output
+/usr/bin/epstopdf ./images/WTA/Davies-Bouldin Index-WTA4.eps
+
+reset
+set terminal postscript eps color
+set key box
+set output './images/SOM/Dunn Index Family-SOM4.eps'
+set style data 'linespoints pointtype 5'
+set xlabel 'K'
+set ylabel 'Index'
+plot  './images/SOM/Dunn Index Family-SOM4.dat' smooth unique title 'Dunn Index Family' with linespoints pointtype 5 
+show output
+/usr/bin/epstopdf ./images/SOM/Dunn Index Family-SOM4.eps
+
+reset 
+set terminal postscript eps color
+set key box
+set output './images/WTA/Dunn Index Family-WTA4.eps'
+set style data 'linespoints pointtype 5'
+set xlabel 'K'
+set ylabel 'Index'
+plot  './images/WTA/Dunn Index Family-WTA4.dat' smooth unique title 'Dunn Index Family' with linespoints pointtype 5 
+show output
+/usr/bin/epstopdf ./images/WTA/Dunn Index Family-WTA4.eps

@@ -1,0 +1,12 @@
+reset
+set terminal postscript eps
+set origin 0,0
+set key box
+set boxwidth 0.9
+set output './images/NumWinsChartSOM3.eps'
+set label font "Times-Roman,14"
+set xlabel 'K' font "Times-Roman,14"
+set ylabel 'Wins' font "Times-Roman,14"
+plot  './images/SOM/NumWinsChartSOM3.dat' smooth unique title 'SOM' with boxes fs solid 0.50
+show output
+/usr/bin/epstopdf ./images/NumWinsChartSOM3.eps

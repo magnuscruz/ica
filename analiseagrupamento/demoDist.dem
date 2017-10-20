@@ -1,0 +1,66 @@
+reset 
+set terminal postscript eps
+set key box
+set output './images/SOM/Distribuicao dos Dados-SOM2.eps'
+set style data 'points'
+set xlabel 'ATRIBUTO 2'
+set ylabel 'ATRIBUTO 1'
+plot  './images/SOM/Distribuicao dos Dados-SOM20.dat' smooth unique title 'PROTOTIPOS' with points  pointtype 6 ,'./images/SOM/Distribuicao dos Dados-SOM21.dat' smooth unique title 'CLUSTER1' with points ,'./images/SOM/Distribuicao dos Dados-SOM22.dat' smooth unique title 'CLUSTER2' with points 
+show output
+/usr/bin/epstopdf ./images/SOM/Distribuicao dos Dados-SOM2.eps
+
+reset 
+set terminal postscript eps
+set key box
+set output './images/WTA/Distribuicao dos Dados-WTA2.eps'
+set style data 'points'
+set xlabel 'ATRIBUTO 2'
+set ylabel 'ATRIBUTO 1'
+plot  './images/WTA/Distribuicao dos Dados-WTA20.dat' smooth unique title 'PROTOTIPOS' with points  pointtype 6 ,'./images/WTA/Distribuicao dos Dados-WTA21.dat' smooth unique title 'CLUSTER1' with points ,'./images/WTA/Distribuicao dos Dados-WTA22.dat' smooth unique title 'CLUSTER2' with points 
+show output
+/usr/bin/epstopdf ./images/WTA/Distribuicao dos Dados-WTA2.eps
+
+reset 
+set terminal postscript eps
+set key box
+set output './images/SOM/Distribuicao dos Dados-SOM3.eps'
+set style data 'points'
+set xlabel 'ATRIBUTO 2'
+set ylabel 'ATRIBUTO 1'
+plot  './images/SOM/Distribuicao dos Dados-SOM30.dat' smooth unique title 'PROTOTIPOS' with points  pointtype 6 ,'./images/SOM/Distribuicao dos Dados-SOM31.dat' smooth unique title 'CLUSTER1' with points ,'./images/SOM/Distribuicao dos Dados-SOM32.dat' smooth unique title 'CLUSTER2' with points ,'./images/SOM/Distribuicao dos Dados-SOM33.dat' smooth unique title 'CLUSTER3' with points 
+show output
+/usr/bin/epstopdf ./images/SOM/Distribuicao dos Dados-SOM3.eps
+
+reset 
+set terminal postscript eps
+set key box
+set output './images/WTA/Distribuicao dos Dados-WTA3.eps'
+set style data 'points'
+set xlabel 'ATRIBUTO 2'
+set ylabel 'ATRIBUTO 1'
+plot  './images/WTA/Distribuicao dos Dados-WTA30.dat' smooth unique title 'PROTOTIPOS' with points  pointtype 6 ,'./images/WTA/Distribuicao dos Dados-WTA31.dat' smooth unique title 'CLUSTER1' with points ,'./images/WTA/Distribuicao dos Dados-WTA32.dat' smooth unique title 'CLUSTER2' with points ,'./images/WTA/Distribuicao dos Dados-WTA33.dat' smooth unique title 'CLUSTER3' with points 
+show output
+/usr/bin/epstopdf ./images/WTA/Distribuicao dos Dados-WTA3.eps
+
+reset 
+set terminal postscript eps
+set key box
+set output './images/SOM/Distribuicao dos Dados-SOM4.eps'
+set style data 'points'
+set xlabel 'ATRIBUTO 2'
+set ylabel 'ATRIBUTO 1'
+plot  './images/SOM/Distribuicao dos Dados-SOM40.dat' smooth unique title 'PROTOTIPOS' with points  pointtype 6 ,'./images/SOM/Distribuicao dos Dados-SOM41.dat' smooth unique title 'CLUSTER1' with points ,'./images/SOM/Distribuicao dos Dados-SOM42.dat' smooth unique title 'CLUSTER2' with points ,'./images/SOM/Distribuicao dos Dados-SOM43.dat' smooth unique title 'CLUSTER3' with points ,'./images/SOM/Distribuicao dos Dados-SOM44.dat' smooth unique title 'CLUSTER4' with points 
+show output
+/usr/bin/epstopdf ./images/SOM/Distribuicao dos Dados-SOM4.eps
+
+reset 
+set terminal postscript eps
+set key box
+set output './images/WTA/Distribuicao dos Dados-WTA4.eps'
+set style data 'points'
+set xlabel 'ATRIBUTO 2'
+set ylabel 'ATRIBUTO 1'
+plot  './images/WTA/Distribuicao dos Dados-WTA40.dat' smooth unique title 'PROTOTIPOS' with points  pointtype 6 ,'./images/WTA/Distribuicao dos Dados-WTA41.dat' smooth unique title 'CLUSTER1' with points ,'./images/WTA/Distribuicao dos Dados-WTA42.dat' smooth unique title 'CLUSTER2' with points ,'./images/WTA/Distribuicao dos Dados-WTA43.dat' smooth unique title 'CLUSTER3' with points ,'./images/WTA/Distribuicao dos Dados-WTA44.dat' smooth unique title 'CLUSTER4' with points 
+show output
+/usr/bin/epstopdf ./images/WTA/Distribuicao dos Dados-WTA4.eps
+
