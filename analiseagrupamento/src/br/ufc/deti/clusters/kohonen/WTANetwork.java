@@ -77,7 +77,7 @@ public class WTANetwork extends AbstractNetwork implements TwoDNetwork {
 	 * feed forward
 	 */
 	public Cluster feedForward(Datum input) {
-		this.min = 99999;
+		this.min = 999999;
 		double distance = 0.0;
 		Neuron winner = null;
 		// calculate activity for the same input

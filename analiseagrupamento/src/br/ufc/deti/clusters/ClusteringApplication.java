@@ -88,7 +88,7 @@ public class ClusteringApplication extends JFrame implements Runnable,
 	
 	private Thread testThread = null;
 
-	private JTextField tf;
+	private JTextField tfDatum;
 
 	private JTextField tfAtributo1;
 
@@ -211,8 +211,8 @@ public class ClusteringApplication extends JFrame implements Runnable,
 		setSize(500, 270);
 		setVisible(false);
 
-		tf = new JTextField();
-		tf.setSize(50, 30);
+		tfDatum = new JTextField();
+		tfDatum.setSize(15, 30);
 		tfAtributo1 = new JTextField("1");
 		tfAtributo1.setSize(50, 30);
 		tfAtributo2 = new JTextField("2");
@@ -277,7 +277,7 @@ public class ClusteringApplication extends JFrame implements Runnable,
 		JPanel panelTextTest = new JPanel();
 		panelTextTest.setLayout(new BorderLayout());
 		panelTextTest.add(new Label("Test datum:"), BorderLayout.WEST);
-		panelTextTest.add(tf, BorderLayout.CENTER);
+		panelTextTest.add(tfDatum, BorderLayout.CENTER);
 
 		panelText.add(panelTextTest, BorderLayout.NORTH);
 
@@ -489,7 +489,7 @@ public class ClusteringApplication extends JFrame implements Runnable,
 	 *            The event
 	 */
 	void clear_actionPerformed(java.awt.event.ActionEvent event) {
-		tf.setText("");
+		//tfDatum.setText("18");
 	}
 
 	/**
@@ -598,7 +598,7 @@ public class ClusteringApplication extends JFrame implements Runnable,
 						int c = 0;
 						for (String string : strings) {
 							if (index != colIgnore) {
-								d[c++] = Double.parseDouble(string.trim());
+								d[c++] = extractedDouble(string);
 							}
 							index++;
 						}
@@ -622,6 +622,10 @@ public class ClusteringApplication extends JFrame implements Runnable,
 					JOptionPane.ERROR_MESSAGE);
 		}
 		return letterListModel;
+	}
+
+	private double extractedDouble(String string) {
+		return Double.parseDouble(string.trim().hashCode()/100000+"");
 	}
 
 	/**
@@ -713,7 +717,7 @@ public class ClusteringApplication extends JFrame implements Runnable,
 		if (testThread!=null) {
 			clustering.test();
 			test_actionPerformed(null);
-		} else if (testThread!=null) {
+		} else if (trainThread!=null) {
 			clustering.learn();
 			train_actionPerformed(null);
 		}
@@ -1041,10 +1045,10 @@ public class ClusteringApplication extends JFrame implements Runnable,
 		double input[] = new double[((Datum) letterListModel.get(0))
 				.getAttributes().length];
 		int idx = 0;
-		String ds = tf.getText();
+		String ds = tfDatum.getText();
 		String[] strings = ds.split(getSeparator());
-		for (int x = 0; x < strings.length; x++) {
-			input[idx++] = new Double(strings[x]).doubleValue();
+		for (int x = 0; x < strings.length && x < input.length; x++) {
+			input[idx++] = extractedDouble(strings[x]);
 		}
 		Cluster best = clustering.winner(input);
 		JOptionPane.showMessageDialog(this, " (Cluster #" + best + " fired)",

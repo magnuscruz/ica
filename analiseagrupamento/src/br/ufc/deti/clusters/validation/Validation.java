@@ -14,7 +14,7 @@ public final class Validation {
 	 * @return
 	 */
 	public static double calculateDunn(Object[] clusters) {
-		double minDiss = 9999.0;
+		double minDiss = 999999;
 		double maxDist = 0.0;
 		double dist = 0.0;
 		for (int i = 0; i < clusters.length; i++) {
@@ -58,7 +58,7 @@ public final class Validation {
 	 * @return
 	 */
 	public static double calculateDunn(Cluster[][] clusters) {
-		double minDiss = 9999.0;
+		double minDiss = 999999;
 		double maxDist = 0.0;
 		double dist = 0.0;
 		for (int i = 0; i < clusters.length; i++) {

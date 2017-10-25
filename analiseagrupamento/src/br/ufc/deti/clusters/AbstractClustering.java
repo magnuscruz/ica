@@ -443,9 +443,9 @@ public abstract class AbstractClustering implements Clustering {
 	 */
 	public Cluster winner(double input[]) {
 		Cluster winner = null;
-		double distance = 9999.0;
+		double distance = 999999;
 		for (Cluster c : outputClusters) {
-			double d = Validation.distance2(c.getAttributes(), input);
+			double d = Validation.euclidianDistance(c.getAttributes(), input);
 			if (d < distance) {
 				distance = d;
 				winner = c;
