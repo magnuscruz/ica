@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dtp:serviceLocator xmlns:dtp="http://www.dataprev.gov.br/ns/javaee/ejb"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.dataprev.gov.br/ns/javaee/ejb serviceLocator.xsd">
+
+    <dtp:server name="reavdir">
+        <dtp:serviceLocatorFactory>br.gov.dataprev.infra.core.locator.factory.WeblogicServiceLocatorFactory</dtp:serviceLocatorFactory>
+        <dtp:initialContextFactory>weblogic.jndi.WLInitialContextFactory</dtp:initialContextFactory>
+        <dtp:providerUrl>t3://v121d029:8001</dtp:providerUrl>
+        <dtp:user>BATCH_USER_REAVDIR</dtp:user>
+            <dtp:password/>     
+        <dtp:keyvalue key="java.naming.security.principal" value="BATCH_USER_REAVDIR"/>
+        <dtp:keyvalue key="java.naming.security.credentials" value=""/> 
+        <dtp:keyvalue key="applicationName" value="Reavdir" />
+    </dtp:server>
+    <dtp:server name="conev">
+        <dtp:serviceLocatorFactory>br.gov.dataprev.infra.core.locator.factory.WeblogicServiceLocatorFactory</dtp:serviceLocatorFactory>
+        <dtp:initialContextFactory>weblogic.jndi.WLInitialContextFactory</dtp:initialContextFactory>
+        <dtp:providerUrl>t3://v121d029:7001</dtp:providerUrl>
+        <dtp:user>BATCH_USER_CONEV</dtp:user>
+            <dtp:password/>     
+        <dtp:keyvalue key="java.naming.security.principal" value="BATCH_USER_CONEV"/>
+        <dtp:keyvalue key="java.naming.security.credentials" value=""/> 
+        <dtp:keyvalue key="applicationName" value="Conev" />
+    </dtp:server>
+    <dtp:server name="comsub">
+        <dtp:serviceLocatorFactory>br.gov.dataprev.infra.core.locator.factory.WeblogicServiceLocatorFactory</dtp:serviceLocatorFactory>
+        <dtp:initialContextFactory>weblogic.jndi.WLInitialContextFactory</dtp:initialContextFactory>
+        <dtp:providerUrl>t3://v121d029:7001</dtp:providerUrl>
+        <dtp:user>BATCH_USER_CONEV</dtp:user>
+            <dtp:password/>     
+        <dtp:keyvalue key="java.naming.security.principal" value="BATCH_USER_CONEV"/>
+        <dtp:keyvalue key="java.naming.security.credentials" value=""/> 
+        <dtp:keyvalue key="applicationName" value="ComSub" />
+    </dtp:server>
+    <dtp:server name="consulta">
+        <dtp:serviceLocatorFactory>br.gov.dataprev.infra.core.locator.factory.WeblogicServiceLocatorFactory</dtp:serviceLocatorFactory>
+        <dtp:initialContextFactory>weblogic.jndi.WLInitialContextFactory</dtp:initialContextFactory>
+        <dtp:providerUrl>t3://v121d029:7001</dtp:providerUrl>
+        <dtp:user>BATCH_USER_CONEV</dtp:user>
+            <dtp:password/>     
+        <dtp:keyvalue key="java.naming.security.principal" value="BATCH_USER_CONEV"/>
+        <dtp:keyvalue key="java.naming.security.credentials" value=""/> 
+        <dtp:keyvalue key="applicationName" value="Consulta" />
+    </dtp:server>
+	<dtp:server name="servidorfilas">
+		<dtp:preserveInitialContext>true</dtp:preserveInitialContext>
+		<dtp:serviceLocatorFactory>br.gov.dataprev.infra.core.locator.factory.WeblogicServiceLocatorFactory</dtp:serviceLocatorFactory>
+		<dtp:initialContextFactory>weblogic.jndi.WLInitialContextFactory</dtp:initialContextFactory>
+		<dtp:providerUrl>t3://v121d030:7001</dtp:providerUrl>
+		<dtp:user>udrj</dtp:user> 
+		<dtp:password>dataprev00</dtp:password>
+	</dtp:server>
+ 	  <dtp:server name="sdc">
+                <dtp:preserveInitialContext>true</dtp:preserveInitialContext>
+                <dtp:initialContextFactory>oracle.j2ee.rmi.RMIInitialContextFactory</dtp:initialContextFactory>
+                <dtp:providerUrl>ormi://hcnisapl01.prevnet:12413/SdcServices</dtp:providerUrl>
+                <dtp:user>userejb</dtp:user>
+                <dtp:password>userejb00</dtp:password>
+                <dtp:doCache>false</dtp:doCache>
+        </dtp:server>
+</dtp:serviceLocator>
