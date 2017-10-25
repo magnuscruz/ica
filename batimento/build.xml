@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xml>
+<project name="RefAppBatch" basedir="." default="make.runtime.for.test">
+
+	<property file="build.properties" />
+			
+	<target name="make.runtime.for.test" depends="reset.data" 
+		description="Prepara ambiente de runtime para teste">
+		
+		<echo message="ATENCAO! Rode mvn clean assembly:assembly antes de rodar esta task." />		
+		<echo message="Montando ambiente de runtime da aplicacao batch..." />
+		<mkdir dir="${runtime.dir}" />
+		<echo message="Apagando diretorio: ${runtime.dir}" />
+		<delete includeemptydirs="yes">
+			<fileset dir="${runtime.dir}" />
+		</delete>
+		
+		<untar src="${maven.build.file}"  dest="${runtime.dir}">
+		    <patternset>
+		        <include name="**/*"/>
+		    </patternset>
+		</untar>	
+		
+		<echo message="Copiando arquivos para a pasta runtime..." />
+		
+		<copy overwrite="yes" todir="${runtime.dir}/arquivos">
+			<fileset dir="${arquivos.dir}">
+				<include name="eleitor/*.*"/>
+				<include name="zonaeleitoral/*.*"/>				
+			</fileset>
+		</copy>			
+		
+		<mkdir dir="${runtime.dir}/${arquivos.dir}/backup"/>
+	</target>	
+
+	<target name="reset.data" description="Apaga dados temporarios da pasta arquivos">
+		<echo message="Inicializando arquivos" />
+		
+		<copy overwrite="yes" todir="${arquivos.dir}/eleitor">
+			<fileset dir="${arquivos.dir}/test">
+				<exclude name="*-BUG.*"/>
+			</fileset>
+		</copy>			
+		
+		<delete includeemptydirs="yes">
+			<fileset dir="${arquivos.dir}/saida" >
+				<include name="*.CSV" />
+			</fileset>
+		</delete>
+		<delete includeemptydirs="yes">
+			<fileset dir="${arquivos.dir}/backup" >
+				<include name="*.CSV" />
+			</fileset>
+		</delete>
+	</target>	
+		
+</project>

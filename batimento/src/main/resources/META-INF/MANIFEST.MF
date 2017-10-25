@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 19.1-b02 (Sun Microsystems Inc.)
+Main-Class: br.gov.dataprev.refappbatch.MainClass
+Implementation-Version: 1.00
+Built-Date: 2011-10-07 12:25:35
+Class-Path: config lib/batch/commons/commons-beanutils-1.7.jar lib/bat
+ ch/commons/commons-collections-3.1.jar lib/batch/commons/commons-dbcp
+ -1.3.jar lib/batch/commons/commons-digester-2.0.jar lib/batch/commons
+ /commons-el.jar lib/batch/commons/commons-io-1.4.jar lib/batch/common
+ s/commons-jexl-1.1.jar lib/batch/commons/commons-lang-2.5.jar lib/bat
+ ch/commons/commons-logging.jar lib/batch/commons/commons-pool-1.5.4.j
+ ar lib/batch/infra/DtpInfraBatch-0.9.6-SNAPSHOT.jar lib/batch/infra/D
+ tpInfraCore-3.1.6.jar lib/batch/infra/DtpInfraDao-3.1.3.jar lib/batch
+ /infra/DtpInfraReportJasper-3.4.2.jar lib/batch/infra/dtpInfraCache-1
+ .0.0.jar lib/batch/integration/SdcServices_V3.03.jar lib/batch/integr
+ ation/eclipselink.jar lib/batch/integration/ehcache-1.6.2.jar lib/bat
+ ch/integration/ejb.jar lib/batch/integration/ejb30.jar lib/batch/inte
+ gration/javax.persistence_1.0.0.jar lib/batch/integration/jta-1.1.jar
+  lib/batch/integration/log4j-1.2.15.jar lib/batch/integration/mysql-c
+ onnector-java-5.1.15-bin.jar lib/batch/integration/oc4jclient.jar lib
+ /batch/integration/ojdbc14.jar lib/batch/integration/optic.jar lib/ba
+ tch/integration/postgresql-8.4-701.jdbc3.jar lib/batch/report/itext-2
+ .1.0.jar lib/batch/report/jasperreports-3.5.0.jar lib/batch/report/po
+ i-3.2-FINAL.jar lib/batch/spring/activation.jar lib/batch/spring/antl
+ r-2.7.6.jar lib/batch/spring/aopalliance.jar lib/batch/spring/aspectj
+ rt-1.6.6.jar lib/batch/spring/aspectjweaver-1.6.6.jar lib/batch/sprin
+ g/javassist-3.9.0.GA.jar lib/batch/spring/org.springframework.aop-3.0
+ .3.RELEASE.jar lib/batch/spring/org.springframework.asm-3.0.3.RELEASE
+ .jar lib/batch/spring/org.springframework.aspects-3.0.3.RELEASE.jar l
+ ib/batch/spring/org.springframework.beans-3.0.3.RELEASE.jar lib/batch
+ /spring/org.springframework.context-3.0.3.RELEASE.jar lib/batch/sprin
+ g/org.springframework.context.support-3.0.3.RELEASE.jar lib/batch/spr
+ ing/org.springframework.core-3.0.3.RELEASE.jar lib/batch/spring/org.s
+ pringframework.expression-3.0.3.RELEASE.jar lib/batch/spring/org.spri
+ ngframework.instrument-3.0.3.RELEASE.jar lib/batch/spring/org.springf
+ ramework.instrument.tomcat-3.0.3.RELEASE.jar lib/batch/spring/org.spr
+ ingframework.jdbc-3.0.3.RELEASE.jar lib/batch/spring/org.springframew
+ ork.jms-3.0.3.RELEASE.jar lib/batch/spring/org.springframework.orm-3.
+ 0.3.RELEASE.jar lib/batch/spring/org.springframework.oxm-3.0.3.RELEAS
+ E.jar lib/batch/spring/org.springframework.transaction-3.0.3.RELEASE.
+ jar lib/batch/spring/spring-batch-core-2.1.7.RELEASE.jar lib/batch/sp
+ ring/spring-batch-infrastructure-2.1.7.RELEASE.jar lib/batch/spring/s
+ pring-modules-validation-0.8.jar lib/batch/xml/dom4j-1.6.1.jar lib/ba
+ tch/xml/jaxb-api.jar lib/batch/xml/jaxb-impl.jar lib/batch/xml/jaxb-x
+ jc.jar lib/batch/xml/jaxb1-impl.jar lib/batch/xml/jettison-1.2.jar li
+ b/batch/xml/jsr173_1.0_api.jar lib/batch/xml/xstream-1.3.1.jar
+

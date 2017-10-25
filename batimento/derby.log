@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Wed Aug 02 11:03:56 BRT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instance a816c00e-015d-a342-9770-0000115bcc40 
+on database directory /home/magnus/git/sibe/batch/MonitorBatch/db  with class loader sun.misc.Launcher$AppClassLoader@7c1c8c58 
+Loaded from file:/home/magnus/.m2/repository/org/apache/derby/derby/10.8.1.2/derby-10.8.1.2.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_80-b15
+user.dir=/home/magnus/git/sibe/batch/MonitorBatch
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

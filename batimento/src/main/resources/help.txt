@@ -1,0 +1,30 @@
+Aplicação Batch de referência para Dataprev.
+============================================
+Aceita os seguintes parâmetros:
+
+  help - Exibe este texto de ajuda.
+   
+  eleicaoJob - Carrega eleitores e zonas eleitorais. Aceita os parâmetros:
+     processo=num
+          Parâmetro de reinicialização do job.
+          Em conjunto com os outros parâmetros, serve para identificar um processo
+          para efeito de restart da fase.
+
+  relatorioJob - Gera um arquivo pdf com a relação de todos os candidatos.
+     candidatoFile=file:ARQUIVO
+          Informa o ARQUIVO pdf para gravação dos eleitores cadastrados
+          como candidatos. Esse arquivo receberá o numero do PID
+          conforme o padrão da DIT.
+     processo=num        
+          Parâmetro opcional de reinicialização do job.
+        Em conjunto com os outros parâmetros, serve para identificar um processo
+        para efeitos de restart da fase.        
+                
+Exemplo de execução:
+(1) java -jar P.REF.BAT.001.ELEICAO.JAR eleicaoJob
+(2) java -Dpid=1234 -jar P.REF.BAT.001.ELEICAO.JAR relatorioJob candidatoFile=file:./arquivos/saida/D.REF.BAT.001.REL.001PDREFBAT001.PDF
+
+OBS: Locais de arquivos e outras configurações podem ser alteradas em "batch-config/refappbatch.properties"
+
+Para ter suporte ao JMX, inicie o job com -Dcom.sun.management.jmxremote
+

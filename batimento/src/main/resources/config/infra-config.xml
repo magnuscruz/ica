@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dtp:configuration xmlns:dtp="http://www.dataprev.gov.br/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.dataprev.gov.br/ns/javaee config.xsd">
+
+    <dtp:log4j>
+        <dtp:file>/etc/config/sibe/log4j/bat_001_log4j.xml</dtp:file>
+    </dtp:log4j>
+
+    <dtp:xml-resource name="serviceLocator"
+        package="br.gov.dataprev.infra.core.locator.config.mapping.serviceLocator">
+        <dtp:file>/etc/config/sibe/servicelocator.xml</dtp:file>
+    </dtp:xml-resource>
+
+    <dtp:xml-resource name="jdbc"
+        package="br.gov.dataprev.infra.persistence.jdbc.config.mapping.jdbc">
+        <dtp:file>/etc/config/sibe/monitor/jdbc.xml</dtp:file>
+    </dtp:xml-resource>
+
+	<!-- Configuração da aplicação batch -->
+	<dtp:properties-resource name="batch-config.properties">
+        <dtp:file>/etc/config/sibe/monitor/batch-config.properties</dtp:file>
+    </dtp:properties-resource>
+
+</dtp:configuration>

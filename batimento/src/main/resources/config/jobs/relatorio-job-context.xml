@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <!-- Adiciona o framework DTP Batch -->
+    <import resource="config-layer.xml" />
+
+    <!--
+        Job que gera pdf para impressão.
+
+        Como o JasperItemWriter não possui suporte à restart,
+        o job foi marcado com restartable=false.
+    -->
+    <job id="relatorioJob" restartable="false"
+        xmlns="http://www.springframework.org/schema/batch">
+        <step id="contarQuantidade" next="gravarCandidatos">
+            <tasklet ref="relatorioCandidatoTasklet">
+                <listeners>
+                    <listener>
+                        <bean
+                            class="br.gov.dataprev.infra.batch.listener.IOListener"
+                            scope="step"
+                            xmlns="http://www.springframework.org/schema/beans">
+                            <property name="entrada" value="dtpjdbc:default" />
+                        </bean>
+                    </listener>
+                </listeners>
+            </tasklet>
+        </step>
+
+        <step id="gravarCandidatos">
+            <tasklet>
+                <listeners>
+                    <listener>
+                        <bean
+                            class="br.gov.dataprev.infra.batch.listener.IOListener"
+                            scope="step"
+                            xmlns="http://www.springframework.org/schema/beans">
+                            <property name="entrada" value="dtpjdbc:default" />
+                            <property name="processamento" value="dtpio:(Ilustrativo - Exemplo de informação com texto livre)" />
+                            
+                            <!-- Saida omitida. O componente JasperItemWriter
+                                já 'avisa' qual é a saída -->
+                        </bean>
+                    </listener>
+                    <listener ref="candidatoJasperWriter" />
+                </listeners>
+                <chunk reader="relatorioCandidadosItemReader" processor="pessoaTOProcessor"
+                    writer="relatorioCandidatosItemWriter" commit-interval="${relatorioJob.commit.interval}">
+                </chunk>
+            </tasklet>
+        </step>
+
+        <validator ref="relatorioJobValidator" />
+    </job>
+
+    <bean id="relatorioJobValidator"
+        class="org.springframework.batch.core.job.DefaultJobParametersValidator">
+        <property name="requiredKeys">
+            <list>
+                <value>candidatoFile</value>
+            </list>
+        </property>
+        <property name="optionalKeys">
+            <list>
+                <value>processo</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ItemReaders -->
+    <bean id="relatorioCandidadosItemReader"
+        class="org.springframework.batch.item.database.JpaPagingItemReader">
+        <description>
+            BEAN responsável por gravar ler entidades pessoas
+            do banco de dados que
+            sejam candidatos
+            ATENÇÃO!!!! É
+            importante para o SpringBatch que a consulta seja ordenada!
+        </description>
+        <property name="queryString"
+            value="select p from Eleitor p where p.candidato = 1 order by p.tituloEleitoral" />
+        <property name="pageSize" value="${relatorioJob.commit.interval}" />
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>   
+    
+    <!-- Item Writers -->
+    <bean id="relatorioCandidatosItemWriter"
+        class="br.gov.dataprev.infra.batch.writer.DelegatingPidItemWriter"
+        scope="step">
+        <property name="resourceName" value="#{jobParameters['candidatoFile']}" />
+        <property name="delegate" ref="candidatoJasperWriter" />
+    </bean>
+
+    <bean id="candidatoJasperWriter"
+        class="br.gov.dataprev.infra.batch.writer.jasper.JasperItemWriter"
+        scope="step">
+        <property name="resource" value="#{jobParameters['candidatoFile']}" />
+        <property name="reportName" value="relatorio_candidatos.jasper" />
+        <property name="parameters">
+            <map>
+                <entry key="data" value="13/01/1981" />
+                <entry key="imagem" value="dtpimage:logotipo.png" />
+                <entry key="total" value="#{jobExecutionContext['total']}" />
+            </map>
+        </property>
+    </bean>
+    
+     
+</beans>

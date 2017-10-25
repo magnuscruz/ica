@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<dtp:jdbc xmlns:dtp="http://www.dataprev.gov.br/ns/javaee/jdbc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.dataprev.gov.br/ns/javaee/jdbc jdbc.xsd">
+
+	<dtp:defaultJdbcReference name="sibe-batch-embedded-derby" /> 
+
+	<dtp:jdbcReference name="ImportBatimBatchPu" type="DATABASE">
+		<dtp:credential user="SIBEBF_INTRANET" password="SIBEBF_INTRANET00" />
+		<dtp:autocommit arg="false" />
+		<dtp:databaseConfig driverClassName="oracle.jdbc.OracleDriver"
+			url="jdbc:oracle:thin:@p112d000:1526:dnmg" databaseName="dnmg" />
+	</dtp:jdbcReference>	
+
+	<dtp:jdbcReference name="sibe-batch-derby" type="DATASOURCE">
+		<dtp:credential user="user" password="user" />
+		<dtp:autocommit arg="false" />
+		<dtp:databaseConfig driverClassName="org.apache.derby.jdbc.ClientDriver"
+			url="jdbc:derby://localhost:1527/sample;create=true;upgrade=true" databaseName="sample" />
+	</dtp:jdbcReference>
+
+	<dtp:jdbcReference name="sibe-batch-embedded-derby" type="DATASOURCE">
+		<dtp:credential user="user" password="user" />
+		<dtp:autocommit arg="false" />
+		<dtp:databaseConfig driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+			url="jdbc:derby:db;create=true;upgrade=true" databaseName="db" />
+	</dtp:jdbcReference>
+</dtp:jdbc>

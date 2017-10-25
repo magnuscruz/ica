@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <!--
+        Define a massa de dados a ser utilizada nos testes.
+    -->
+    <ZONAS_ELEITORAIS ID_ZONA_ELEITORAL="-1"
+        ID_MUNI_PREV="1234" NM_ZONA_ELEITORAL="TESTE ZONA ELEITORAL" />
+
+</dataset>

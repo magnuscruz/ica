@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+    	http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+        http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+    <!-- Adiciona o framework DTP Batch -->
+    <import resource="config-layer.xml" />
+    
+    <!-- Configuração das threads -->
+    <!-- TODO - Externalizar threads -->
+	<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor"> 
+		<property name="corePoolSize" value="5" /> 
+	</bean>     
+
+    <!--Job que executa o processo de carga de Cadastros, Vinculos, Remuneracoes e Beneficios -->
+    <job id="importacaoBatimentoJob" xmlns="http://www.springframework.org/schema/batch">
+        <step id="importacaoBatimentoLoad">
+            <tasklet>
+                <chunk reader="importacaoBatimentoFileReader"
+                    processor="importacaoBatimentoProcessor" writer="importacaoBatimentoMultiFlatFileItemWriter"
+                    commit-interval="${importacaoBatimentoJob.commit.interval}">
+                </chunk>
+            </tasklet>
+        </step>
+    </job>	    
+
+    <!-- Configurações para o step importacaoBatimentoLoad -->
+    <!-- Carrega os arquivos para aplicação dos critérios -->
+    <bean id="importacaoBatimentoFileReader"
+        class="org.springframework.batch.item.file.MultiResourceItemReader"
+        scope="step">
+        <property name="delegate" ref="importacaoBatimentoLineNumberReader" />
+        <property name="resources"
+            value="file:${importacaoBatimentoJob.arquivo.batinv.dir}/*.ZIP" />
+
+        <!-- Esta propriedade indica para lancar erros se nenhum arquivo
+            existir. -->
+        <property name="strict" value="true" />    
+    </bean>
+    
+   <bean id="importacaoBatimentoLineNumberReader"
+        class="br.gov.dataprev.infra.batch.reader.LineNumberItemReader" scope="step">
+        <property name="encoding" value="ISO-8859-1" />        
+        <property name="lineMapper" ref="importacaoBatimentoLineMapper" />
+        <property name="bufferedReaderFactory" ref="dtpZipReaderFactory" />
+    </bean>   
+
+	<bean id="importacaoBatimentoLineMapper" class="org.springframework.batch.item.file.mapping.PatternMatchingCompositeLineMapper">
+        <property name="tokenizers">
+            <map>
+            	<!-- LINHA DO HEADER -->
+                <entry key="BATINV*" value-ref="importacaoBatimentoHeaderFixedTokenizer"/>
+                <entry key="*" value-ref="importacaoBatimentoBodyTokenizer"/>
+            </map>
+        </property>
+        <property name="fieldSetMappers">
+            <map>
+                <entry key="BATINV*">
+                    <ref bean="batimentoHeaderFieldSetMapper" />
+                </entry>
+                <entry key="*">
+                    <ref bean="batimentoBodyFieldSetMapper" />
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+	<bean id="importacaoBatimentoHeaderFixedTokenizer"
+		class="org.springframework.batch.item.file.transform.FixedLengthTokenizer">
+		<property name="names" value="id,dataSolicitacao,orientacaoLimite,parteVariavel,tamanhoInformacao,tipoDispo,totalRegistros" />
+		<property name="columns" value="1-10, 11-18, 19-19, 20-20, 21-23, 24-24, 25-33" />
+	</bean>
+	
+	<bean id="importacaoBatimentoBodyTokenizer"
+		class="org.springframework.batch.item.file.transform.FixedLengthTokenizer">
+		<property name="names" value="nit,cpf,nome,nomeMae,dataNascimento,rg,ctps,tituloEleitor,cnh,docEstrageiro,carteiraMaritimo,passaporte,sexo,estadoCivil,tipoCertidao,folhaCertidao,livroCertidao,termoCertidao,dataLimite,codigoRetorno,cpfCnis,nomeCpfCnis,dataNascCnis,totalTrabalhadoresCnis,validacaoCpfReceita,dataObito,quantidadeVinculos,vinculos,remuneracoes, numeroBeneficio, tipoEmpregador, identificadorEmpregador, orgaoLocal, orgaoPagador, fonteNit, grupoEspecies, especieBeneficio, dib, dcb, ddb, rendaAtual, camposFuturos" />
+		<property name="columns" value="1-11, 12-22, 23-82, 83-142, 143-150, 151-170, 171-182, 183-195, 196-208, 209-228, 229-248, 249-268, 269-269, 270-270, 271-271, 272-276, 277-282, 283-292, 293-300, 301-301, 302-312, 313-372, 373-380, 381-383, 384-384, 385-392, 393-395, 396-20895, 20896-35295, 35296-35305, 35306-35306, 35307-35320, 35321-35328, 35329-35334, 35335-35335, 35336-35337, 35338-35339, 35340-35347, 35348-35355, 35356-35363, 35364-35377, 35378-35395" />
+	</bean>
+
+    <!-- Item Writer dos arquivos dos Batimentos resultantes da aplicação dos Critérios -->
+    <bean id="importacaoBatimentoMultiFlatFileItemWriter"
+        class="org.springframework.batch.item.file.MultiResourceItemWriter"
+        scope="step">
+        <property name="resource"
+            value="file:${importacaoBatimentoJob.arquivo.saida.dir}/D.CNS.SAD.002.BTV.BATIMENTO" />
+        <property name="delegate" ref="importacaoBatimentoFlatFileItemWriter" />
+        <property name="resourceSuffixCreator" ref="importacaoBatimentoResourceSuffixCreator" />
+
+        <!-- ATENÇÃO! Tem que ser multiplo do commit interval -->
+        <property name="itemCountLimitPerResource" value="3" />
+    </bean>
+
+    <bean id="importacaoBatimentoFlatFileItemWriter"
+        class="br.gov.dataprev.sibe.batch.importbatim.writer.ImportacaoBatimentoItemWriter"
+        scope="step">
+        <property name="names" value="especieBeneficio,numeroBeneficio,orgaoLocal,nit,nome,dib,dcb,rendaAtual,tipoEmpregador,quantidadeVinculos,vinculos,remuneracoes" />
+        <property name="delegate" ref="flatFileImportacaoBatimentoItemWriter" />        
+    </bean>
+
+    <bean id="flatFileImportacaoBatimentoItemWriter"
+        class="br.gov.dataprev.infra.batch.writer.DtpFlatFileItemWriter"
+        scope="step">
+        <description>
+            Responsável por gravar os registros resultantes da aplicação dos critérios
+        </description>
+        <property name="encoding" value="ISO-8859-1" />
+        <property name="lineAggregator" ref="importacaoBatimentoAggregator" />
+
+        <property name="headerCallback"  ref="importacaoBatimentoFlatFileItemWriter" />
+        <property name="footerCallback" ref="importacaoBatimentoFlatFileItemWriter" />
+    </bean>
+
+    <bean id="importacaoBatimentoAggregator"
+        class="org.springframework.batch.item.file.transform.DelimitedLineAggregator"
+        scope="step">
+        <property name="delimiter" value="," />
+        <property name="fieldExtractor">
+            <bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+                <property name="names" value="especieBeneficio,numeroBeneficio,orgaoLocal,nit,nome,dib,dcb,rendaAtual,tipoEmpregador,quantidadeVinculos,vinculos,remuneracoes" />
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="importacaoBatimentoAggregatorOld"
+        class="org.springframework.batch.item.file.transform.DelimitedLineAggregator"
+        scope="step">
+        <property name="delimiter" value="," />
+        <property name="fieldExtractor">
+            <bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+                <property name="names" value="nit,cpf,nome,nomeMae,dataNascimento,rg,ctps,tituloEleitor,cnh,docEstrageiro,carteiraMaritimo,passaporte,sexo,estadoCivil,tipoCertidao,folhaCertidao,livroCertidao,termoCertidao,dataLimite,codigoRetorno,cpfCnis,nomeCpfCnis,dataNascCnis,totalTrabalhadoresCnis,validacaoCpfReceita,dataObito,quantidadeVinculos,vinculos,remuneracoes, numeroBeneficio, tipoEmpregador, identificadorEmpregador, orgaoLocal, orgaoPagador, fonteNit, grupoEspecies, especieBeneficio, dib, dcb, ddb, rendaAtual, camposFuturos" />
+            </bean>
+        </property>
+    </bean>
+
+</beans>

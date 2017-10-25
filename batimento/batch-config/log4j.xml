@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+
+<log4j:configuration>
+	
+	<appender name="CONSOLE_LOG" class="org.apache.log4j.ConsoleAppender">
+		<!-- 
+			ATENÇÃO! 
+			Em produção, configurar a propriedade abaixo para OFF.	
+		-->
+		<param name="Threshold" value="debug" />
+		<param name="encoding" value="ISO-8859-1" />
+
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p [%d] [%c{1}.%M:%L] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILE_LOG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="log/W.REF.BAT.001.LOG.DESENVOLVIMENTO.LOG" />
+		<param name="DatePattern" value="'-'yyyy-MM-dd'.log'" />
+		<param name="encoding" value="ISO-8859-1" />		
+		
+		<!-- 
+			Em produção, o nível abaixo pode ser diminuído 
+			para reduzir o OVERHEAD 
+		-->	
+		<param name="Threshold" value="DEBUG" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p [%d] [%t] [%c{1}.%M:%L] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILE_SKIP_LOG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="log/W.REF.BAT.001.LOG.SKIP.LOG" />
+		<param name="DatePattern" value="'-'yyyy-MM-dd'.log'" />
+		<param name="Threshold" value="DEBUG" />
+		<param name="encoding" value="ISO-8859-1" />		
+		
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p [%d] [%t] [%c{1}.%M:%L] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="PRODUCAO_CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<param name="Threshold" value="DEBUG" />
+		<param name="encoding" value="UTF-8" />		
+		
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="PROD %m%n" />
+		</layout>
+	</appender>
+	
+	<category name="br.gov.dataprev.refappbatch" additivity="false">
+		<priority value="DEBUG" />
+		<appender-ref ref="CONSOLE_LOG" />
+		<appender-ref ref="FILE_LOG" />
+	</category>
+
+	<category name="producao" additivity="false">
+		<priority value="INFO" />
+		<appender-ref ref="PRODUCAO_CONSOLE"/>
+		<appender-ref ref="FILE_LOG" />
+	</category>		
+
+	<category name="br.gov.dataprev.infra" additivity="false">
+		<priority value="DEBUG" />
+		<appender-ref ref="CONSOLE_LOG" />
+		<appender-ref ref="FILE_LOG" />
+	</category>
+
+	<category name="skip" additivity="false">
+		<priority value="DEBUG" />		
+		<appender-ref ref="FILE_SKIP_LOG" />
+	</category>	
+	
+	<logger name="org.hibernate.SQL" additivity="false">
+	    <level value="debug" />
+	    <appender-ref ref="CONSOLE_LOG" />
+	    <appender-ref ref="FILE_LOG" />
+	</logger>
+	
+	<category name="org.springframework" additivity="false">
+		<priority value="ERROR" />
+		<appender-ref ref="CONSOLE_LOG" />
+		<appender-ref ref="FILE_LOG" />
+	</category>
+
+	<category name="org.springframework.batch" additivity="false">
+		<priority value="ERROR" />
+		<appender-ref ref="CONSOLE_LOG" />
+		<appender-ref ref="FILE_LOG" />
+	</category>
+
+	<root>
+		<priority value="ERROR" />
+		<appender-ref ref="CONSOLE_LOG" />
+		<appender-ref ref="FILE_LOG" />
+	</root>
+</log4j:configuration>

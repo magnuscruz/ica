@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <!-- Adiciona o framework DTP Batch -->
+    <import resource="classpath:/br/gov/dataprev/infra/batch/config/dtp-batch-context.xml" />
+    <import resource="classpath:/br/gov/dataprev/infra/batch/config/jpa-data-source-context.xml" />
+
+    <context:component-scan base-package="br.gov.dataprev.sibe.batch" />
+
+    <!--
+        Define saídas para o S.O. de acordo com a saída do Job
+        Para a DIT, qualquer valor diferente de 0 é erro.
+     -->
+    <bean id="dtpExitCodeMapper" class="br.gov.dataprev.infra.batch.support.DtpExitCodeMapper">
+        <property name="mapping">
+            <map>
+                <entry key="COMPLETED WITH SKIPS" value="0"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <description>Declara os arquivos de mensagens do DtpInfraBatch</description>
+        <property name="parentMessageSource" ref="infraMessageSource" />
+        <property name="basenames">
+            <list>
+                <value>config.mensagens</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Contém configurações gerais da aplicação -->
+    <bean id="BatchConfigProperties"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location"
+            value="file:/etc/config/sibe/monitor/batch-config.properties" />
+
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="order" value="1" />
+    </bean>
+
+    <bean id="dataSourceInitializer"
+        class="br.gov.dataprev.infra.batch.initializer.DataSourceInitializer">
+        <description>
+            Inicializador do datasource. Util para gerar a base em tempo de desenvolvimento.
+        </description>
+        <property name="dataSource" ref="dataSource" />
+        <property name="initialize" value="${importacaoBatimentoJob.data.source.init}" />
+        <property name="initScripts">
+            <list>
+                <value>${importacaoBatimentoJob.drop.script}</value>
+                <value>${importacaoBatimentoJob.schema.script}</value>
+                <value>${importacaoBatimentoJob.business.schema.script}</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="diskSpaceInitializer"
+       class="br.gov.dataprev.infra.batch.initializer.DiskSpaceInitializer" >
+        <property name="diskMap">
+            <map>
+                <entry key="./arquivos" value="${importacaoBatimentoJob.disk.space.required}" />
+            </map>
+        </property>
+    </bean>
+</beans>

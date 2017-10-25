@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+     
+	<bean id="dataSource" class="br.gov.dataprev.infra.batch.datasource.DtpBasicDataSource" destroy-method="close" lazy-init="true">
+	</bean> 
+	
+<!-- 
+    <bean id="dataSource"  class="br.gov.dataprev.infra.batch.datasource.DtpBasicDataSource"
+        destroy-method="close" lazy-init="true">
+        <description>
+            Sobrescreve o datasource do framework.
+
+            A propriedade jdbcReference pode ser utilizada para referenciar outro
+            banco, ao invés do defaultJdbcReference.
+        </description>
+       
+       	<property name="minIdle" value="1" /> 
+        <property name="maxIdle" value="8" />
+        <property name="maxActive" value="${batch.datasource.max.pool.size}" />         
+		<property name="initialSize" value="1" />
+
+		<property name="maxWait" value="#{1000 * 60 * 15}" />
+				
+		<property name="validationQuery" value="SELECT * FROM DUAL" />   Oracle
+		
+		<property name="testOnBorrow" value="true" /> 
+		<property name="testWhileIdle" value="true" /> 
+		 
+		<property name="minEvictableIdleTimeMillis" value="#{1000 * 60 * 15}" />   		
+		<property name="timeBetweenEvictionRunsMillis" value="#{1000 * 60 * 2}" />		 
+		 		  
+    </bean>	
+	<bean id="dataSourceInitializer" class="br.gov.dataprev.infra.batch.initializer.DataSourceInitializer" >
+		<description>
+			Inicializador do datasource. Util para gerar a base em tempo de desenvolvimento.
+		</description>
+		<property name="dataSource" ref="dataSource"/>
+		<property name="initialize" value="true"/>
+		<property name="initScripts">
+			<list>
+				<value>classpath:/org/springframework/batch/core/schema-drop-derby.sql</value>
+				<value>classpath:/org/springframework/batch/core/schema-derby.sql</value>
+				<value>${refappbatch.business.schema.script}</value>
+			</list>
+		</property>
+	</bean>
+	 -->	
+	
+</beans>
+
