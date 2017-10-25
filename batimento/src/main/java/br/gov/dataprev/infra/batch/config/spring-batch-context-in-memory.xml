@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+    default-lazy-init="true">
+
+    <!-- Configuração do Spring Batch junto ao Framework Spring. -->
+    <bean id="jobRepository"
+        class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+        <description>
+            Bean do SpringBatch responsável por persistir o
+            estado da execução de um
+            JOB em memoria
+        </description>
+        <constructor-arg ref="transactionManager" />
+        <property name="isolationLevelForCreate" value="ISOLATION_DEFAULT" />
+    </bean>
+
+
+    <bean id="jobLauncher"
+        class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <description>
+            Bean do SpringBatch responsável pela execução de
+            JOBs
+        </description>
+        <property name="jobRepository" ref="jobRepository" />
+    </bean>
+
+    <bean id="jobExplorer"
+        class="org.springframework.batch.core.explore.support.MapJobExplorerFactoryBean">
+        <description>
+            Bean do SpringBatch responsável por visualizar os
+            batchs
+        </description>
+        <property name="repositoryFactory" ref="&amp;jobRepository" />
+    </bean>
+
+    <bean id="jobRegistry"
+        class="org.springframework.batch.core.configuration.support.MapJobRegistry">
+        <description>
+            Bean do SpringBatch responsável manter todos os
+            Jobs que estão registrados
+            na aplicação
+        </description>
+    </bean>
+
+    <bean id="jobOperator"
+        class="org.springframework.batch.core.launch.support.SimpleJobOperator">
+        <description>
+            Bean do SpringBatch responsável manipular e
+            executar Job's
+        </description>
+
+        <property name="jobExplorer" ref="jobExplorer" />
+        <property name="jobRepository" ref="jobRepository" />
+        <property name="jobRegistry" ref="jobRegistry" />
+        <property name="jobLauncher" ref="jobLauncher" />
+    </bean>
+
+    <bean id="jobRegistryBeanPostProcessor"
+        class="org.springframework.batch.core.configuration.support.JobRegistryBeanPostProcessor">
+        <description>
+            Bean do SpringBatch responsável gravar os Job's
+            conforme eles forem sendo criados pelo Spring.
+        </description>
+        <property name="jobRegistry" ref="jobRegistry" />
+    </bean>
+</beans>

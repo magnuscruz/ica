@@ -19,12 +19,12 @@
 	<!-- Dependencias -->
 	<dependencies>
 		<!-- Dependencias da Infra -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>br.gov.dataprev.infra</groupId>
 			<artifactId>dtp-infra-batch</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-		<!-- <dependency> <groupId>br.gov.dataprev.infra</groupId> <artifactId>dtp-infra-report-jasper</artifactId> 
+ -->		<!-- <dependency> <groupId>br.gov.dataprev.infra</groupId> <artifactId>dtp-infra-report-jasper</artifactId> 
 			<version>4.0.0-FINAL</version> </dependency> <dependency> <groupId>br.gov.dataprev.infra</groupId> 
 			<artifactId>dtpInfraCache</artifactId> <version>1.0.3</version> </dependency> -->
 
@@ -146,7 +146,11 @@
 			<version>2.6</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
 		<!-- Dependencias para teste -->
 		<dependency>
 			<groupId>junit</groupId>
