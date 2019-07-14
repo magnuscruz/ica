@@ -1,5 +1,7 @@
 package br.ufc.deti.clusters;
 
+import java.util.List;
+
 import javax.swing.DefaultListModel;
 
 import br.ufc.deti.clusters.gng.Topology;
@@ -46,7 +48,7 @@ public abstract class AbstractNetwork extends AbstractClustering implements
 	 */
 	public abstract double calculateCoeficiente(int i);
 
-	public AbstractNetwork(int inputCount, int outputCount, Reportable owner, DefaultListModel dataListModel) {
+	public AbstractNetwork(int inputCount, int outputCount, Reportable owner, List<Datum> dataListModel) {
 		super(inputCount, outputCount, owner, dataListModel);
 	}
 

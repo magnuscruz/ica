@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,7 +54,7 @@ public abstract class AbstractClustering implements Clustering {
 	protected Reportable ownerApp;
 
 	/** Name of the input data */
-	private DefaultListModel trainListModel;
+	private List<Datum> trainListModel;
 
 	private Datum[] trainList;
 	private Datum[] testList;
@@ -76,12 +75,12 @@ public abstract class AbstractClustering implements Clustering {
 	private int imageTam = 256;
 
 	public AbstractClustering(int inputCount, int outputCount,
-			Reportable owner, DefaultListModel dataListModel) {
+			Reportable owner, List<Datum> dataListModel) {
 		this.attribsNumInput = inputCount;
 		this.outputClusterNumber = outputCount;
 		this.trainListModel = dataListModel;
-		this.trainList = new Datum[dataListModel.getSize()];
-		this.testList = new Datum[dataListModel.getSize()];
+		this.trainList = new Datum[dataListModel.size()];
+		this.testList = new Datum[dataListModel.size()];
 		int i = 0;
 		for (Object element : dataListModel.toArray()) {
 			this.testList[i] = this.trainList[i] = (Datum) element;
@@ -228,9 +227,7 @@ public abstract class AbstractClustering implements Clustering {
 	 * Show input elements
 	 */
 	protected void showInputData() {
-		Enumeration<?> elementData = trainListModel.elements();
-		for (; elementData.hasMoreElements();) {
-			Datum element = (Datum) elementData.nextElement();
+		for (Datum element : trainListModel) {
 			double x = element.getAttributeX();
 			double y = element.getAttributeY();
 			chart.add(XYSeriesChart.DATA_CLUSTER + 1, x, y);
@@ -496,7 +493,7 @@ public abstract class AbstractClustering implements Clustering {
 
 	public void setEpocas(int epocas) {
 		this.epocas = epocas;
-		t_max = epocas * trainListModel.getSize();
+		t_max = epocas * trainListModel.size();
 	}
 
 	/**
@@ -532,7 +529,7 @@ public abstract class AbstractClustering implements Clustering {
 	/**
 	 * @return the trainListModel
 	 */
-	public DefaultListModel getTrainListModel() {
+	public List<Datum> getTrainListModel() {
 		return trainListModel;
 	}
 
@@ -540,7 +537,7 @@ public abstract class AbstractClustering implements Clustering {
 	 * @param trainListModel
 	 *            the trainListModel to set
 	 */
-	public void setTrainListModel(DefaultListModel trainListModel) {
+	public void setTrainListModel(List<Datum> trainListModel) {
 		this.trainListModel = trainListModel;
 	}
 
